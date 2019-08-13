@@ -20,18 +20,10 @@ values = '';
     this.values = event.target.value;
     console.log(this.values);
   }
-
-columnDefs = [
-        {headerName: 'ID', field: 'id' , width: 100, resizable: true},
-        {headerName: 'USER ID', field: 'userId' , width: 100, resizable: true },
-        {headerName: 'TITLE', field: 'title', width: 560, resizable: true},
-        {headerName: 'COMPLETE', field: 'completed', width: 350, resizable: true}
-    ];
 rowData: any;
   constructor(private httpClient: HttpClient,private globalService: GlobalService){}
 
   ngOnInit() {
-  this.rowData = this.httpClient.get(this.globalService.dataApi);
   }
   
 

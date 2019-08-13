@@ -22,6 +22,7 @@ import { MailComponent } from './mail/mail.component';
 import { ChartComponent } from './chart/chart.component';
 import { HelpComponent } from './help/help.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { AgGridComponent } from './ag-grid/ag-grid.component';
 const routes: Routes = [
 { path: 'dashboard', component: DashboardComponent },
 { path: 'activity',  component: ActivityComponent },
@@ -39,7 +40,8 @@ const routes: Routes = [
     DashboardComponent,
     MailComponent,
     ChartComponent,
-    HelpComponent
+    HelpComponent,
+    AgGridComponent
   ],
   imports: [
     BrowserModule,
