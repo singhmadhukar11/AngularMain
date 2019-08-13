@@ -1,0 +1,28 @@
+.Maincontent {
+  background: #efefef;
+  padding: 10px 15px;
+  overflow: auto;
+}
+
+.acc {
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+.mat-card {
+  margin-bottom: 15px;
+}
+
+.card-txt {
+  color: grey;
+  font-size: 14px;
+}
+
+.text-align-rgt {
+  text-align: right;
+}
+
+.mini-card i{
+      color: dodgerblue;
+    font-size: 30px;
+}

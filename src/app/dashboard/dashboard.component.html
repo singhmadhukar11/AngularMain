@@ -1,0 +1,45 @@
+      <mat-card class="margin-bottom-15">
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <div>
+            <div><b>Good Morning</b>, Z-Team</div>
+            <div class="acc">Account Type: <b>Personal</b></div>
+          </div>
+          <div>
+            <div>Time: <b>{{today | date:'hh:mm a':'+0530'}}</b></div>
+            <div class="acc">Date: <b>{{today | date:'dd-MM-yyyy'}}</b></div>
+          </div>
+        </div>
+      </mat-card>
+      <div fxLayout="row" fxLayoutAlign="space-between center" class="mini-card">
+        <mat-card fxFlex="20" fxLayout="row" fxLayoutAlign="space-between center">
+          <div><i class="material-icons">person</i></div>
+          <div class="card-txt">
+            <div class="text-align-rgt">5000</div>
+            <div>Total User</div>
+          </div>
+        </mat-card>
+        <mat-card fxFlex="20" fxLayout="row" fxLayoutAlign="space-between center">
+          <div><i class="material-icons">shopping_cart</i></div>
+          <div class="card-txt">
+            <div class="text-align-rgt">$3000</div>
+            <div>Today's sale</div>
+          </div>
+        </mat-card>
+        <mat-card fxFlex="20" fxLayout="row" fxLayoutAlign="space-between center">
+          <div><i class="material-icons">visibility</i></div>
+          <div class="card-txt">
+            <div class="text-align-rgt">8000</div>
+            <div>Total Visits</div>
+          </div>
+        </mat-card>
+        <mat-card fxFlex="20" fxLayout="row" fxLayoutAlign="space-between center">
+          <div><i class="material-icons">touch_app</i></div>
+          <div class="card-txt">
+            <div class="text-align-rgt">2000</div>
+            <div>Online Orders</div>
+          </div>
+        </mat-card>
+      </div>
+      <mat-card>
+        <app-highchart></app-highchart>
+      </mat-card>
