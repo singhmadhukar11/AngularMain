@@ -8,8 +8,6 @@ import { GlobalService } from '../global.service';
 })
 export class AgGridComponent implements OnInit {
 
-  constructor(private httpClient: HttpClient,private globalService: GlobalService) { }
-
 columnDefs = [
         {headerName: 'ID', field: 'id' , width: 100, resizable: true},
         {headerName: 'USER ID', field: 'userId' , width: 100, resizable: true },
@@ -17,9 +15,8 @@ columnDefs = [
         {headerName: 'COMPLETE', field: 'completed', width: 350, resizable: true}
     ];
 rowData: any;
-  constructor(private httpClient: HttpClient,private globalService: GlobalService){}
-
+  constructor(private http: HttpClient,private globalService: GlobalService){}
   ngOnInit() {
-  this.rowData = this.httpClient.get(this.globalService.dataApi);
+      this.rowData = this.http.get(this.globalService.dataApi);
   }
 }

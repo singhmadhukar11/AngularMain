@@ -1,1 +1,6 @@
-<p>mail works!</p>
+
+<button (click)="get_products()">click</button>
+<mat-list *ngFor="let folder of products">
+ <mat-list-item> {{folder.id}} |  {{folder.title}} | {{folder.completed}}</mat-list-item>
+ <mat-divider></mat-divider>
+</mat-list>

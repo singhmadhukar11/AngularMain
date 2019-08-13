@@ -23,6 +23,7 @@ import { ChartComponent } from './chart/chart.component';
 import { HelpComponent } from './help/help.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { AgGridComponent } from './ag-grid/ag-grid.component';
+import { ChartModule } from 'angular-highcharts';
 const routes: Routes = [
 { path: 'dashboard', component: DashboardComponent },
 { path: 'activity',  component: ActivityComponent },
@@ -57,6 +58,7 @@ const routes: Routes = [
     MatListModule,
     MatIconModule,
     MatButtonModule,
+    ChartModule,
     RouterModule.forRoot(
       routes,
     ),

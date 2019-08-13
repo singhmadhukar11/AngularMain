@@ -6,5 +6,6 @@ import { Injectable } from '@angular/core';
 export class GlobalService {
 
 dataApi = "https://jsonplaceholder.typicode.com/todos";
+
   constructor() { }
 }
