@@ -7,10 +7,9 @@ import { GlobalService } from '../global.service';
   styleUrls: ['./mail.component.css']
 })
 export class MailComponent implements OnInit {
-products = [];
+products = "";
 get_products(){
         this.http.get(this.globalService.dataApi).subscribe((res)=>{
-        this.products=res;
             console.log(this.products)
         });
   };

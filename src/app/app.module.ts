@@ -23,7 +23,10 @@ import { ChartComponent } from './chart/chart.component';
 import { HelpComponent } from './help/help.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { AgGridComponent } from './ag-grid/ag-grid.component';
-import { ChartModule } from 'angular-highcharts';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { FormsModule } from '@angular/forms';
 const routes: Routes = [
 { path: 'dashboard', component: DashboardComponent },
 { path: 'activity',  component: ActivityComponent },
@@ -58,7 +61,9 @@ const routes: Routes = [
     MatListModule,
     MatIconModule,
     MatButtonModule,
-    ChartModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    FormsModule,
     RouterModule.forRoot(
       routes,
     ),

@@ -8,20 +8,16 @@ import { GlobalService } from '../global.service';
 })
 export class ActivityComponent implements OnInit {
 
-private products  = []; 
-values = '';
-   get_products(){
-        this.httpClient.get(this.globalService.dataApi).subscribe((res)=>{
-            console.log(this.products)
-        });
-    }
+name:string = "Albrt";
+email:email = "Albrt@gmail.com";
+ctn:tel = 7894561230;
+msg:any = "A message is a discrete unit of communication intended by the source for consumption by some recipient or group of recipients.";
 
-  onKey(event: any) { // without type info
-    this.values = event.target.value;
-    console.log(this.values);
-  }
-rowData: any;
-  constructor(private httpClient: HttpClient,private globalService: GlobalService){}
+
+
+submitFunction() {
+  console.log("Clicked");
+}
 
   ngOnInit() {
   }
