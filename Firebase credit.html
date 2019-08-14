@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+    <script>
+        // Set the configuration for your app
+        // TODO: Replace with your project's config object
+        var config = {
+            apiKey: "AIzaSyAFo7y4JY-bS8wgiyqovlQlIPGda7pAD9E",
+            authDomain: "dash-1a311.firebaseapp.com",
+            databaseURL: "https://dash-1a311.firebaseio.com",
+            projectId: "dash-1a311",
+            storageBucket: "",
+            messagingSenderId: 480233127837
+        };
+        firebase.initializeApp(config);
+
+        // Get a reference to the database service
+        var database = firebase.database();
+
+        function addLead() {
+            var clientName = document.getElementById('name').value;
+            var clientMobile = document.getElementById('mobile').value;
+            var clientEmail = document.getElementById('email').value;
+
+            var newClientKey = database.ref().child('details').push().key;
+            database.ref('details/' + newClientKey + '/name').set(clientName);
+            database.ref('details/' + newClientKey + '/mobile').set(clientMobile);
+            database.ref('details/' + newClientKey + '/email').set(clientEmail);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="name">
+    <input type="text" id="mobile">
+    <input type="text" id="email">
+    <button type="button" id="button" onclick="addLead();">Submit</button>
+</body>
+
+</html>
