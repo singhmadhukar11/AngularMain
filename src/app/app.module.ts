@@ -27,13 +27,14 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 const routes: Routes = [
 { path: 'dashboard', component: DashboardComponent },
 { path: 'activity',  component: ActivityComponent },
 { path: 'mail',  component: MailComponent },
 { path: 'chart',  component: ChartComponent },
 { path: 'help',  component: HelpComponent },
-{ path: 'signout',  component: ActivityComponent }
+{ path: '**', component: PageNotFoundComponent }
 ];
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ const routes: Routes = [
     MailComponent,
     ChartComponent,
     HelpComponent,
-    AgGridComponent
+    AgGridComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

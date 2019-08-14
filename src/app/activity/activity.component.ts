@@ -9,8 +9,8 @@ import { GlobalService } from '../global.service';
 export class ActivityComponent implements OnInit {
 
 name:string = "";
-email:email = "";
-ctn:number = "";
+email:any = "";
+ctn:any = "";
 msg:any = "";
 
 
@@ -19,7 +19,7 @@ submitFunction(name,email,ctn,msg) {
   console.log("Hello"+ " " + name + " " + email + " " + ctn + " " + msg );
   this.name = name;
   this.email = email;
-  this.tel = ctn;
+  this.ctn = ctn;
   this.msg = msg;
 }
 
