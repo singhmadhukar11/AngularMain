@@ -8,15 +8,19 @@ import { GlobalService } from '../global.service';
 })
 export class ActivityComponent implements OnInit {
 
-name:string = "Albrt";
-email:email = "Albrt@gmail.com";
-ctn:tel = 7894561230;
-msg:any = "A message is a discrete unit of communication intended by the source for consumption by some recipient or group of recipients.";
+name:string = "";
+email:email = "";
+ctn:number = "";
+msg:any = "";
 
 
 
-submitFunction() {
-  console.log("Clicked");
+submitFunction(name,email,ctn,msg) {
+  console.log("Hello"+ " " + name + " " + email + " " + ctn + " " + msg );
+  this.name = name;
+  this.email = email;
+  this.tel = ctn;
+  this.msg = msg;
 }
 
   ngOnInit() {
