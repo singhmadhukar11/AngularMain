@@ -17,7 +17,6 @@ html {
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font: normal normal normal 1rem/1.6 'Muli', sans-serif;
 }
 .mat-card {
     border-radius: 0px !important;
