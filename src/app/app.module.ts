@@ -25,6 +25,8 @@ import { AgGridModule } from 'ag-grid-angular';
 import { AgGridComponent } from './ag-grid/ag-grid.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -34,6 +36,7 @@ const routes: Routes = [
 { path: 'mail',  component: MailComponent },
 { path: 'chart',  component: ChartComponent },
 { path: 'help',  component: HelpComponent },
+{ path: '', component: DashboardComponent },
 { path: '**', component: PageNotFoundComponent }
 ];
 @NgModule({
@@ -63,8 +66,10 @@ const routes: Routes = [
     MatListModule,
     MatIconModule,
     MatButtonModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule,
     FormsModule,
     RouterModule.forRoot(
       routes,

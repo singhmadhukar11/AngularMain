@@ -13,10 +13,7 @@ email:any = "";
 ctn:any = "";
 msg:any = "";
 
-
-
 submitFunction(name,email,ctn,msg) {
-  console.log("Hello"+ " " + name + " " + email + " " + ctn + " " + msg );
   this.name = name;
   this.email = email;
   this.ctn = ctn;

@@ -1,12 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~ag-grid-community/dist/styles/ag-grid.css";
 @import "~ag-grid-community/dist/styles/ag-theme-balham.css";
-body{
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800&display=swap');
+body {
     margin: 0px;
-    font-family: 'Roboto', sans-serif;
 }
-.mat-card{
-
-	border-radius: 0px !important;
+a {
+    -webkit-transition: all ease-out 0.2s;
+    -moz-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+}
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font: normal normal normal 1rem/1.6 'Muli', sans-serif;
+}
+.mat-card {
+    border-radius: 0px !important;
 }

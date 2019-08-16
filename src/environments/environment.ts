@@ -3,8 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 export const environment = {
   production: false,
-  firebase: {
-  apiKey: "AIzaSyAFo7y4JY-bS8wgiyqovlQlIPGda7pAD9E",
+  firebaseConfig: {
+  	apiKey: "AIzaSyAFo7y4JY-bS8wgiyqovlQlIPGda7pAD9E",
     authDomain: "dash-1a311.firebaseapp.com",
     databaseURL: "https://dash-1a311.firebaseio.com",
     projectId: "dash-1a311",
