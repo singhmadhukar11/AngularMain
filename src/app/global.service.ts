@@ -4,8 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class GlobalService {
-
+constructor() { }
 dataApi = "https://jsonplaceholder.typicode.com/todos";
 
-  constructor() { }
+
+
 }

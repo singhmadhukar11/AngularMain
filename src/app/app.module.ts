@@ -24,9 +24,7 @@ import { HelpComponent } from './help/help.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { AgGridComponent } from './ag-grid/ag-grid.component';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule } from '@angular/fire/storage';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -67,9 +65,7 @@ const routes: Routes = [
     MatIconModule,
     MatButtonModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule,
-    AngularFireAuthModule,
-    AngularFireStorageModule,
+    AngularFireDatabaseModule,
     FormsModule,
     RouterModule.forRoot(
       routes,

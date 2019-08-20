@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { GlobalService } from '../global.service';
+import { AngularFireDatabase } from '@angular/fire/database';
+import {Observable} from 'rxjs';
 @Component({
   selector: 'app-activity',
   templateUrl: './activity.component.html',
@@ -20,8 +22,17 @@ submitFunction(name,email,ctn,msg) {
   this.msg = msg;
 }
 
-  ngOnInit() {
-  }
+courses: Observable < any > | any;
+constructor(private db: AngularFireDatabase) {
+    this.courses = db.list('/details').valueChanges()
+        .subscribe(courses => {
+            this.courses = courses;
+        })
+}
+getData() {
+    return this.courses;
+}
+ngOnInit() {}
   
 
 }
