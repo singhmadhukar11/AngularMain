@@ -9,11 +9,12 @@ private basePath = '/details';
 dataApi = "https://jsonplaceholder.typicode.com/todos";
 
  submitFunction(data) {
- 	debugger;
   const obj = this.db.database.ref(this.basePath);
   obj.push(data);
   console.log('Success');
   }
+
+  
 
 
 }

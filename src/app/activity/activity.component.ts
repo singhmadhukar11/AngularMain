@@ -15,12 +15,6 @@ email:any = "";
 ctn:any = "";
 msg:any = "";
 private basePath = '/details';
-//submitFunction(name,email,ctn,msg) {
-//  this.name = name;
-//  this.email = email;
-//  this.ctn = ctn;
-//  this.msg = msg;
-//}
 
 courses: Observable < any > | any;
 constructor(private db: AngularFireDatabase, private globalService: GlobalService) {
@@ -28,13 +22,12 @@ constructor(private db: AngularFireDatabase, private globalService: GlobalServic
         .subscribe(courses => {
             this.courses = courses;
         })
-}
-getData() {
-    return this.courses;
-}
+	}
+	getData() {
+	    return this.courses;
+	}
 
   submitFunction(name, email, ctn, msg) {
-  	debugger;
      const dataObj = {
       name: name,
       email: email,
