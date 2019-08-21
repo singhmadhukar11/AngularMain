@@ -1,20 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { GlobalService } from '../global.service';
+import { AngularFireDatabase } from '@angular/fire/database';
+import {Observable} from 'rxjs';
+import {Sort} from '@angular/material/sort';
 @Component({
   selector: 'app-mail',
   templateUrl: './mail.component.html',
   styleUrls: ['./mail.component.css']
 })
 export class MailComponent implements OnInit {
-products = "";
-get_products(){
-        this.http.get(this.globalService.dataApi).subscribe((res)=>{
-            console.log(this.products)
-        });
-  };
-  constructor(private http: HttpClient,private globalService: GlobalService){}
-
+private basePath = '/details';
+courses: Observable < any > | any;
+ constructor(private db: AngularFireDatabase, private globalService: GlobalService) {
+    this.courses = db.list(this.basePath).valueChanges()
+        .subscribe(courses => {
+            this.courses = courses;
+        })
+	}
+	getData() {
+	    return this.courses;
+	}
   ngOnInit() {}
 
 }

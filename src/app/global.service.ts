@@ -14,7 +14,4 @@ dataApi = "https://jsonplaceholder.typicode.com/todos";
   console.log('Success');
   }
 
-  
-
-
 }

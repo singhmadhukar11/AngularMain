@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { GlobalService } from '../global.service';
 import { AngularFireDatabase } from '@angular/fire/database';
 import {Observable} from 'rxjs';
+import {Sort} from '@angular/material/sort';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 @Component({
   selector: 'app-activity',
   templateUrl: './activity.component.html',
@@ -14,6 +16,9 @@ name:string = "";
 email:any = "";
 ctn:any = "";
 msg:any = "";
+address:any = "";
+lat:any = "";
+long:any = ""
 private basePath = '/details';
 
 courses: Observable < any > | any;
@@ -27,15 +32,29 @@ constructor(private db: AngularFireDatabase, private globalService: GlobalServic
 	    return this.courses;
 	}
 
-  submitFunction(name, email, ctn, msg) {
+  submitFunction(name, email, ctn, msg, address, lat, long) {
      const dataObj = {
       name: name,
       email: email,
       ctn: ctn,
-      msg: msg
+      msg: msg,
+      address: address,
+      lat: lat,
+      long: long
     };
     this.globalService.submitFunction(dataObj);
   }
+
+  resetForm(){
+      this.name ="",
+      this.email = "",
+      this.ctn = "",
+      this.msg = "",
+      this.address = "",
+      this.lat = "",
+      this.long = ""
+  }
+
 ngOnInit() {}
   
 

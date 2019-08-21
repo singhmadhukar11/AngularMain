@@ -28,6 +28,10 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { MapComponent } from './map/map.component';
+import { AgmCoreModule } from '@agm/core';
 const routes: Routes = [
 { path: 'dashboard', component: DashboardComponent },
 { path: 'activity',  component: ActivityComponent },
@@ -35,7 +39,9 @@ const routes: Routes = [
 { path: 'chart',  component: ChartComponent },
 { path: 'help',  component: HelpComponent },
 { path: '', component: DashboardComponent },
+{ path: 'map', component: MapComponent },
 { path: '**', component: PageNotFoundComponent }
+
 ];
 @NgModule({
   declarations: [
@@ -48,7 +54,8 @@ const routes: Routes = [
     ChartComponent,
     HelpComponent,
     AgGridComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -67,10 +74,15 @@ const routes: Routes = [
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     FormsModule,
+    MatProgressSpinnerModule,
+    MatTooltipModule,
     RouterModule.forRoot(
       routes,
     ),
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([]),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCsfAKMcwNFRB3o4uGi6Z5BD9-1kw6yy34'
+    })
 
   ],
   providers: [],

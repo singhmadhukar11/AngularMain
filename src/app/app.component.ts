@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-
 export interface type{
     name:string;
     icon:string;
@@ -11,7 +10,7 @@ export interface type{
 })
 
 export class AppComponent {
-title = 'Angular-ie';
+    title = 'Angular-ie';
     today = new Date();
     sideNavmenus: type[] = [{
             name: 'dashboard',
@@ -32,6 +31,10 @@ title = 'Angular-ie';
         {
             name: 'help',
             icon: 'help'
+        },
+        {
+            name: 'map',
+            icon: 'map'
         },
         {
             name: 'signout',

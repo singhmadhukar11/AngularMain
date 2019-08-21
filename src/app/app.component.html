@@ -1,21 +1,22 @@
 <div>
   <app-header></app-header>
   <div fxLayout="row" class="main-height">
-    <div fxFlex="15" class="Sidenav" style="padding: 0;">
+    <div fxFlex="5" class="Sidenav" style="padding: 0;">
       <!-- <div routerLink="/dashboard" routerLinkActive="active">Dashboard</div>
       <div routerLink="/activity" routerLinkActive="active">Activity</div> -->
       <mat-list>
         <div *ngFor="let menu of sideNavmenus" class="sideNav-txt">
         <mat-list-item routerLinkActive="active" routerLink="/{{menu.name}}">
+           <button mat-icon-button matTooltip="{{menu.icon}}" matTooltipPosition="right">
           <mat-icon mat-list-icon style="color: dimgrey;">{{menu.icon}}</mat-icon>
-          <h4 mat-line><span class="ft-clr">{{menu.name}}</span></h4>
+  </button>
+          <!-- <h4 mat-line><span class="ft-clr">{{menu.name}}</span></h4> -->
         </mat-list-item>
       </div>
       </mat-list>
     </div>
-     <div fxFlex="85" class="Maincontent">
+     <div fxFlex="95" class="Maincontent">
 <router-outlet></router-outlet>
 </div>
   </div>
 </div>
-
