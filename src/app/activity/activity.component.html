@@ -9,7 +9,8 @@
   	</mat-form-field>
 	<mat-form-field fxFlex="25">
 	<span matPrefix>+91 &nbsp;</span>
-    <input matInput placeholder="Contact No" type="tel" value="{{ctn}}" [(ngModel)]="ctn">
+    <input matInput #phone placeholder="Contact No" type="tel" value="{{ctn}}" [(ngModel)]="ctn" maxlength="10">
+    <mat-hint align="end">{{phone.value.length}} / 10</mat-hint>
   	</mat-form-field>
 	</div>
   <div fxLayout="row" fxLayoutAlign="space-around center">
@@ -26,7 +27,8 @@
 
 	<div  fxLayout="row" fxLayoutAlign="space-around center" >
 	<mat-form-field style="width: 92%">
-    <input matInput placeholder="Message" value="{{msg}}" [(ngModel)]="msg">
+    <input matInput placeholder="Message" value="{{msg}}" [(ngModel)]="msg" maxlength="100" #message>
+    <mat-hint align="end">{{message.value.length}} / 100</mat-hint>
   	</mat-form-field>
 	</div>
 	<div fxLayout="row" fxLayoutAlign="end center" style="margin-right: 4%;">
@@ -34,7 +36,6 @@
 	</div>
 	</mat-card>
 </div>
-
 <!-- mat-card>
 	<div *ngFor="let hero of courses">
       {{ hero.name}} || {{ hero.email}} || {{ hero.msg}} || {{hero.ctn}}
