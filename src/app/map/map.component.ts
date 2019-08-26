@@ -71,13 +71,7 @@ courses: Observable < any > | any;
     }
   ]
 
-
-
-
-  
-  ngOnInit() {
-    console.log('your Data is'+this.mapData);
-  }
+  ngOnInit() {}
 
 }
 
