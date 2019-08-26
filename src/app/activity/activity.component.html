@@ -53,7 +53,7 @@
     <th mat-sort-header="carbs"  style="text-align: left;">Longitude</th>
   </tr>
 
-  <tr *ngFor="let hero of courses">
+  <tr *ngFor="let hero of courses" (click)="delete(name)">
     <td>{{ hero.name}}</td>
     <td>{{ hero.email}}</td>
     <td>{{ hero.msg}}</td>

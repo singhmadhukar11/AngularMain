@@ -55,6 +55,11 @@ constructor(private db: AngularFireDatabase, private globalService: GlobalServic
       this.long = ""
   }
 
+  delete(name) {
+    debugger;
+    this.courses.remove(name);
+  }
+
 ngOnInit() {}
   
 

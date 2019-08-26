@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n\t<mat-card>\r\n\t<div fxLayout=\"row\" fxLayoutAlign=\"space-around center\">\r\n\t<mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Name\" value=\"{{name}}\" [(ngModel)]=\"name\">\r\n  \t</mat-form-field>\r\n\t<mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Email Address\" value=\"{{email}}\" [(ngModel)]=\"email\">\r\n  \t</mat-form-field>\r\n\t<mat-form-field fxFlex=\"25\">\r\n\t<span matPrefix>+91 &nbsp;</span>\r\n    <input matInput placeholder=\"Contact No\" type=\"tel\" value=\"{{ctn}}\" [(ngModel)]=\"ctn\">\r\n  \t</mat-form-field>\r\n\t</div>\r\n  <div fxLayout=\"row\" fxLayoutAlign=\"space-around center\">\r\n  <mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Address\" value=\"{{address}}\" [(ngModel)]=\"address\">\r\n    </mat-form-field>\r\n  <mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Latitude\" value=\"{{lat}}\" [(ngModel)]=\"lat\">\r\n    </mat-form-field>\r\n  <mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Logitude\"  value=\"{{long}}\" [(ngModel)]=\"long\">\r\n    </mat-form-field>\r\n  </div>\r\n\r\n\t<div  fxLayout=\"row\" fxLayoutAlign=\"space-around center\" >\r\n\t<mat-form-field style=\"width: 92%\">\r\n    <input matInput placeholder=\"Message\" value=\"{{msg}}\" [(ngModel)]=\"msg\">\r\n  \t</mat-form-field>\r\n\t</div>\r\n\t<div fxLayout=\"row\" fxLayoutAlign=\"end center\" style=\"margin-right: 4%;\">\r\n\t<button mat-raised-button color=\"primary\" (click)=\"submitFunction(name,email,ctn,msg,address,lat,long);resetForm()\" routerLink=\"/mail\">Submit</button>\r\n\t</div>\r\n\t</mat-card>\r\n</div>\r\n\r\n<!-- mat-card>\r\n\t<div *ngFor=\"let hero of courses\">\r\n      {{ hero.name}} || {{ hero.email}} || {{ hero.msg}} || {{hero.ctn}}\r\n    </div>\r\n</mat-card> -->\r\n<!-- <mat-card>\r\n<table>\r\n  <tr>\r\n    <th mat-sort-header=\"name\"  style=\"text-align: left;\">Name</th>\r\n    <th mat-sort-header=\"calories\"  style=\"text-align: left;\">Email</th>\r\n    <th mat-sort-header=\"fat\"  style=\"text-align: left;\">Message</th>\r\n    <th mat-sort-header=\"carbs\"  style=\"text-align: left;\">Contact No</th>\r\n    <th mat-sort-header=\"calories\"  style=\"text-align: left;\">Address</th>\r\n    <th mat-sort-header=\"fat\"  style=\"text-align: left;\">Latitude</th>\r\n    <th mat-sort-header=\"carbs\"  style=\"text-align: left;\">Longitude</th>\r\n  </tr>\r\n\r\n  <tr *ngFor=\"let hero of courses\">\r\n    <td>{{ hero.name}}</td>\r\n    <td>{{ hero.email}}</td>\r\n    <td>{{ hero.msg}}</td>\r\n    <td>{{hero.ctn}}</td>\r\n    <td>{{ hero.address}}</td>\r\n    <td>{{ hero.lat}}</td>\r\n    <td>{{hero.long}}</td>\r\n  </tr>\r\n</table>\r\n</mat-card> -->"
+module.exports = "<div>\r\n\t<mat-card>\r\n\t<div fxLayout=\"row\" fxLayoutAlign=\"space-around center\">\r\n\t<mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Name\" value=\"{{name}}\" [(ngModel)]=\"name\">\r\n  \t</mat-form-field>\r\n\t<mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Email Address\" value=\"{{email}}\" [(ngModel)]=\"email\">\r\n  \t</mat-form-field>\r\n\t<mat-form-field fxFlex=\"25\">\r\n\t<span matPrefix>+91 &nbsp;</span>\r\n    <input matInput #phone placeholder=\"Contact No\" type=\"tel\" value=\"{{ctn}}\" [(ngModel)]=\"ctn\" maxlength=\"10\">\r\n    <mat-hint align=\"end\">{{phone.value.length}} / 10</mat-hint>\r\n  \t</mat-form-field>\r\n\t</div>\r\n  <div fxLayout=\"row\" fxLayoutAlign=\"space-around center\">\r\n  <mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Address\" value=\"{{address}}\" [(ngModel)]=\"address\">\r\n    </mat-form-field>\r\n  <mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Latitude\" value=\"{{lat}}\" [(ngModel)]=\"lat\">\r\n    </mat-form-field>\r\n  <mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Logitude\"  value=\"{{long}}\" [(ngModel)]=\"long\">\r\n    </mat-form-field>\r\n  </div>\r\n\r\n\t<div  fxLayout=\"row\" fxLayoutAlign=\"space-around center\" >\r\n\t<mat-form-field style=\"width: 92%\">\r\n    <input matInput placeholder=\"Message\" value=\"{{msg}}\" [(ngModel)]=\"msg\" maxlength=\"100\" #message>\r\n    <mat-hint align=\"end\">{{message.value.length}} / 100</mat-hint>\r\n  \t</mat-form-field>\r\n\t</div>\r\n\t<div fxLayout=\"row\" fxLayoutAlign=\"end center\" style=\"margin-right: 4%;\">\r\n\t<button mat-raised-button color=\"primary\" (click)=\"submitFunction(name,email,ctn,msg,address,lat,long);resetForm()\" routerLink=\"/mail\">Submit</button>\r\n\t</div>\r\n\t</mat-card>\r\n</div>\r\n<!-- mat-card>\r\n\t<div *ngFor=\"let hero of courses\">\r\n      {{ hero.name}} || {{ hero.email}} || {{ hero.msg}} || {{hero.ctn}}\r\n    </div>\r\n</mat-card> -->\r\n<!-- <mat-card>\r\n<table>\r\n  <tr>\r\n    <th mat-sort-header=\"name\"  style=\"text-align: left;\">Name</th>\r\n    <th mat-sort-header=\"calories\"  style=\"text-align: left;\">Email</th>\r\n    <th mat-sort-header=\"fat\"  style=\"text-align: left;\">Message</th>\r\n    <th mat-sort-header=\"carbs\"  style=\"text-align: left;\">Contact No</th>\r\n    <th mat-sort-header=\"calories\"  style=\"text-align: left;\">Address</th>\r\n    <th mat-sort-header=\"fat\"  style=\"text-align: left;\">Latitude</th>\r\n    <th mat-sort-header=\"carbs\"  style=\"text-align: left;\">Longitude</th>\r\n  </tr>\r\n\r\n  <tr *ngFor=\"let hero of courses\">\r\n    <td>{{ hero.name}}</td>\r\n    <td>{{ hero.email}}</td>\r\n    <td>{{ hero.msg}}</td>\r\n    <td>{{hero.ctn}}</td>\r\n    <td>{{ hero.address}}</td>\r\n    <td>{{ hero.lat}}</td>\r\n    <td>{{hero.long}}</td>\r\n  </tr>\r\n</table>\r\n</mat-card> -->"
 
 /***/ }),
 
@@ -129,7 +129,7 @@ module.exports = "<mat-card>\r\n<table>\r\n  <tr>\r\n    <th mat-sort-header=\"n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<agm-map \r\n  [latitude]=\"lat\"\r\n  [longitude]=\"lng\"\r\n  [zoom]=\"zoom\"\r\n  [disableDefaultUI]=\"false\"\r\n  [zoomControl]=\"true\"\r\n  (mapClick)=\"mapClicked($event)\">\r\n\r\n  <agm-marker \r\n      *ngFor=\"let m of markers; let i = index\"\r\n      (markerClick)=\"clickedMarker(m.label, i)\"\r\n      [latitude]=\"m.lat\"\r\n      [longitude]=\"m.lng\"\r\n      [label]=\"m.label\"\r\n      [markerDraggable]=\"m.draggable\"\r\n      (dragEnd)=\"markerDragEnd(m, $event)\">\r\n      \r\n    <agm-info-window>\r\n      <strong>{{m.name}}</strong>\r\n    </agm-info-window>\r\n    \r\n  </agm-marker>\r\n\r\n  <tr *ngFor=\"let hero of courses\">\r\n    <td>{{ hero.name}}</td>\r\n    <td>{{ hero.email}}</td>\r\n    <td>{{ hero.msg}}</td>\r\n    <td>{{hero.ctn}}</td>\r\n    <td>{{ hero.address}}</td>\r\n    <td>{{ hero.lat}}</td>\r\n    <td>{{hero.long}}</td>\r\n  </tr>"
+module.exports = "<agm-map \r\n  [latitude]=\"lat\"\r\n  [longitude]=\"lng\"\r\n  [zoom]=\"zoom\"\r\n  [disableDefaultUI]=\"false\"\r\n  [zoomControl]=\"true\"\r\n  (mapClick)=\"mapClicked($event)\">\r\n\r\n  <agm-marker \r\n      *ngFor=\"let m of markers; let i = index\"\r\n      (markerClick)=\"clickedMarker(m.label, i)\"\r\n      [latitude]=\"m.lat\"\r\n      [longitude]=\"m.lng\"\r\n      [label]=\"m.label\"\r\n      [markerDraggable]=\"m.draggable\"\r\n      (dragEnd)=\"markerDragEnd(m, $event)\">\r\n      \r\n    <agm-info-window>\r\n      <strong>{{m.name}}</strong>\r\n    </agm-info-window>\r\n    \r\n  </agm-marker>"
 
 /***/ }),
 
@@ -873,15 +873,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapComponent", function() { return MapComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/es2015/index.js");
-/* harmony import */ var _global_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../global.service */ "./src/app/global.service.ts");
-
+/* harmony import */ var _global_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../global.service */ "./src/app/global.service.ts");
 
 
 
 let MapComponent = class MapComponent {
-    constructor(db, globalService) {
-        this.db = db;
+    constructor(globalService) {
         this.globalService = globalService;
         this.basePath = '/details';
         // google maps zoom level
@@ -902,10 +899,6 @@ let MapComponent = class MapComponent {
                 name: 'Indore'
             }
         ];
-        this.courses = db.list(this.basePath).valueChanges()
-            .subscribe(courses => {
-            this.courses = courses;
-        });
         if (navigator) {
             navigator.geolocation.getCurrentPosition(pos => {
                 this.lng = +pos.coords.longitude;
@@ -920,21 +913,17 @@ let MapComponent = class MapComponent {
         this.markers.push({
             lat: $event.coords.lat,
             lng: $event.coords.lng,
-            draggable: true
+            draggable: false
         });
     }
     markerDragEnd(m, $event) {
         console.log('dragEnd', m, $event);
     }
-    getData() {
-        return this.courses;
-    }
     ngOnInit() {
     }
 };
 MapComponent.ctorParameters = () => [
-    { type: _angular_fire_database__WEBPACK_IMPORTED_MODULE_2__["AngularFireDatabase"] },
-    { type: _global_service__WEBPACK_IMPORTED_MODULE_3__["GlobalService"] }
+    { type: _global_service__WEBPACK_IMPORTED_MODULE_2__["GlobalService"] }
 ];
 MapComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

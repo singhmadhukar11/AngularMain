@@ -7,10 +7,9 @@
   (mapClick)="mapClicked($event)">
 
   <agm-marker 
-      *ngFor="let m of markers; let i = index"
-      (markerClick)="clickedMarker(m.label, i)"
+      *ngFor="let m of courses"
       [latitude]="m.lat"
-      [longitude]="m.lng"
+      [longitude]="m.long"
       [label]="m.label"
       [markerDraggable]="m.draggable"
       (dragEnd)="markerDragEnd(m, $event)">
@@ -20,3 +19,4 @@
     </agm-info-window>
     
   </agm-marker>
+  </agm-map>

@@ -18,9 +18,9 @@ courses: Observable < any > | any;
             this.courses = courses;
         })
 	}
-	getData() {
-	    return this.courses;
-	}
-  ngOnInit() {}
+
+    ngOnInit() {
+    return this.courses;
+  }
 
 }

@@ -10,23 +10,33 @@ import { MouseEvent } from '@agm/core';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-
-    private basePath = '/details';
-courses: Observable < any > | any;
 	  // google maps zoom level
   zoom: number = 8;
   
   // initial center position for the map
   lat: any;
   lng: any;
-  constructor(private globalService: GlobalService){
+  locations:any;
+  private basePath = '/details';
+courses: Observable < any > | any;
+  constructor(private db: AngularFireDatabase,private globalService: GlobalService){
     if (navigator)
     {
     navigator.geolocation.getCurrentPosition( pos => {
         this.lng = +pos.coords.longitude;
         this.lat = +pos.coords.latitude;
       });
+    this.courses = db.list(this.basePath).valueChanges()
+        .subscribe(courses => {
+            this.courses = courses;
+        });
+    
  }}
+
+   getData() {
+      return this.courses;
+  }
+
 
   clickedMarker(label: string, index: number) {
     console.log(`clicked the marker: ${label || index}`)
@@ -62,9 +72,11 @@ courses: Observable < any > | any;
   ]
 
 
+
+
   
   ngOnInit() {
-    
+    console.log('your Data is'+this.mapData);
   }
 
 }
