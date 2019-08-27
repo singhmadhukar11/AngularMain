@@ -20,7 +20,6 @@ address:any = "";
 lat:any;
 long:any;
 private basePath = '/details';
-
 courses: Observable < any > | any;
 constructor(private db: AngularFireDatabase, private globalService: GlobalService) {
     this.courses = db.list(this.basePath).valueChanges()

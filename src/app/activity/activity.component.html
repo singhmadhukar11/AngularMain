@@ -5,17 +5,16 @@
     <input matInput placeholder="Name" value="{{name}}" [(ngModel)]="name">
   	</mat-form-field>
 	<mat-form-field fxFlex="25">
-    <input matInput placeholder="Email Address" value="{{email}}" [(ngModel)]="email">
+    <input matInput placeholder="Email Address" value="{{email}}" [(ngModel)]="email" [disabled]="!name">
   	</mat-form-field>
 	<mat-form-field fxFlex="25">
-	<span matPrefix>+91 &nbsp;</span>
-    <input matInput #phone placeholder="Contact No" type="tel" value="{{ctn}}" [(ngModel)]="ctn" maxlength="10">
+    <input matInput #phone placeholder="Contact No" type="tel" value="{{ctn}}" [(ngModel)]="ctn" maxlength="10" [disabled]="!email">
     <mat-hint align="end">{{phone.value.length}} / 10</mat-hint>
   	</mat-form-field>
 	</div>
   <div fxLayout="row" fxLayoutAlign="space-around center">
   <mat-form-field fxFlex="25">
-    <input matInput placeholder="Address" value="{{address}}" [(ngModel)]="address">
+    <input matInput placeholder="Address" value="{{address}}" [(ngModel)]="address" [disabled]="!ctn">
     </mat-form-field>
   <mat-form-field fxFlex="25">
     <input matInput placeholder="Latitude" value="{{lat}}" [(ngModel)]="lat">
@@ -27,12 +26,12 @@
 
 	<div  fxLayout="row" fxLayoutAlign="space-around center" >
 	<mat-form-field style="width: 92%">
-    <input matInput placeholder="Message" value="{{msg}}" [(ngModel)]="msg" maxlength="100" #message>
+    <input matInput placeholder="Message" value="{{msg}}" [(ngModel)]="msg" maxlength="100" #message [disabled]="!address">
     <mat-hint align="end">{{message.value.length}} / 100</mat-hint>
   	</mat-form-field>
 	</div>
 	<div fxLayout="row" fxLayoutAlign="end center" style="margin-right: 4%;">
-	<button mat-raised-button color="primary" (click)="submitFunction(name,email,ctn,msg,address,lat,long);resetForm()" routerLink="/mail">Submit</button>
+	<button mat-raised-button color="primary" (click)="submitFunction(name,email,ctn,msg,address,lat,long);resetForm()" [disabled]="!address || !msg" routerLink="/mail">Submit</button>
 	</div>
 	</mat-card>
 </div>
