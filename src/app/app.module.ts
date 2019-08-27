@@ -33,6 +33,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from '@agm/core';
 import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
+import { MatTableModule } from '@angular/material'  
 const routes: Routes = [
 { path: 'dashboard', component: DashboardComponent },
 { path: 'activity',  component: ActivityComponent },
@@ -84,7 +85,8 @@ const routes: Routes = [
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCsfAKMcwNFRB3o4uGi6Z5BD9-1kw6yy34'
     }),
-    AgmJsMarkerClustererModule
+    AgmJsMarkerClustererModule,
+    MatTableModule
 
   ],
   providers: [],

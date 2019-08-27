@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import {Observable} from 'rxjs';
+import { MatTableModule } from '@angular/material'  
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -15,10 +16,16 @@ private basePath = '/details';
 this.courses = db.list(this.basePath).valueChanges()
         .subscribe(courses => {
             this.courses = courses;
+
         })
   }
+
+displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+
 
   ngOnInit() {
   }
 
 }
+
+

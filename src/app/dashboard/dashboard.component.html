@@ -21,23 +21,52 @@
         <mat-card fxFlex="20" fxLayout="row" fxLayoutAlign="space-between center">
           <div><i class="material-icons">shopping_cart</i></div>
           <div class="card-txt">
-            <div class="text-align-rgt">$3000</div>
+            <div class="text-align-rgt">${{courses.length * 57}}</div>
             <div>Today's sale</div>
           </div>
         </mat-card>
         <mat-card fxFlex="20" fxLayout="row" fxLayoutAlign="space-between center">
           <div><i class="material-icons">visibility</i></div>
           <div class="card-txt">
-            <div class="text-align-rgt">{{courses.length}}</div>
+            <div class="text-align-rgt">{{courses.length * 5}}</div>
             <div>Total Visits</div>
           </div>
         </mat-card>
         <mat-card fxFlex="20" fxLayout="row" fxLayoutAlign="space-between center">
           <div><i class="material-icons">touch_app</i></div>
           <div class="card-txt">
-            <div class="text-align-rgt">2000</div>
+            <div class="text-align-rgt">{{courses.length * 2}}</div>
             <div>Online Orders</div>
           </div>
         </mat-card>
       </div>
-  <app-ag-grid></app-ag-grid>
+      <div>
+        <table mat-table [dataSource]="courses" class="mat-elevation-z8">
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> Name. </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Address </th>
+    <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="weight">
+    <th mat-header-cell *matHeaderCellDef> Email </th>
+    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="symbol">
+    <th mat-header-cell *matHeaderCellDef> Contact No </th>
+    <td mat-cell *matCellDef="let element"> {{element.ctn}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+      </div>

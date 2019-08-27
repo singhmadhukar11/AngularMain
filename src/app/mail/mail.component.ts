@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { GlobalService } from '../global.service';
 import { AngularFireDatabase } from '@angular/fire/database';
 import {Observable} from 'rxjs';
-import {Sort} from '@angular/material/sort';
+import { MatTableModule } from '@angular/material'  
 @Component({
   selector: 'app-mail',
   templateUrl: './mail.component.html',
@@ -20,7 +20,6 @@ courses: Observable < any > | any;
 	}
 
     ngOnInit() {
-    return this.courses;
   }
-
+displayedColumns: string[] = ['name', 'email', 'msg'];
 }
