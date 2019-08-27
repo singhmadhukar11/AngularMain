@@ -32,6 +32,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from '@agm/core';
+import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
 const routes: Routes = [
 { path: 'dashboard', component: DashboardComponent },
 { path: 'activity',  component: ActivityComponent },
@@ -82,7 +83,8 @@ const routes: Routes = [
     AgGridModule.withComponents([]),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCsfAKMcwNFRB3o4uGi6Z5BD9-1kw6yy34'
-    })
+    }),
+    AgmJsMarkerClustererModule
 
   ],
   providers: [],

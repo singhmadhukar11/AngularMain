@@ -5,19 +5,19 @@
   [disableDefaultUI]="false"
   [zoomControl]="true"
   (mapClick)="mapClicked($event)">
-
+<agm-marker-cluster imagePath="https://raw.githubusercontent.com/googlemaps/v3-utility-library/master/markerclustererplus/images/m">
   <agm-marker 
       *ngFor="let m of courses"
       [latitude]="m.lat"
       [longitude]="m.long"
       [label]="m.label"
       [iconUrl]="'../assets/man.png'"
-      [markerDraggable]="m.draggable"
-      (dragEnd)="markerDragEnd(m, $event)">
-      
-    <agm-info-window>
+      (mouseOver)="onMouseOver(infoWindow,$event)">
+    <agm-info-window #infoWindow>
       <strong>{{m.name}}</strong>
     </agm-info-window>
-    
   </agm-marker>
+  </agm-marker-cluster>
   </agm-map>
+
+  

@@ -17,8 +17,8 @@ email:any = "";
 ctn:any = "";
 msg:any = "";
 address:any = "";
-lat:any = "";
-long:any = ""
+lat:any;
+long:any;
 private basePath = '/details';
 
 courses: Observable < any > | any;
@@ -27,6 +27,7 @@ constructor(private db: AngularFireDatabase, private globalService: GlobalServic
         .subscribe(courses => {
             this.courses = courses;
         })
+
 	}
 	getData() {
 	    return this.courses;
@@ -60,7 +61,13 @@ constructor(private db: AngularFireDatabase, private globalService: GlobalServic
     this.courses.remove(name);
   }
 
-ngOnInit() {}
+ngOnInit() {
+  navigator.geolocation.getCurrentPosition((position) => { 
+  // console.log("Got position", position.coords);
+  this.lat = position.coords.latitude; 
+  this.long = position.coords.longitude;
+});
+}
   
 
 }

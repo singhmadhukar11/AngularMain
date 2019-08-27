@@ -70,6 +70,9 @@ courses: Observable < any > | any;
       name: 'Indore'
     }
   ]
+  onMouseOver(infoWindow) {
+        infoWindow.open();
+    }
 
   ngOnInit() {}
 

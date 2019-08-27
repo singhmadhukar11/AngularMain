@@ -129,7 +129,7 @@ module.exports = "<mat-card>\r\n<table>\r\n  <tr>\r\n    <th mat-sort-header=\"n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<agm-map \r\n  [latitude]=\"lat\"\r\n  [longitude]=\"lng\"\r\n  [zoom]=\"zoom\"\r\n  [disableDefaultUI]=\"false\"\r\n  [zoomControl]=\"true\"\r\n  (mapClick)=\"mapClicked($event)\">\r\n\r\n  <agm-marker \r\n      *ngFor=\"let m of courses\"\r\n      [latitude]=\"m.lat\"\r\n      [longitude]=\"m.long\"\r\n      [label]=\"m.label\"\r\n      [markerDraggable]=\"m.draggable\"\r\n      (dragEnd)=\"markerDragEnd(m, $event)\">\r\n      \r\n    <agm-info-window>\r\n      <strong>{{m.name}}</strong>\r\n    </agm-info-window>\r\n    \r\n  </agm-marker>\r\n  </agm-map>"
+module.exports = "<agm-map \r\n  [latitude]=\"lat\"\r\n  [longitude]=\"lng\"\r\n  [zoom]=\"zoom\"\r\n  [disableDefaultUI]=\"false\"\r\n  [zoomControl]=\"true\"\r\n  (mapClick)=\"mapClicked($event)\">\r\n\r\n  <agm-marker \r\n      *ngFor=\"let m of courses\"\r\n      [latitude]=\"m.lat\"\r\n      [longitude]=\"m.long\"\r\n      [label]=\"m.label\"\r\n      [iconUrl]=\"'../assets/man.png'\"\r\n      [markerDraggable]=\"m.draggable\"\r\n      (dragEnd)=\"markerDragEnd(m, $event)\">\r\n      \r\n    <agm-info-window>\r\n      <strong>{{m.name}}</strong>\r\n    </agm-info-window>\r\n    \r\n  </agm-marker>\r\n  </agm-map>"
 
 /***/ }),
 
