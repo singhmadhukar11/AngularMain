@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { Routes, RouterModule, Router } from '@angular/router';
 export interface type{
     name:string;
     icon:string;
@@ -12,6 +13,7 @@ export interface type{
 export class AppComponent {
     title = 'Angular-ie';
     today = new Date();
+    constructor(private router: Router) {}
     sideNavmenus: type[] = [{
             name: 'dashboard',
             icon: 'dashboard'
@@ -41,4 +43,15 @@ export class AppComponent {
             icon: 'exit_to_app'
         }
     ];
+
+    selectedIdx = 0;
+
+    selectItem(index):void {
+        this.selectedIdx = index;
+    }
+
+
+  ngOnInit() {
+    this.router.navigate([''])
+  }
 }

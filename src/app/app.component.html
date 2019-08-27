@@ -5,8 +5,8 @@
       <!-- <div routerLink="/dashboard" routerLinkActive="active">Dashboard</div>
       <div routerLink="/activity" routerLinkActive="active">Activity</div> -->
       <mat-list>
-        <div *ngFor="let menu of sideNavmenus" class="sideNav-txt">
-        <mat-list-item routerLinkActive="active" routerLink="/{{menu.name}}">
+        <div *ngFor="let menu of sideNavmenus;let i = index" class="sideNav-txt">
+        <mat-list-item  (click)="selectItem(i)" routerLink="/{{menu.name}}" [ngClass]="{'active': selectedIdx == i}">
            <button mat-icon-button matTooltip="{{menu.icon}}" matTooltipPosition="right">
           <mat-icon mat-list-icon style="color: #232f3e;">{{menu.icon}}</mat-icon>
   </button>

@@ -36,7 +36,7 @@ courses: Observable < any > | any;
    getData() {
       return this.courses;
   }
-
+mapStyle = this.globalService.styles;
 
   clickedMarker(label: string, index: number) {
     console.log(`clicked the marker: ${label || index}`)
