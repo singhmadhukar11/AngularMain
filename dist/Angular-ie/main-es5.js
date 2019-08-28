@@ -118,7 +118,7 @@ module.exports = "<div>Highchart Works</div>"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <mat-card>\r\n<table>\r\n  <tr>\r\n    <th mat-sort-header=\"name\"  style=\"text-align: left;\">Name</th>\r\n    <th mat-sort-header=\"calories\"  style=\"text-align: left;\">Email</th>\r\n    <th mat-sort-header=\"fat\"  style=\"text-align: left;\">Message</th>\r\n    <th mat-sort-header=\"carbs\"  style=\"text-align: left;\">Contact No</th>\r\n    <th mat-sort-header=\"calories\"  style=\"text-align: left;\">Address</th>\r\n    <th mat-sort-header=\"fat\"  style=\"text-align: left;\">Latitude</th>\r\n    <th mat-sort-header=\"carbs\"  style=\"text-align: left;\">Longitude</th>\r\n  </tr>\r\n\r\n  <tr *ngFor=\"let hero of courses\">\r\n    <td>{{ hero.name}}</td>\r\n    <td>{{ hero.email}}</td>\r\n    <td>{{ hero.msg}}</td>\r\n    <td>{{hero.ctn}}</td>\r\n    <td>{{ hero.address}}</td>\r\n    <td>{{ hero.lat}}</td>\r\n    <td>{{hero.long}}</td>\r\n  </tr>\r\n</table>\r\n</mat-card> -->\r\n\r\n <div>\r\n        <table mat-table [dataSource]=\"courses\" class=\"mat-elevation-z8\">\r\n  <!-- Position Column -->\r\n  <ng-container matColumnDef=\"name\">\r\n    <th mat-header-cell *matHeaderCellDef> Name </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"email\">\r\n    <th mat-header-cell *matHeaderCellDef> Email </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.email}} </td>\r\n  </ng-container>\r\n\r\n<ng-container matColumnDef=\"msg\">\r\n    <th mat-header-cell *matHeaderCellDef> Message </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.msg}} </td>\r\n  </ng-container>\r\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n</table>\r\n      </div>"
+module.exports = "<div>\r\n<table mat-table [dataSource]=\"courses\" class=\"mat-elevation-z8\">\r\n  <ng-container matColumnDef=\"name\">\r\n    <th mat-header-cell *matHeaderCellDef><mat-checkbox color=\"primary\">Name</mat-checkbox>  </th>\r\n    <td mat-cell *matCellDef=\"let element\"> <mat-checkbox color=\"primary\">{{element.name}}</mat-checkbox> </td>\r\n  </ng-container>\r\n  <ng-container matColumnDef=\"email\">\r\n    <th mat-header-cell *matHeaderCellDef> Email </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.email}} </td>\r\n  </ng-container>\r\n  <ng-container matColumnDef=\"msg\">\r\n    <th mat-header-cell *matHeaderCellDef> Message </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.msg}} </td>\r\n  </ng-container>\r\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n</table>\r\n</div>"
 
 /***/ }),
 
@@ -471,6 +471,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
 /* harmony import */ var _agm_js_marker_clusterer__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! @agm/js-marker-clusterer */ "./node_modules/@agm/js-marker-clusterer/index.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm5/checkbox.es5.js");
+
 
 
 
@@ -561,7 +563,8 @@ var AppModule = /** @class */ (function () {
                     apiKey: 'AIzaSyCsfAKMcwNFRB3o4uGi6Z5BD9-1kw6yy34'
                 }),
                 _agm_js_marker_clusterer__WEBPACK_IMPORTED_MODULE_35__["AgmJsMarkerClustererModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_36__["MatTableModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_36__["MatTableModule"],
+                _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_37__["MatCheckboxModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]

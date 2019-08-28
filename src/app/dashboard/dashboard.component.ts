@@ -15,22 +15,34 @@ export interface UserData {
 })
 export class DashboardComponent implements OnInit {
  title = 'Angular-ie';
- today = new Date()
-private basePath = '/details';
+ date = new Date()
+ time = this.date.getHours();
+ greet:any = "";
+ private basePath = '/details';
  courses: Observable < any > | any | UserData;
+ 
   constructor(private db: AngularFireDatabase) { 
-this.courses = db.list(this.basePath).valueChanges()
-        .subscribe(courses => {
-            this.courses = courses;
 
-        })
+        this.courses = db.list(this.basePath).valueChanges()
+            .subscribe(courses => {
+                this.courses = courses;
+            })
+
+        if (this.time < 12) {
+            debugger;
+            this.greet = "Good morning";
+        } else if (this.time < 14) {
+            this.greet = "Good Afternoon";
+        } else {
+            this.greet = "Good evening";
+        }
+
   }
 
 displayedColumns: string[] = ['name', 'address', 'email', 'ctn'];
 
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }
 

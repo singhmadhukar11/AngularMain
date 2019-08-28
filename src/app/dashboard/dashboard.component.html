@@ -1,12 +1,12 @@
       <mat-card class="margin-bottom-15">
         <div fxLayout="row" fxLayoutAlign="space-between center">
           <div>
-            <div><b>Good Morning</b>, Z-Team</div>
+            <div><b>{{greet}}</b>, Z-Team</div>
             <div class="acc">Account Type: <b>Personal</b></div>
           </div>
           <div>
-            <div>Time: <b>{{today | date:'hh:mm a':'+0530'}}</b></div>
-            <div class="acc">Date: <b>{{today | date:'dd-MM-yyyy'}}</b></div>
+            <div>Time: <b>{{date | date:'hh:mm a':'+0530'}}</b></div>
+            <div class="acc">Date: <b>{{date | date:'dd-MM-yyyy'}}</b></div>
           </div>
         </div>
       </mat-card>
