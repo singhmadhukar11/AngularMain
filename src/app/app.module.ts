@@ -34,6 +34,7 @@ import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from '@agm/core';
 import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
 import { MatTableModule } from '@angular/material'  
+import {MatCheckboxModule} from '@angular/material/checkbox';
 const routes: Routes = [
 { path: 'dashboard', component: DashboardComponent },
 { path: 'activity',  component: ActivityComponent },
@@ -86,7 +87,8 @@ const routes: Routes = [
       apiKey: 'AIzaSyCsfAKMcwNFRB3o4uGi6Z5BD9-1kw6yy34'
     }),
     AgmJsMarkerClustererModule,
-    MatTableModule
+    MatTableModule,
+    MatCheckboxModule
 
   ],
   providers: [],

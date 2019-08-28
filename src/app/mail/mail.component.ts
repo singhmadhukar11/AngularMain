@@ -4,6 +4,7 @@ import { GlobalService } from '../global.service';
 import { AngularFireDatabase } from '@angular/fire/database';
 import {Observable} from 'rxjs';
 import { MatTableModule } from '@angular/material'  
+import {MatCheckboxModule} from '@angular/material/checkbox';
 @Component({
   selector: 'app-mail',
   templateUrl: './mail.component.html',
