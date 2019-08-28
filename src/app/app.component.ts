@@ -15,8 +15,8 @@ export class AppComponent {
     today = new Date();
     constructor(private router: Router) {}
     sideNavmenus: type[] = [{
-            name: 'dashboard',
-            icon: 'dashboard'
+           name: 'map',
+            icon: 'map'
         },
         {
             name: 'activity',
@@ -35,8 +35,8 @@ export class AppComponent {
             icon: 'help'
         },
         {
-            name: 'map',
-            icon: 'map'
+             name: 'dashboard',
+            icon: 'dashboard'
         },
         {
             name: 'signout',

@@ -40,7 +40,7 @@ const routes: Routes = [
 { path: 'mail',  component: MailComponent },
 { path: 'chart',  component: ChartComponent },
 { path: 'help',  component: HelpComponent },
-{ path: '', component: DashboardComponent },
+{ path: '', component: MapComponent },
 { path: 'map', component: MapComponent },
 { path: '**', component: PageNotFoundComponent }
 
