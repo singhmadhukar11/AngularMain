@@ -1,6 +1,6 @@
 <div>
  <mat-toolbar color="primary">
-    <span>Dashboard</span>
+    <span class="dash-label">{{label}}</span>
     <!-- This fills the remaining space of the current row -->
     <span class="example-fill-remaining-space"></span>
       <span>User</span>
@@ -14,8 +14,8 @@
       <!-- <div routerLink="/dashboard" routerLinkActive="active">Dashboard</div>
       <div routerLink="/activity" routerLinkActive="active">Activity</div> -->
       <mat-list>
-        <div *ngFor="let menu of sideNavmenus;let i = index" class="sideNav-txt">
-        <mat-list-item  (click)="selectItem(i,menu)" routerLink="/{{menu.name}}" [ngClass]="{'active': selectedIdx == i}">
+        <div *ngFor="let menu of sideNavmenus;let i = index" (click)="selectItem(i,menu)" class="sideNav-txt">
+        <mat-list-item   routerLink="/{{menu.name}}" [ngClass]="{'active': selectedIdx == i}">
            <button mat-icon-button matTooltip="{{menu.icon}}" matTooltipPosition="right">
           <mat-icon mat-list-icon style="color: #232f3e;">{{menu.icon}}</mat-icon>
   </button>

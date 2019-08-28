@@ -45,9 +45,10 @@ export class AppComponent {
     ];
 
     selectedIdx = 0;
-
-    selectItem(index):void {
+    label:any = "MAP";
+    selectItem(index,menu):void {
         this.selectedIdx = index;
+        this.label = menu.name;
     }
 
 

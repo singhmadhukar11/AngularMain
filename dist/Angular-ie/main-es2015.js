@@ -74,7 +74,7 @@ module.exports = "<label class=\"image-upload-container btn btn-bwm\">\r\n  <spa
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "      <mat-card class=\"margin-bottom-15\">\r\n        <div fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n          <div>\r\n            <div><b>Good Morning</b>, Z-Team</div>\r\n            <div class=\"acc\">Account Type: <b>Personal</b></div>\r\n          </div>\r\n          <div>\r\n            <div>Time: <b>{{today | date:'hh:mm a':'+0530'}}</b></div>\r\n            <div class=\"acc\">Date: <b>{{today | date:'dd-MM-yyyy'}}</b></div>\r\n          </div>\r\n        </div>\r\n      </mat-card>\r\n      <div fxLayout=\"row\" fxLayoutAlign=\"space-between center\" class=\"mini-card\">\r\n        <mat-card fxFlex=\"20\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n          <div><i class=\"material-icons\">person</i></div>\r\n          <div class=\"card-txt\">\r\n            <div class=\"text-align-rgt\">{{courses.length}}</div>\r\n            <div>Total User</div>\r\n          </div>\r\n        </mat-card>\r\n        <mat-card fxFlex=\"20\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n          <div><i class=\"material-icons\">shopping_cart</i></div>\r\n          <div class=\"card-txt\">\r\n            <div class=\"text-align-rgt\">${{courses.length * 57}}</div>\r\n            <div>Today's sale</div>\r\n          </div>\r\n        </mat-card>\r\n        <mat-card fxFlex=\"20\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n          <div><i class=\"material-icons\">visibility</i></div>\r\n          <div class=\"card-txt\">\r\n            <div class=\"text-align-rgt\">{{courses.length * 5}}</div>\r\n            <div>Total Visits</div>\r\n          </div>\r\n        </mat-card>\r\n        <mat-card fxFlex=\"20\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n          <div><i class=\"material-icons\">touch_app</i></div>\r\n          <div class=\"card-txt\">\r\n            <div class=\"text-align-rgt\">{{courses.length * 2}}</div>\r\n            <div>Online Orders</div>\r\n          </div>\r\n        </mat-card>\r\n      </div>\r\n      <div>\r\n        <table mat-table [dataSource]=\"courses\" class=\"mat-elevation-z8\">\r\n  <!-- Position Column -->\r\n  <ng-container matColumnDef=\"name\">\r\n    <th mat-header-cell *matHeaderCellDef> Name. </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n  </ng-container>\r\n\r\n  <!-- Name Column -->\r\n  <ng-container matColumnDef=\"address\">\r\n    <th mat-header-cell *matHeaderCellDef> Address </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.address}} </td>\r\n  </ng-container>\r\n\r\n  <!-- Weight Column -->\r\n  <ng-container matColumnDef=\"email\">\r\n    <th mat-header-cell *matHeaderCellDef> Email </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.email}} </td>\r\n  </ng-container>\r\n\r\n  <!-- Symbol Column -->\r\n  <ng-container matColumnDef=\"ctn\">\r\n    <th mat-header-cell *matHeaderCellDef> Contact No </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.ctn}} </td>\r\n  </ng-container>\r\n\r\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n</table>\r\n      </div>"
+module.exports = "      <mat-card class=\"margin-bottom-15\">\r\n        <div fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n          <div>\r\n            <div><b>{{greet}}</b>, Z-Team</div>\r\n            <div class=\"acc\">Account Type: <b>Personal</b></div>\r\n          </div>\r\n          <div>\r\n            <div>Time: <b>{{date | date:'hh:mm a':'+0530'}}</b></div>\r\n            <div class=\"acc\">Date: <b>{{date | date:'dd-MM-yyyy'}}</b></div>\r\n          </div>\r\n        </div>\r\n      </mat-card>\r\n      <div fxLayout=\"row\" fxLayoutAlign=\"space-between center\" class=\"mini-card\">\r\n        <mat-card fxFlex=\"20\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n          <div><i class=\"material-icons\">person</i></div>\r\n          <div class=\"card-txt\">\r\n            <div class=\"text-align-rgt\">{{courses.length}}</div>\r\n            <div>Total User</div>\r\n          </div>\r\n        </mat-card>\r\n        <mat-card fxFlex=\"20\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n          <div><i class=\"material-icons\">shopping_cart</i></div>\r\n          <div class=\"card-txt\">\r\n            <div class=\"text-align-rgt\">${{courses.length * 57}}</div>\r\n            <div>Today's sale</div>\r\n          </div>\r\n        </mat-card>\r\n        <mat-card fxFlex=\"20\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n          <div><i class=\"material-icons\">visibility</i></div>\r\n          <div class=\"card-txt\">\r\n            <div class=\"text-align-rgt\">{{courses.length * 5}}</div>\r\n            <div>Total Visits</div>\r\n          </div>\r\n        </mat-card>\r\n        <mat-card fxFlex=\"20\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n          <div><i class=\"material-icons\">touch_app</i></div>\r\n          <div class=\"card-txt\">\r\n            <div class=\"text-align-rgt\">{{courses.length * 2}}</div>\r\n            <div>Online Orders</div>\r\n          </div>\r\n        </mat-card>\r\n      </div>\r\n      <div>\r\n        <table mat-table [dataSource]=\"courses\" class=\"mat-elevation-z8\">\r\n  <!-- Position Column -->\r\n  <ng-container matColumnDef=\"name\">\r\n    <th mat-header-cell *matHeaderCellDef> Name. </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n  </ng-container>\r\n\r\n  <!-- Name Column -->\r\n  <ng-container matColumnDef=\"address\">\r\n    <th mat-header-cell *matHeaderCellDef> Address </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.address}} </td>\r\n  </ng-container>\r\n\r\n  <!-- Weight Column -->\r\n  <ng-container matColumnDef=\"email\">\r\n    <th mat-header-cell *matHeaderCellDef> Email </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.email}} </td>\r\n  </ng-container>\r\n\r\n  <!-- Symbol Column -->\r\n  <ng-container matColumnDef=\"ctn\">\r\n    <th mat-header-cell *matHeaderCellDef> Contact No </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.ctn}} </td>\r\n  </ng-container>\r\n\r\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n</table>\r\n      </div>"
 
 /***/ }),
 
@@ -639,16 +639,27 @@ let DashboardComponent = class DashboardComponent {
     constructor(db) {
         this.db = db;
         this.title = 'Angular-ie';
-        this.today = new Date();
+        this.date = new Date();
+        this.time = this.date.getHours();
+        this.greet = "";
         this.basePath = '/details';
         this.displayedColumns = ['name', 'address', 'email', 'ctn'];
         this.courses = db.list(this.basePath).valueChanges()
             .subscribe(courses => {
             this.courses = courses;
         });
+        if (this.time < 12) {
+            debugger;
+            this.greet = "Good morning";
+        }
+        else if (this.time < 14) {
+            this.greet = "Good Afternoon";
+        }
+        else {
+            this.greet = "Good evening";
+        }
     }
-    ngOnInit() {
-    }
+    ngOnInit() { }
 };
 DashboardComponent.ctorParameters = () => [
     { type: _angular_fire_database__WEBPACK_IMPORTED_MODULE_2__["AngularFireDatabase"] }
