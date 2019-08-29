@@ -29,7 +29,7 @@ courses: Observable < any > | any;
         this.lng = +pos.coords.longitude;
         this.lat = +pos.coords.latitude;
       });
-    this.courses = db.list(this.basePath).valueChanges()
+     db.list(this.basePath).valueChanges()
         .subscribe(courses => {
             this.courses = courses;
         });

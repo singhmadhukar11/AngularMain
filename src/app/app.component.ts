@@ -31,12 +31,13 @@ export class AppComponent {
             icon: 'insert_chart'
         },
         {
-            name: 'help',
-            icon: 'help'
+            
+            name: 'dashboard',
+            icon: 'dashboard'
         },
         {
-             name: 'dashboard',
-            icon: 'dashboard'
+            name: 'help',
+            icon: 'help'
         },
         {
             name: 'signout',

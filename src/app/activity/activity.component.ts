@@ -22,7 +22,7 @@ long:any;
 private basePath = '/details';
 courses: Observable < any > | any;
 constructor(private db: AngularFireDatabase, private globalService: GlobalService) {
-    this.courses = db.list(this.basePath).valueChanges()
+    db.list(this.basePath).valueChanges()
         .subscribe(courses => {
             this.courses = courses;
         })

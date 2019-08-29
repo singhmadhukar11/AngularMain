@@ -19,11 +19,11 @@ export class DashboardComponent implements OnInit {
  time = this.date.getHours();
  greet:any = "";
  private basePath = '/details';
- courses: Observable < any > | any | UserData;
+ courses: Observable < any > | any | UserData | [];
  
   constructor(private db: AngularFireDatabase) { 
 
-        this.courses = db.list(this.basePath).valueChanges()
+        db.list(this.basePath).valueChanges()
             .subscribe(courses => {
                 this.courses = courses;
             })
