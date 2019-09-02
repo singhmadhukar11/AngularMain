@@ -23,8 +23,8 @@ export class AppComponent {
             icon: 'local_activity'
         },
         {
-            name: 'mail',
-            icon: 'email'
+            name: 'list',
+            icon: 'list'
         },
         {
             name: 'chart',

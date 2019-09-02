@@ -6,7 +6,7 @@
   [zoomControl]="true"
   [styles]="mapStyle"
   (mapClick)="mapClicked($event)">
-<!-- <agm-marker-cluster imagePath="https://raw.githubusercontent.com/googlemaps/v3-utility-library/master/markerclustererplus/images/m"> -->
+ <agm-marker-cluster imagePath="https://raw.githubusercontent.com/googlemaps/v3-utility-library/master/markerclustererplus/images/m"> 
   <agm-marker 
       *ngFor="let m of courses"
       [latitude]="m.lat"
@@ -19,7 +19,7 @@
       <strong>{{m.name}}</strong>
     </agm-info-window>
   </agm-marker>
-  <!-- </agm-marker-cluster> -->
+  </agm-marker-cluster>
   </agm-map>
 
   

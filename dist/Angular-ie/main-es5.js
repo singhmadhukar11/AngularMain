@@ -184,7 +184,7 @@ var ActivityComponent = /** @class */ (function () {
         this.msg = "";
         this.address = "";
         this.basePath = '/details';
-        this.courses = db.list(this.basePath).valueChanges()
+        db.list(this.basePath).valueChanges()
             .subscribe(function (courses) {
             _this.courses = courses;
         });
@@ -386,12 +386,12 @@ var AppComponent = /** @class */ (function () {
                 icon: 'insert_chart'
             },
             {
-                name: 'help',
-                icon: 'help'
-            },
-            {
                 name: 'dashboard',
                 icon: 'dashboard'
+            },
+            {
+                name: 'help',
+                icon: 'help'
             },
             {
                 name: 'signout',
@@ -660,7 +660,7 @@ var DashboardComponent = /** @class */ (function () {
         this.greet = "";
         this.basePath = '/details';
         this.displayedColumns = ['name', 'address', 'email', 'ctn'];
-        this.courses = db.list(this.basePath).valueChanges()
+        db.list(this.basePath).valueChanges()
             .subscribe(function (courses) {
             _this.courses = courses;
         });
@@ -1351,7 +1351,7 @@ var MailComponent = /** @class */ (function () {
         this.globalService = globalService;
         this.basePath = '/details';
         this.displayedColumns = ['name', 'email', 'msg'];
-        this.courses = db.list(this.basePath).valueChanges()
+        db.list(this.basePath).valueChanges()
             .subscribe(function (courses) {
             _this.courses = courses;
         });
@@ -1436,7 +1436,7 @@ var MapComponent = /** @class */ (function () {
                 _this.lng = +pos.coords.longitude;
                 _this.lat = +pos.coords.latitude;
             });
-            this.courses = db.list(this.basePath).valueChanges()
+            db.list(this.basePath).valueChanges()
                 .subscribe(function (courses) {
                 _this.courses = courses;
             });

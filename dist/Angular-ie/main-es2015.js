@@ -183,7 +183,7 @@ let ActivityComponent = class ActivityComponent {
         this.msg = "";
         this.address = "";
         this.basePath = '/details';
-        this.courses = db.list(this.basePath).valueChanges()
+        db.list(this.basePath).valueChanges()
             .subscribe(courses => {
             this.courses = courses;
         });
@@ -379,12 +379,12 @@ let AppComponent = class AppComponent {
                 icon: 'insert_chart'
             },
             {
-                name: 'help',
-                icon: 'help'
-            },
-            {
                 name: 'dashboard',
                 icon: 'dashboard'
+            },
+            {
+                name: 'help',
+                icon: 'help'
             },
             {
                 name: 'signout',
@@ -646,7 +646,7 @@ let DashboardComponent = class DashboardComponent {
         this.greet = "";
         this.basePath = '/details';
         this.displayedColumns = ['name', 'address', 'email', 'ctn'];
-        this.courses = db.list(this.basePath).valueChanges()
+        db.list(this.basePath).valueChanges()
             .subscribe(courses => {
             this.courses = courses;
         });
@@ -1328,7 +1328,7 @@ let MailComponent = class MailComponent {
         this.globalService = globalService;
         this.basePath = '/details';
         this.displayedColumns = ['name', 'email', 'msg'];
-        this.courses = db.list(this.basePath).valueChanges()
+        db.list(this.basePath).valueChanges()
             .subscribe(courses => {
             this.courses = courses;
         });
@@ -1411,7 +1411,7 @@ let MapComponent = class MapComponent {
                 this.lng = +pos.coords.longitude;
                 this.lat = +pos.coords.latitude;
             });
-            this.courses = db.list(this.basePath).valueChanges()
+            db.list(this.basePath).valueChanges()
                 .subscribe(courses => {
                 this.courses = courses;
             });

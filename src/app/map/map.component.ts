@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import {Observable} from 'rxjs';
-import { GlobalService } from '../global.service';
+import { MapService } from '../map.service';
 import { MouseEvent } from '@agm/core';
 @Component({
   selector: 'app-map',
@@ -10,9 +10,8 @@ import { MouseEvent } from '@agm/core';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-	  // google maps zoom level
+	// google maps zoom level
   zoom: number = 2;
-  
   // initial center position for the map
   lat: any;
   lng: any;
@@ -22,23 +21,23 @@ export class MapComponent implements OnInit {
   today = new Date()
   hours = this.today.getHours();
 courses: Observable < any > | any;
-  constructor(private db: AngularFireDatabase,private globalService: GlobalService){
+  constructor(private db: AngularFireDatabase,private mapService: MapService){
     if (navigator)
     {
     navigator.geolocation.getCurrentPosition( pos => {
         this.lng = +pos.coords.longitude;
         this.lat = +pos.coords.latitude;
       });
+
      db.list(this.basePath).valueChanges()
-        .subscribe(courses => {
-            this.courses = courses;
+        .subscribe(data => {
+            this.courses = data;
         });
 
-
   if(this.hours < 18){
-    this.mapStyle = this.globalService.dayStyles;
+    this.mapStyle = this.mapService.dayStyles;
   }else{
-    this.mapStyle = this.globalService.nightStyles;
+    this.mapStyle = this.mapService.nightStyles;
   }
     
  }}
@@ -46,8 +45,7 @@ courses: Observable < any > | any;
    getData() {
       return this.courses;
   }
-  
-
+ 
   clickedMarker(label: string, index: number) {
     console.log(`clicked the marker: ${label || index}`)
   }
@@ -86,15 +84,6 @@ courses: Observable < any > | any;
 
   ngOnInit() {}
 
-}
-
-// just an interface for type safety.
-interface marker {
-  lat?: any;
-  lng?: any;
-  label?: string;
-  draggable: boolean;
-  name?: any;
 }
 
 

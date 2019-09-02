@@ -29,3 +29,8 @@
 table {
   width: 100%;
 }
+.card-val{
+  font-size: 18px;
+    font-weight: 600;
+    color: #232f3e;
+}
