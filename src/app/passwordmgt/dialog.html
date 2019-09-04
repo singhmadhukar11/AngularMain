@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Details</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="Name" [(ngModel)]="data.name">
+  </mat-form-field>
+     <mat-form-field>
+    <input matInput placeholder="Username" [(ngModel)]="data.username">
+  </mat-form-field>
+   <mat-form-field>
+    <input matInput placeholder="Password" [(ngModel)]="data.password">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Comments" [(ngModel)]="data.comments">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button color="primary"  [mat-dialog-close]="data" cdkFocusInitial>Submit</button>
+</div>

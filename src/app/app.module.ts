@@ -38,7 +38,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
-import { PasswordmgtComponent } from './passwordmgt/passwordmgt.component';
+import { PasswordmgtComponent, DialogOverviewExampleDialog } from './passwordmgt/passwordmgt.component';
+import {MatDialogModule} from '@angular/material/dialog';
 const routes: Routes = [
 { path: 'dashboard', component: DashboardComponent },
 { path: 'activity',  component: ActivityComponent },
@@ -47,7 +48,7 @@ const routes: Routes = [
 { path: 'help',  component: HelpComponent },
 { path: 'map', component: MapComponent },
 { path: 'passwordmgt', component: PasswordmgtComponent },
-{ path: '', component: MapComponent },
+{ path: '', component: PasswordmgtComponent },
 { path: '**', component: PageNotFoundComponent },
 ];
 @NgModule({
@@ -63,8 +64,10 @@ const routes: Routes = [
     AgGridComponent,
     PageNotFoundComponent,
     MapComponent,
-    PasswordmgtComponent
+    PasswordmgtComponent,
+    DialogOverviewExampleDialog
   ],
+  entryComponents: [PasswordmgtComponent, DialogOverviewExampleDialog],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -87,6 +90,7 @@ const routes: Routes = [
     NgbModule,
     NgbPaginationModule,
     NgbAlertModule,
+    MatDialogModule,
     LeafletModule.forRoot(),
     RouterModule.forRoot(
       routes,
