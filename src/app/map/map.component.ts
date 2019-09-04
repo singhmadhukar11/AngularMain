@@ -50,34 +50,34 @@ courses: Observable < any > | any;
     console.log(`clicked the marker: ${label || index}`)
   }
   
-  mapClicked($event: MouseEvent) {
-    this.markers.push({
-      lat: $event.coords.lat,
-      lng: $event.coords.lng,
-      draggable: false
-    });
-  }
+  // mapClicked($event: MouseEvent) {
+  //   this.markers.push({
+  //     lat: $event.coords.lat,
+  //     lng: $event.coords.lng,
+  //     draggable: false
+  //   });
+  // }
   
-  markerDragEnd(m: marker, $event: MouseEvent) {
-    console.log('dragEnd', m, $event);
-  }
+  // markerDragEnd(m: marker, $event: MouseEvent) {
+  //   console.log('dragEnd', m, $event);
+  // }
   
-  markers: marker[] = [
-    {
-      lat: 22.9676,
-      lng: 76.0534,
-      label: 'A',
-      draggable: true,
-      name: 'Dewas'
-    },
-    {
-      lat: 22.7196,
-      lng: 75.8577,
-      label: 'B',
-      draggable: false,
-      name: 'Indore'
-    }
-  ]
+  // markers: marker[] = [
+  //   {
+  //     lat: 22.9676,
+  //     lng: 76.0534,
+  //     label: 'A',
+  //     draggable: true,
+  //     name: 'Dewas'
+  //   },
+  //   {
+  //     lat: 22.7196,
+  //     lng: 75.8577,
+  //     label: 'B',
+  //     draggable: false,
+  //     name: 'Indore'
+  //   }
+  // ]
   onMouseOver(infoWindow) {
         infoWindow.open();
     }

@@ -42,7 +42,7 @@ constructor(private db: AngularFireDatabase, private globalService: GlobalServic
       lat: lat,
       long: long
     };
-    this.globalService.submitFunction(dataObj);
+    this.globalService.addFunction(dataObj);
   }
 
   resetForm(){

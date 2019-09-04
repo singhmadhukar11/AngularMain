@@ -36,6 +36,10 @@ export class AppComponent {
             icon: 'dashboard'
         },
         {
+            name: 'passwordmgt',
+            icon: 'vpn_key'
+        },
+        {
             name: 'help',
             icon: 'help'
         },

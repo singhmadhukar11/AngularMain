@@ -8,10 +8,17 @@ constructor(private db: AngularFireDatabase) { }
 private basePath = '/details';
 dataApi = "https://jsonplaceholder.typicode.com/todos";
 
- submitFunction(data) {
+ addFunction(data) {
   const obj = this.db.database.ref(this.basePath);
   obj.push(data);
   console.log('Success');
   }
+
+deleteFunction(data) {
+  const obj = this.db.database.ref(this.basePath);
+  obj.push(data);
+  console.log('Success');
+  }
+
 
 }

@@ -38,15 +38,17 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { PasswordmgtComponent } from './passwordmgt/passwordmgt.component';
 const routes: Routes = [
 { path: 'dashboard', component: DashboardComponent },
 { path: 'activity',  component: ActivityComponent },
 { path: 'list',  component: MailComponent },
 { path: 'chart',  component: ChartComponent },
 { path: 'help',  component: HelpComponent },
-{ path: '', component: MapComponent },
 { path: 'map', component: MapComponent },
-{ path: '**', component: PageNotFoundComponent }
+{ path: 'passwordmgt', component: PasswordmgtComponent },
+{ path: '', component: MapComponent },
+{ path: '**', component: PageNotFoundComponent },
 ];
 @NgModule({
   declarations: [
@@ -60,7 +62,8 @@ const routes: Routes = [
     HelpComponent,
     AgGridComponent,
     PageNotFoundComponent,
-    MapComponent
+    MapComponent,
+    PasswordmgtComponent
   ],
   imports: [
     BrowserModule,
