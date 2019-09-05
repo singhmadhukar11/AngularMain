@@ -40,6 +40,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 import { PasswordmgtComponent, DialogOverviewExampleDialog } from './passwordmgt/passwordmgt.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 const routes: Routes = [
 { path: 'dashboard', component: DashboardComponent },
 { path: 'activity',  component: ActivityComponent },
@@ -48,7 +50,7 @@ const routes: Routes = [
 { path: 'help',  component: HelpComponent },
 { path: 'map', component: MapComponent },
 { path: 'passwordmgt', component: PasswordmgtComponent },
-{ path: '', component: PasswordmgtComponent },
+{ path: '', component: MapComponent },
 { path: '**', component: PageNotFoundComponent },
 ];
 @NgModule({
@@ -91,6 +93,8 @@ const routes: Routes = [
     NgbPaginationModule,
     NgbAlertModule,
     MatDialogModule,
+    MatFormFieldModule,
+    MatSelectModule,
     LeafletModule.forRoot(),
     RouterModule.forRoot(
       routes,

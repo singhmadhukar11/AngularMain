@@ -3,10 +3,16 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 import { Inject } from '@angular/core';  
 import { GlobalService } from '../global.service';
 import { AngularFireDatabase } from '@angular/fire/database';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 export interface DialogData {
   username: any;
   password: any;
   comments: any;
+}
+export interface Food {
+  value: string;
+  viewValue: string;
 }
 @Component({
   selector: 'app-passwordmgt',
@@ -18,6 +24,7 @@ export class PasswordmgtComponent implements OnInit {
   username: any;
   password: any;
   comments: any;
+  type: any;
   data: any;
   array:any[]=[];
 private passPath = '/password';
@@ -30,21 +37,24 @@ passData: any;
             this.passData = password;
         })
   }
+  foods: Food[] = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'}
+  ];
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      width: '250px',
-      data: {name: this.name,username: this.username, password: this.password, comments:this.comments}
+      width: '350px',
+      data: {name: this.name,username: this.username, password: this.password, comments:this.comments, type:this.type}
     });
 
 
     dialogRef.afterClosed().subscribe(result => {
       this.data = result;
-      debugger;
       const obj = this.db.database.ref(this.passPath);
   		obj.push(this.data);
       // this.array.push(this.data);
-
        });
   }
 
