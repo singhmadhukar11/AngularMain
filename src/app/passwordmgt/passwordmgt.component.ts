@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { Inject } from '@angular/core';  
+import { GlobalService } from '../global.service';
+import { AngularFireDatabase } from '@angular/fire/database';
 export interface DialogData {
   username: any;
   password: any;
@@ -16,10 +18,18 @@ export class PasswordmgtComponent implements OnInit {
   username: any;
   password: any;
   comments: any;
-  data: DialogData;
-  array:[]=[];
+  data: any;
+  array:any[]=[];
+private passPath = '/password';
+passData: any;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog,private globalService: GlobalService,private db: AngularFireDatabase) {
+
+  	db.list(this.passPath).valueChanges()
+        .subscribe(password => {
+            this.passData = password;
+        })
+  }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
@@ -27,9 +37,14 @@ export class PasswordmgtComponent implements OnInit {
       data: {name: this.name,username: this.username, password: this.password, comments:this.comments}
     });
 
+
     dialogRef.afterClosed().subscribe(result => {
       this.data = result;
-      this.array.push(this.data);
+      debugger;
+      const obj = this.db.database.ref(this.passPath);
+  		obj.push(this.data);
+      // this.array.push(this.data);
+
        });
   }
 

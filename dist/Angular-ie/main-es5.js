@@ -52,7 +52,7 @@ module.exports = "<ag-grid-angular \r\n    style=\"width: 100%; height: 375px;\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n <mat-toolbar color=\"primary\">\r\n    <span class=\"dash-label\">{{label}}</span>\r\n    <!-- This fills the remaining space of the current row -->\r\n    <span class=\"example-fill-remaining-space\"></span>\r\n      <span>User</span>\r\n      <i class=\"material-icons\">\r\n      perm_identity\r\n    </i>\r\n  </mat-toolbar>\r\n\r\n  <div fxLayout=\"row\" class=\"main-height\">\r\n    <div fxFlex=\"15\" class=\"Sidenav\" style=\"padding: 0;\">\r\n      <!-- <div routerLink=\"/dashboard\" routerLinkActive=\"active\">Dashboard</div>\r\n      <div routerLink=\"/activity\" routerLinkActive=\"active\">Activity</div> -->\r\n      <mat-list>\r\n        <div *ngFor=\"let menu of sideNavmenus;let i = index\" (click)=\"selectItem(i,menu)\" class=\"sideNav-txt\">\r\n        <mat-list-item   routerLink=\"/{{menu.name}}\" [ngClass]=\"{'active': selectedIdx == i}\">\r\n           <button mat-icon-button matTooltip=\"{{menu.icon}}\" matTooltipPosition=\"right\">\r\n          <mat-icon mat-list-icon style=\"color: #232f3e;\">{{menu.icon}}</mat-icon>\r\n  </button>\r\n          <h4 mat-line><span class=\"ft-clr\">{{menu.name}}</span></h4>\r\n        </mat-list-item>\r\n      </div>\r\n      </mat-list>\r\n    </div>\r\n     <div fxFlex=\"85\" class=\"Maincontent\" [ngStyle]=\"{'padding':selectedIdx === 0 ? '0px' : '15px' }\">\r\n<router-outlet></router-outlet>\r\n</div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div>\r\n <mat-toolbar color=\"primary\">\r\n    <span class=\"dash-label\">{{label}}</span>\r\n    <!-- This fills the remaining space of the current row -->\r\n    <span class=\"example-fill-remaining-space\"></span>\r\n      <span>User</span>\r\n      <i class=\"material-icons\">\r\n      perm_identity\r\n    </i>\r\n  </mat-toolbar>\r\n\r\n  <div fxLayout=\"row\" class=\"main-height\">\r\n    <div fxFlex=\"15\" class=\"Sidenav\" style=\"padding: 0;\">\r\n      <!-- <div routerLink=\"/dashboard\" routerLinkActive=\"active\">Dashboard</div>\r\n      <div routerLink=\"/activity\" routerLinkActive=\"active\">Activity</div> -->\r\n      <mat-list>\r\n        <div *ngFor=\"let menu of sideNavmenus;let i = index\" (click)=\"selectItem(i,menu)\" class=\"sideNav-txt\">\r\n        <mat-list-item routerLink=\"/{{menu.name}}\" [ngClass]=\"{'active': selectedIdx == i}\">\r\n           <button mat-icon-button matTooltip=\"{{menu.icon}}\" matTooltipPosition=\"right\">\r\n          <mat-icon mat-list-icon style=\"color: #232f3e;\">{{menu.icon}}</mat-icon>\r\n  </button>\r\n          <h4 mat-line><span class=\"ft-clr\">{{menu.name}}</span></h4>\r\n        </mat-list-item>\r\n      </div>\r\n      </mat-list>\r\n    </div>\r\n     <div fxFlex=\"85\" class=\"Maincontent\" [ngStyle]=\"{'padding':selectedIdx === 2 ? '0px' : '15px' }\">\r\n<router-outlet></router-outlet>\r\n</div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -144,6 +144,28 @@ module.exports = "<p>page-not-found!</p>\r\n"
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/passwordmgt/dialog.html":
+/*!*******************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/passwordmgt/dialog.html ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1 mat-dialog-title>Details</h1>\r\n<div mat-dialog-content>\r\n  <mat-form-field>\r\n    <input matInput placeholder=\"Name\" [(ngModel)]=\"data.name\">\r\n  </mat-form-field>\r\n     <mat-form-field>\r\n    <input matInput placeholder=\"Username\" [(ngModel)]=\"data.username\">\r\n  </mat-form-field>\r\n   <mat-form-field>\r\n    <input matInput placeholder=\"Password\" [(ngModel)]=\"data.password\">\r\n  </mat-form-field>\r\n  <mat-form-field>\r\n    <input matInput placeholder=\"Comments\" [(ngModel)]=\"data.comments\">\r\n  </mat-form-field>\r\n</div>\r\n<div mat-dialog-actions>\r\n  <button mat-button (click)=\"onNoClick()\">Cancel</button>\r\n  <button mat-button color=\"primary\"  [mat-dialog-close]=\"data\" cdkFocusInitial>Submit</button>\r\n</div>"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/passwordmgt/passwordmgt.component.html":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/passwordmgt/passwordmgt.component.html ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div>\r\n<div>\r\n   <button mat-raised-button color=\"primary\" (click)=\"openDialog()\">Add Password</button>\r\n</div>\r\n<div fxLayout=\"row wrap\" fxLayoutGap=\"20px\">\r\n\t<div *ngFor=\"let t of array\" fxFlex=\"20\">\r\n\t<mat-card style=\"margin-top: 20px;font-size: 15px;color: grey;\" >\r\n\t\t<div>{{t.name}}</div>\r\n\t\t<div><span>Username</span> : <span>{{t.username}}</span></div>\r\n\t\t<div><span>Password</span> : <span>{{t.password}}</span></div>\r\n\t\t<div><span>Comments</span> : <span>{{t.comments}}</span></div>\r\n\t</mat-card>\r\n\t</div>\r\n</div> \r\n</div>"
+
+/***/ }),
+
 /***/ "./src/app/activity/activity.component.css":
 /*!*************************************************!*\
   !*** ./src/app/activity/activity.component.css ***!
@@ -202,7 +224,7 @@ var ActivityComponent = /** @class */ (function () {
             lat: lat,
             long: long
         };
-        this.globalService.submitFunction(dataObj);
+        this.globalService.addFunction(dataObj);
     };
     ActivityComponent.prototype.resetForm = function () {
         this.name = "",
@@ -390,6 +412,10 @@ var AppComponent = /** @class */ (function () {
                 icon: 'dashboard'
             },
             {
+                name: 'passwordmgt',
+                icon: 'vpn_key'
+            },
+            {
                 name: 'help',
                 icon: 'help'
             },
@@ -476,6 +502,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm5/checkbox.es5.js");
 /* harmony import */ var _asymmetrik_ngx_leaflet__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! @asymmetrik/ngx-leaflet */ "./node_modules/@asymmetrik/ngx-leaflet/dist/index.js");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./passwordmgt/passwordmgt.component */ "./src/app/passwordmgt/passwordmgt.component.ts");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+
+
 
 
 
@@ -523,9 +553,10 @@ var routes = [
     { path: 'list', component: _mail_mail_component__WEBPACK_IMPORTED_MODULE_21__["MailComponent"] },
     { path: 'chart', component: _chart_chart_component__WEBPACK_IMPORTED_MODULE_22__["ChartComponent"] },
     { path: 'help', component: _help_help_component__WEBPACK_IMPORTED_MODULE_23__["HelpComponent"] },
-    { path: '', component: _map_map_component__WEBPACK_IMPORTED_MODULE_33__["MapComponent"] },
     { path: 'map', component: _map_map_component__WEBPACK_IMPORTED_MODULE_33__["MapComponent"] },
-    { path: '**', component: _page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_30__["PageNotFoundComponent"] }
+    { path: 'passwordmgt', component: _passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_40__["PasswordmgtComponent"] },
+    { path: '', component: _passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_40__["PasswordmgtComponent"] },
+    { path: '**', component: _page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_30__["PageNotFoundComponent"] },
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -543,8 +574,11 @@ var AppModule = /** @class */ (function () {
                 _help_help_component__WEBPACK_IMPORTED_MODULE_23__["HelpComponent"],
                 _ag_grid_ag_grid_component__WEBPACK_IMPORTED_MODULE_25__["AgGridComponent"],
                 _page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_30__["PageNotFoundComponent"],
-                _map_map_component__WEBPACK_IMPORTED_MODULE_33__["MapComponent"]
+                _map_map_component__WEBPACK_IMPORTED_MODULE_33__["MapComponent"],
+                _passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_40__["PasswordmgtComponent"],
+                _passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_40__["DialogOverviewExampleDialog"]
             ],
+            entryComponents: [_passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_40__["PasswordmgtComponent"], _passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_40__["DialogOverviewExampleDialog"]],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
@@ -567,6 +601,7 @@ var AppModule = /** @class */ (function () {
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_39__["NgbModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_39__["NgbPaginationModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_39__["NgbAlertModule"],
+                _angular_material_dialog__WEBPACK_IMPORTED_MODULE_41__["MatDialogModule"],
                 _asymmetrik_ngx_leaflet__WEBPACK_IMPORTED_MODULE_38__["LeafletModule"].forRoot(),
                 _angular_router__WEBPACK_IMPORTED_MODULE_19__["RouterModule"].forRoot(routes),
                 ag_grid_angular__WEBPACK_IMPORTED_MODULE_24__["AgGridModule"].withComponents([]),
@@ -724,7 +759,12 @@ var GlobalService = /** @class */ (function () {
         this.basePath = '/details';
         this.dataApi = "https://jsonplaceholder.typicode.com/todos";
     }
-    GlobalService.prototype.submitFunction = function (data) {
+    GlobalService.prototype.addFunction = function (data) {
+        var obj = this.db.database.ref(this.basePath);
+        obj.push(data);
+        console.log('Success');
+    };
+    GlobalService.prototype.deleteFunction = function (data) {
         var obj = this.db.database.ref(this.basePath);
         obj.push(data);
         console.log('Success');
@@ -1562,6 +1602,92 @@ var PageNotFoundComponent = /** @class */ (function () {
         })
     ], PageNotFoundComponent);
     return PageNotFoundComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/passwordmgt/passwordmgt.component.css":
+/*!*******************************************************!*\
+  !*** ./src/app/passwordmgt/passwordmgt.component.css ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Bhc3N3b3JkbWd0L3Bhc3N3b3JkbWd0LmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/passwordmgt/passwordmgt.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/passwordmgt/passwordmgt.component.ts ***!
+  \******************************************************/
+/*! exports provided: PasswordmgtComponent, DialogOverviewExampleDialog */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PasswordmgtComponent", function() { return PasswordmgtComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DialogOverviewExampleDialog", function() { return DialogOverviewExampleDialog; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+
+
+
+
+var PasswordmgtComponent = /** @class */ (function () {
+    function PasswordmgtComponent(dialog) {
+        this.dialog = dialog;
+        this.array = [];
+    }
+    PasswordmgtComponent.prototype.openDialog = function () {
+        var _this = this;
+        var dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+            width: '250px',
+            data: { name: this.name, username: this.username, password: this.password, comments: this.comments }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            _this.data = result;
+            _this.array.push(_this.data);
+        });
+    };
+    PasswordmgtComponent.prototype.ngOnInit = function () {
+    };
+    PasswordmgtComponent.ctorParameters = function () { return [
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"] }
+    ]; };
+    PasswordmgtComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-passwordmgt',
+            template: __webpack_require__(/*! raw-loader!./passwordmgt.component.html */ "./node_modules/raw-loader/index.js!./src/app/passwordmgt/passwordmgt.component.html"),
+            styles: [__webpack_require__(/*! ./passwordmgt.component.css */ "./src/app/passwordmgt/passwordmgt.component.css")]
+        })
+    ], PasswordmgtComponent);
+    return PasswordmgtComponent;
+}());
+
+var DialogOverviewExampleDialog = /** @class */ (function () {
+    function DialogOverviewExampleDialog(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+    }
+    DialogOverviewExampleDialog.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    DialogOverviewExampleDialog.ctorParameters = function () { return [
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] },
+        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] }
+    ]; };
+    DialogOverviewExampleDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'dialog-overview-example-dialog',
+            template: __webpack_require__(/*! raw-loader!./dialog.html */ "./node_modules/raw-loader/index.js!./src/app/passwordmgt/dialog.html"),
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]))
+    ], DialogOverviewExampleDialog);
+    return DialogOverviewExampleDialog;
 }());
 
 
