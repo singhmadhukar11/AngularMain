@@ -32,7 +32,7 @@
   	</mat-form-field>
 	</div>
 	<div fxLayout="row" fxLayoutAlign="end center" style="margin-right: 4%;">
-	<button mat-raised-button color="primary" (click)="submitFunction(name,email,ctn,msg,address,lat,long);resetForm()" [disabled]="!address || !msg" routerLink="/list">Submit</button>
+	<button mat-raised-button color="primary" (click)="submitFunction(name,email,ctn,msg,address,lat,long,date,time);resetForm()" [disabled]="!address || !msg" routerLink="/list">Submit</button>
 	</div>
 	</mat-card>
 </div>

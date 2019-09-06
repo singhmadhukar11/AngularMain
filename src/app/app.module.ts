@@ -42,6 +42,7 @@ import { PasswordmgtComponent, DialogOverviewExampleDialog } from './passwordmgt
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 const routes: Routes = [
 { path: 'dashboard', component: DashboardComponent },
 { path: 'activity',  component: ActivityComponent },
@@ -95,6 +96,7 @@ const routes: Routes = [
     MatDialogModule,
     MatFormFieldModule,
     MatSelectModule,
+    Ng2SearchPipeModule,
     LeafletModule.forRoot(),
     RouterModule.forRoot(
       routes,

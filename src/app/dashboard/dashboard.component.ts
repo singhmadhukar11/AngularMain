@@ -15,7 +15,7 @@ export interface UserData {
 })
 export class DashboardComponent implements OnInit {
  title = 'Angular-ie';
- date = new Date()
+ date = new Date();
  time = this.date.getHours();
  greet:any = "";
  private basePath = '/details';

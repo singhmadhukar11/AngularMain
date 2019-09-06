@@ -29,7 +29,7 @@ export class PasswordmgtComponent implements OnInit {
   array:any[]=[];
 private passPath = '/password';
 passData: any;
-
+searchText;
   constructor(public dialog: MatDialog,private globalService: GlobalService,private db: AngularFireDatabase) {
 
   	db.list(this.passPath).valueChanges()
@@ -37,6 +37,7 @@ passData: any;
             this.passData = password;
         })
   }
+
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
       width: '350px',
@@ -70,7 +71,5 @@ export class DialogOverviewExampleDialog {
   onNoClick(): void {
     this.dialogRef.close();
   }
-
-
 
 }

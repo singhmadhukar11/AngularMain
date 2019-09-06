@@ -5,6 +5,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import {Observable} from 'rxjs';
 import {Sort} from '@angular/material/sort';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {formatDate } from '@angular/common';
 @Component({
   selector: 'app-activity',
   templateUrl: './activity.component.html',
@@ -19,6 +20,9 @@ msg:any = "";
 address:any = "";
 lat:any;
 long:any;
+today= new Date();
+date = '';
+time = '';
 private basePath = '/details';
 courses: Observable < any > | any;
 constructor(private db: AngularFireDatabase, private globalService: GlobalService) {
@@ -26,13 +30,14 @@ constructor(private db: AngularFireDatabase, private globalService: GlobalServic
         .subscribe(courses => {
             this.courses = courses;
         })
-
+    this.date = formatDate(this.today, 'dd-MM-yyyy', 'en-US', '+0530');
+    this.time = formatDate(this.today, 'hh:mm:ss a', 'en-US', '+0530');
 	}
 	getData() {
 	    return this.courses;
 	}
 
-  submitFunction(name, email, ctn, msg, address, lat, long) {
+  submitFunction(name, email, ctn, msg, address, lat, long, date, time) {
      const dataObj = {
       name: name,
       email: email,
@@ -40,8 +45,11 @@ constructor(private db: AngularFireDatabase, private globalService: GlobalServic
       msg: msg,
       address: address,
       lat: lat,
-      long: long
+      long: long,
+      date: date,
+      time: time
     };
+    debugger;
     this.globalService.addFunction(dataObj);
   }
 
@@ -55,17 +63,13 @@ constructor(private db: AngularFireDatabase, private globalService: GlobalServic
       this.long = ""
   }
 
-  delete(name) {
-    debugger;
-    this.courses.remove(name);
-  }
-
 ngOnInit() {
   navigator.geolocation.getCurrentPosition((position) => { 
   // console.log("Got position", position.coords);
   this.lat = position.coords.latitude; 
   this.long = position.coords.longitude;
 });
+
 }
   
 

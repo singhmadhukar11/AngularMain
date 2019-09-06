@@ -22,5 +22,5 @@ courses: Observable < any > | any;
 
     ngOnInit() {
   }
-displayedColumns: string[] = ['name', 'email', 'msg'];
+displayedColumns: string[] = ['name', 'email', 'msg', 'date', 'time'];
 }
