@@ -43,7 +43,10 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './login/login.component';
 const routes: Routes = [
+{ path: 'login', component: LoginComponent },
 { path: 'dashboard', component: DashboardComponent },
 { path: 'activity',  component: ActivityComponent },
 { path: 'list',  component: MailComponent },
@@ -51,7 +54,8 @@ const routes: Routes = [
 { path: 'help',  component: HelpComponent },
 { path: 'map', component: MapComponent },
 { path: 'passwordmgt', component: PasswordmgtComponent },
-{ path: '', component: MapComponent },
+{ path: 'admin', component: AdminComponent },
+{ path: '', component: LoginComponent },
 { path: '**', component: PageNotFoundComponent },
 ];
 @NgModule({
@@ -68,7 +72,9 @@ const routes: Routes = [
     PageNotFoundComponent,
     MapComponent,
     PasswordmgtComponent,
-    DialogOverviewExampleDialog
+    DialogOverviewExampleDialog,
+    AdminComponent,
+    LoginComponent
   ],
   entryComponents: [PasswordmgtComponent, DialogOverviewExampleDialog],
   imports: [

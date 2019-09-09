@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n\t<mat-card>\r\n    <span class=\"information\">Information</span>\r\n\t<div fxLayout=\"row\" fxLayoutAlign=\"space-around center\">\r\n\t<mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Name\" value=\"{{name}}\" [(ngModel)]=\"name\">\r\n  \t</mat-form-field>\r\n\t<mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Email Address\" value=\"{{email}}\" [(ngModel)]=\"email\" [disabled]=\"!name\">\r\n  \t</mat-form-field>\r\n\t<mat-form-field fxFlex=\"25\">\r\n    <input matInput #phone placeholder=\"Contact No\" type=\"tel\" value=\"{{ctn}}\" [(ngModel)]=\"ctn\" maxlength=\"10\" [disabled]=\"!email\">\r\n    <mat-hint align=\"end\">{{phone.value.length}} / 10</mat-hint>\r\n  \t</mat-form-field>\r\n\t</div>\r\n  <div fxLayout=\"row\" fxLayoutAlign=\"space-around center\">\r\n  <mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Address\" value=\"{{address}}\" [(ngModel)]=\"address\" [disabled]=\"!ctn\">\r\n    </mat-form-field>\r\n  <mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Latitude\" value=\"{{lat}}\" [(ngModel)]=\"lat\">\r\n    </mat-form-field>\r\n  <mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Logitude\"  value=\"{{long}}\" [(ngModel)]=\"long\">\r\n    </mat-form-field>\r\n  </div>\r\n\r\n\t<div  fxLayout=\"row\" fxLayoutAlign=\"space-around center\" >\r\n\t<mat-form-field style=\"width: 92%\">\r\n    <input matInput placeholder=\"Message\" value=\"{{msg}}\" [(ngModel)]=\"msg\" maxlength=\"100\" #message [disabled]=\"!address\">\r\n    <mat-hint align=\"end\">{{message.value.length}} / 100</mat-hint>\r\n  \t</mat-form-field>\r\n\t</div>\r\n\t<div fxLayout=\"row\" fxLayoutAlign=\"end center\" style=\"margin-right: 4%;\">\r\n\t<button mat-raised-button color=\"primary\" (click)=\"submitFunction(name,email,ctn,msg,address,lat,long);resetForm()\" [disabled]=\"!address || !msg\" routerLink=\"/list\">Submit</button>\r\n\t</div>\r\n\t</mat-card>\r\n</div>\r\n<!-- mat-card>\r\n\t<div *ngFor=\"let hero of courses\">\r\n      {{ hero.name}} || {{ hero.email}} || {{ hero.msg}} || {{hero.ctn}}\r\n    </div>\r\n</mat-card> -->\r\n<!-- <mat-card>\r\n<table>\r\n  <tr>\r\n    <th mat-sort-header=\"name\"  style=\"text-align: left;\">Name</th>\r\n    <th mat-sort-header=\"calories\"  style=\"text-align: left;\">Email</th>\r\n    <th mat-sort-header=\"fat\"  style=\"text-align: left;\">Message</th>\r\n    <th mat-sort-header=\"carbs\"  style=\"text-align: left;\">Contact No</th>\r\n    <th mat-sort-header=\"calories\"  style=\"text-align: left;\">Address</th>\r\n    <th mat-sort-header=\"fat\"  style=\"text-align: left;\">Latitude</th>\r\n    <th mat-sort-header=\"carbs\"  style=\"text-align: left;\">Longitude</th>\r\n  </tr>\r\n\r\n  <tr *ngFor=\"let hero of courses\" (click)=\"delete(name)\">\r\n    <td>{{ hero.name}}</td>\r\n    <td>{{ hero.email}}</td>\r\n    <td>{{ hero.msg}}</td>\r\n    <td>{{hero.ctn}}</td>\r\n    <td>{{ hero.address}}</td>\r\n    <td>{{ hero.lat}}</td>\r\n    <td>{{hero.long}}</td>\r\n  </tr>\r\n</table>\r\n</mat-card> -->"
+module.exports = "<div>\r\n\t<mat-card>\r\n    <span class=\"information\">Information</span>\r\n\t<div fxLayout=\"row\" fxLayoutAlign=\"space-around center\">\r\n\t<mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Name\" value=\"{{name}}\" [(ngModel)]=\"name\">\r\n  \t</mat-form-field>\r\n\t<mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Email Address\" value=\"{{email}}\" [(ngModel)]=\"email\" [disabled]=\"!name\">\r\n  \t</mat-form-field>\r\n\t<mat-form-field fxFlex=\"25\">\r\n    <input matInput #phone placeholder=\"Contact No\" type=\"tel\" value=\"{{ctn}}\" [(ngModel)]=\"ctn\" maxlength=\"10\" [disabled]=\"!email\">\r\n    <mat-hint align=\"end\">{{phone.value.length}} / 10</mat-hint>\r\n  \t</mat-form-field>\r\n\t</div>\r\n  <div fxLayout=\"row\" fxLayoutAlign=\"space-around center\">\r\n  <mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Address\" value=\"{{address}}\" [(ngModel)]=\"address\" [disabled]=\"!ctn\">\r\n    </mat-form-field>\r\n  <mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Latitude\" value=\"{{lat}}\" [(ngModel)]=\"lat\">\r\n    </mat-form-field>\r\n  <mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Logitude\"  value=\"{{long}}\" [(ngModel)]=\"long\">\r\n    </mat-form-field>\r\n  </div>\r\n\r\n\t<div  fxLayout=\"row\" fxLayoutAlign=\"space-around center\" >\r\n\t<mat-form-field style=\"width: 92%\">\r\n    <input matInput placeholder=\"Message\" value=\"{{msg}}\" [(ngModel)]=\"msg\" maxlength=\"100\" #message [disabled]=\"!address\">\r\n    <mat-hint align=\"end\">{{message.value.length}} / 100</mat-hint>\r\n  \t</mat-form-field>\r\n\t</div>\r\n\t<div fxLayout=\"row\" fxLayoutAlign=\"end center\" style=\"margin-right: 4%;\">\r\n\t<button mat-raised-button color=\"primary\" (click)=\"submitFunction(name,email,ctn,msg,address,lat,long,date,time);resetForm()\" [disabled]=\"!address || !msg\" routerLink=\"/list\">Submit</button>\r\n\t</div>\r\n\t</mat-card>\r\n</div>\r\n<!-- mat-card>\r\n\t<div *ngFor=\"let hero of courses\">\r\n      {{ hero.name}} || {{ hero.email}} || {{ hero.msg}} || {{hero.ctn}}\r\n    </div>\r\n</mat-card> -->\r\n<!-- <mat-card>\r\n<table>\r\n  <tr>\r\n    <th mat-sort-header=\"name\"  style=\"text-align: left;\">Name</th>\r\n    <th mat-sort-header=\"calories\"  style=\"text-align: left;\">Email</th>\r\n    <th mat-sort-header=\"fat\"  style=\"text-align: left;\">Message</th>\r\n    <th mat-sort-header=\"carbs\"  style=\"text-align: left;\">Contact No</th>\r\n    <th mat-sort-header=\"calories\"  style=\"text-align: left;\">Address</th>\r\n    <th mat-sort-header=\"fat\"  style=\"text-align: left;\">Latitude</th>\r\n    <th mat-sort-header=\"carbs\"  style=\"text-align: left;\">Longitude</th>\r\n  </tr>\r\n\r\n  <tr *ngFor=\"let hero of courses\" (click)=\"delete(name)\">\r\n    <td>{{ hero.name}}</td>\r\n    <td>{{ hero.email}}</td>\r\n    <td>{{ hero.msg}}</td>\r\n    <td>{{hero.ctn}}</td>\r\n    <td>{{ hero.address}}</td>\r\n    <td>{{ hero.lat}}</td>\r\n    <td>{{hero.long}}</td>\r\n  </tr>\r\n</table>\r\n</mat-card> -->"
 
 /***/ }),
 
@@ -118,7 +118,7 @@ module.exports = "<div>Highchart Works</div>"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <div style=\"float: right;\"> \r\n    <button mat-icon-button matTooltip=\"Add\" matTooltipPosition=\"right\" routerLink=\"/activity\">\r\n          <mat-icon mat-list-icon style=\"color: #232f3e;\">library_add</mat-icon>\r\n    </button>\r\n  </div>\r\n<table mat-table [dataSource]=\"courses\" class=\"mat-elevation-z8\">\r\n  <ng-container matColumnDef=\"name\">\r\n    <th mat-header-cell *matHeaderCellDef><mat-checkbox color=\"primary\">Name</mat-checkbox>  </th>\r\n    <td mat-cell *matCellDef=\"let element\"> <mat-checkbox color=\"primary\">{{element.name}}</mat-checkbox> </td>\r\n  </ng-container>\r\n  <ng-container matColumnDef=\"email\">\r\n    <th mat-header-cell *matHeaderCellDef> Email </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.email}} </td>\r\n  </ng-container>\r\n  <ng-container matColumnDef=\"msg\">\r\n    <th mat-header-cell *matHeaderCellDef> Message </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.msg}} </td>\r\n  </ng-container>\r\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n</table>\r\n</div>"
+module.exports = "<div>\r\n  <div style=\"float: right;\"> \r\n    <button mat-icon-button matTooltip=\"Add\" matTooltipPosition=\"right\" routerLink=\"/activity\">\r\n          <mat-icon mat-list-icon style=\"color: #232f3e;\">library_add</mat-icon>\r\n    </button>\r\n  </div>\r\n<table mat-table [dataSource]=\"courses\" class=\"mat-elevation-z8\">\r\n  <ng-container matColumnDef=\"name\">\r\n    <th mat-header-cell *matHeaderCellDef><mat-checkbox color=\"primary\">Name</mat-checkbox>  </th>\r\n    <td mat-cell *matCellDef=\"let element\"> <mat-checkbox color=\"primary\">{{element.name}}</mat-checkbox> </td>\r\n  </ng-container>\r\n  <ng-container matColumnDef=\"email\">\r\n    <th mat-header-cell *matHeaderCellDef> Email </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.email}} </td>\r\n  </ng-container>\r\n  <ng-container matColumnDef=\"msg\">\r\n    <th mat-header-cell *matHeaderCellDef> Message </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.msg}} </td>\r\n  </ng-container>\r\n   <ng-container matColumnDef=\"date\">\r\n    <th mat-header-cell *matHeaderCellDef> Date </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.date}} </td>\r\n  </ng-container>\r\n  <ng-container matColumnDef=\"time\">\r\n    <th mat-header-cell *matHeaderCellDef> Time </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.time}} </td>\r\n  </ng-container>\r\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n</table>\r\n</div>"
 
 /***/ }),
 
@@ -162,7 +162,7 @@ module.exports = "<style>\r\n\t.mat-form-field {\r\n    display: inline-block;\r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n<div>\r\n   <button mat-raised-button color=\"primary\" (click)=\"openDialog()\">Add Password</button>\r\n</div>\r\n<div fxLayout=\"row wrap\" fxLayoutGap=\"20px\">\r\n\t<div *ngFor=\"let t of passData\" fxFlex=\"30\">\r\n\t<mat-card style=\"margin-top: 20px;font-size: 15px;color: grey;\" [ngClass]=\"{'yellow': t.type == 'social','lime': t.type == 'personal','blue': t.type == 'cardetail','grey': t.type == 'bank'}\">\r\n\t\t<span class=\"name\">{{t.name}}</span>\r\n\t\t<div><span>Username</span> : <span>{{t.username}}</span></div>\r\n\t\t<div><span>Password</span> : <span>{{t.password}}</span></div>\r\n\t\t<div><span>Comments</span> : <span>{{t.comments}}</span></div>\r\n\t</mat-card>\r\n\t</div>\r\n</div> \r\n</div>"
+module.exports = "<div>\r\n<div>\r\n   <button mat-raised-button color=\"primary\" (click)=\"openDialog()\">Add Password</button>\r\n<mat-form-field class=\"example-full-width\" style=\"left: 5px;top: 5px;\">\r\n<input matInput class=\"form-control\" type=\"text\" name=\"search\" [(ngModel)]=\"searchText\" autocomplete=\"off\" placeholder=\"Search Details\">\r\n     </mat-form-field>\r\n</div>\r\n<div fxLayout=\"row wrap\" fxLayoutGap=\"20px\">\r\n\t<div *ngFor=\"let t of passData | filter:searchText\" fxFlex=\"30\">\r\n\t<mat-card style=\"margin-top: 20px;font-size: 15px;color: grey;\" [ngClass]=\"{'yellow': t.type == 'social','lime': t.type == 'personal','blue': t.type == 'cardetail','grey': t.type == 'bank'}\">\r\n\t\t<span class=\"name\">{{t.name}}</span>\r\n\t\t<div><span>Username</span> : <span>{{t.username}}</span></div>\r\n\t\t<div><span>Password</span> : <span>{{t.password}}</span></div>\r\n\t\t<div><span>Comments</span> : <span>{{t.comments}}</span></div>\r\n\t</mat-card>\r\n\t</div>\r\n</div> \r\n</div>"
 
 /***/ }),
 
@@ -173,7 +173,7 @@ module.exports = "<div>\r\n<div>\r\n   <button mat-raised-button color=\"primary
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".full-width {\r\n    width: 100%;\r\n}\r\n.information {\r\n    font-size: 17px;\r\n    padding-left: 45px;\r\n    font-weight: 600;\r\n    color: #25282bbd;\r\n    text-transform: uppercase;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFjdGl2aXR5L2FjdGl2aXR5LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0FBQ2Y7QUFDQTtJQUNJLGVBQWU7SUFDZixrQkFBa0I7SUFDbEIsZ0JBQWdCO0lBQ2hCLGdCQUFnQjtJQUNoQix5QkFBeUI7QUFDN0IiLCJmaWxlIjoiYWN0aXZpdHkvYWN0aXZpdHkuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mdWxsLXdpZHRoIHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG59XHJcbi5pbmZvcm1hdGlvbiB7XHJcbiAgICBmb250LXNpemU6IDE3cHg7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDQ1cHg7XHJcbiAgICBmb250LXdlaWdodDogNjAwO1xyXG4gICAgY29sb3I6ICMyNTI4MmJiZDtcclxuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcbn0iXX0= */"
+module.exports = ".full-width {\r\n    width: 100%;\r\n}\r\n.information {\r\n    font-size: 17px;\r\n    padding-left: 45px;\r\n    font-weight: 600;\r\n    color: #25282bbd;\r\n    text-transform: uppercase;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWN0aXZpdHkvYWN0aXZpdHkuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFdBQVc7QUFDZjtBQUNBO0lBQ0ksZUFBZTtJQUNmLGtCQUFrQjtJQUNsQixnQkFBZ0I7SUFDaEIsZ0JBQWdCO0lBQ2hCLHlCQUF5QjtBQUM3QiIsImZpbGUiOiJzcmMvYXBwL2FjdGl2aXR5L2FjdGl2aXR5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZnVsbC13aWR0aCB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxufVxyXG4uaW5mb3JtYXRpb24ge1xyXG4gICAgZm9udC1zaXplOiAxN3B4O1xyXG4gICAgcGFkZGluZy1sZWZ0OiA0NXB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcclxuICAgIGNvbG9yOiAjMjUyODJiYmQ7XHJcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xyXG59Il19 */"
 
 /***/ }),
 
@@ -191,6 +191,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _global_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../global.service */ "./src/app/global.service.ts");
 /* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+
 
 
 
@@ -205,16 +207,21 @@ var ActivityComponent = /** @class */ (function () {
         this.ctn = "";
         this.msg = "";
         this.address = "";
+        this.today = new Date();
+        this.date = '';
+        this.time = '';
         this.basePath = '/details';
         db.list(this.basePath).valueChanges()
             .subscribe(function (courses) {
             _this.courses = courses;
         });
+        this.date = Object(_angular_common__WEBPACK_IMPORTED_MODULE_4__["formatDate"])(this.today, 'dd-MM-yyyy', 'en-US', '+0530');
+        this.time = Object(_angular_common__WEBPACK_IMPORTED_MODULE_4__["formatDate"])(this.today, 'hh:mm:ss a', 'en-US', '+0530');
     }
     ActivityComponent.prototype.getData = function () {
         return this.courses;
     };
-    ActivityComponent.prototype.submitFunction = function (name, email, ctn, msg, address, lat, long) {
+    ActivityComponent.prototype.submitFunction = function (name, email, ctn, msg, address, lat, long, date, time) {
         var dataObj = {
             name: name,
             email: email,
@@ -222,8 +229,11 @@ var ActivityComponent = /** @class */ (function () {
             msg: msg,
             address: address,
             lat: lat,
-            long: long
+            long: long,
+            date: date,
+            time: time
         };
+        debugger;
         this.globalService.addFunction(dataObj);
     };
     ActivityComponent.prototype.resetForm = function () {
@@ -234,10 +244,6 @@ var ActivityComponent = /** @class */ (function () {
             this.address = "",
             this.lat = "",
             this.long = "";
-    };
-    ActivityComponent.prototype.delete = function (name) {
-        debugger;
-        this.courses.remove(name);
     };
     ActivityComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -272,7 +278,7 @@ var ActivityComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZy1ncmlkL2FnLWdyaWQuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FnLWdyaWQvYWctZ3JpZC5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -366,7 +372,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".example-fill-remaining-space {\r\n    /* This fills the remaining space, by using flexbox. \r\n     Every toolbar row uses a flexbox row layout. */\r\n    -webkit-box-flex: 1;\r\n            flex: 1 1 auto;\r\n}\r\n.example-container {\r\n    height: calc(100vh - 64px);\r\n}\r\n.main-height {\r\n    height: calc(100vh - 57px);\r\n}\r\n.Sidenav {\r\n    border-right: 1px solid #dedede;\r\n    padding: 10px;\r\n}\r\n.Maincontent {\r\n    background: #efefef;\r\n    /*padding: 10px 15px;*/\r\n    overflow: auto;\r\n}\r\n.acc {\r\n    font-size: 14px;\r\n    padding-top: 10px;\r\n}\r\n.mat-card {\r\n    margin-bottom: 15px;\r\n}\r\n.card-txt {\r\n    color: grey;\r\n    font-size: 14px;\r\n}\r\n.text-align-rgt {\r\n    text-align: right;\r\n}\r\n.mini-card i {\r\n    color: dodgerblue;\r\n    font-size: 30px;\r\n}\r\n.sideNav-txt {\r\n    text-transform: uppercase;\r\n    font-size: 15px;\r\n    font-weight: 600;\r\n    color: grey;\r\n    cursor: pointer;\r\n    text-decoration: none;\r\n}\r\n.ft-clr {\r\n    font-size: 14px;\r\n    font-weight: 500 !important;\r\n    color: #232f3e;\r\n}\r\n.mat-list-base {\r\n    padding-top: 0px !important;\r\n}\r\ntable {\r\n    width: 100%;\r\n}\r\n.active {\r\n    background: #FFC107;\r\n}\r\n.example-fill-remaining-space {\r\n    /* This fills the remaining space, by using flexbox. \r\n     Every toolbar row uses a flexbox row layout. */\r\n    -webkit-box-flex: 1;\r\n            flex: 1 1 auto;\r\n}\r\n.mat-toolbar-row, .mat-toolbar-single-row {\r\n    height: 56px;\r\n}\r\n.mat-toolbar.mat-primary {\r\n    background: #232f3e !important;\r\n    color: #fff;\r\n}\r\n.toolbar-fullscreen {\r\n    display: none;\r\n}\r\n.toolbar-filler {\r\n    -webkit-box-flex: 1;\r\n            flex: 1 1 auto\r\n}\r\n.dash-label {\r\n    text-transform: uppercase;\r\n    font-size: 17px;\r\n    letter-spacing: 0.03cm;\r\n    padding-left: 17px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0k7bURBQytDO0lBQy9DLG1CQUFjO1lBQWQsY0FBYztBQUNsQjtBQUNBO0lBQ0ksMEJBQTBCO0FBQzlCO0FBQ0E7SUFDSSwwQkFBMEI7QUFDOUI7QUFDQTtJQUNJLCtCQUErQjtJQUMvQixhQUFhO0FBQ2pCO0FBQ0E7SUFDSSxtQkFBbUI7SUFDbkIsc0JBQXNCO0lBQ3RCLGNBQWM7QUFDbEI7QUFDQTtJQUNJLGVBQWU7SUFDZixpQkFBaUI7QUFDckI7QUFDQTtJQUNJLG1CQUFtQjtBQUN2QjtBQUNBO0lBQ0ksV0FBVztJQUNYLGVBQWU7QUFDbkI7QUFDQTtJQUNJLGlCQUFpQjtBQUNyQjtBQUNBO0lBQ0ksaUJBQWlCO0lBQ2pCLGVBQWU7QUFDbkI7QUFDQTtJQUNJLHlCQUF5QjtJQUN6QixlQUFlO0lBQ2YsZ0JBQWdCO0lBQ2hCLFdBQVc7SUFDWCxlQUFlO0lBQ2YscUJBQXFCO0FBQ3pCO0FBQ0E7SUFDSSxlQUFlO0lBQ2YsMkJBQTJCO0lBQzNCLGNBQWM7QUFDbEI7QUFDQTtJQUNJLDJCQUEyQjtBQUMvQjtBQUNBO0lBQ0ksV0FBVztBQUNmO0FBQ0E7SUFDSSxtQkFBbUI7QUFDdkI7QUFDQTtJQUNJO21EQUMrQztJQUMvQyxtQkFBYztZQUFkLGNBQWM7QUFDbEI7QUFDQTtJQUNJLFlBQVk7QUFDaEI7QUFDQTtJQUNJLDhCQUE4QjtJQUM5QixXQUFXO0FBQ2Y7QUFDQTtJQUNJLGFBQWE7QUFDakI7QUFDQTtJQUNJLG1CQUFhO1lBQWI7QUFDSjtBQUNBO0lBQ0kseUJBQXlCO0lBQ3pCLGVBQWU7SUFDZixzQkFBc0I7SUFDdEIsa0JBQWtCO0FBQ3RCIiwiZmlsZSI6ImFwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmV4YW1wbGUtZmlsbC1yZW1haW5pbmctc3BhY2Uge1xyXG4gICAgLyogVGhpcyBmaWxscyB0aGUgcmVtYWluaW5nIHNwYWNlLCBieSB1c2luZyBmbGV4Ym94LiBcclxuICAgICBFdmVyeSB0b29sYmFyIHJvdyB1c2VzIGEgZmxleGJveCByb3cgbGF5b3V0LiAqL1xyXG4gICAgZmxleDogMSAxIGF1dG87XHJcbn1cclxuLmV4YW1wbGUtY29udGFpbmVyIHtcclxuICAgIGhlaWdodDogY2FsYygxMDB2aCAtIDY0cHgpO1xyXG59XHJcbi5tYWluLWhlaWdodCB7XHJcbiAgICBoZWlnaHQ6IGNhbGMoMTAwdmggLSA1N3B4KTtcclxufVxyXG4uU2lkZW5hdiB7XHJcbiAgICBib3JkZXItcmlnaHQ6IDFweCBzb2xpZCAjZGVkZWRlO1xyXG4gICAgcGFkZGluZzogMTBweDtcclxufVxyXG4uTWFpbmNvbnRlbnQge1xyXG4gICAgYmFja2dyb3VuZDogI2VmZWZlZjtcclxuICAgIC8qcGFkZGluZzogMTBweCAxNXB4OyovXHJcbiAgICBvdmVyZmxvdzogYXV0bztcclxufVxyXG4uYWNjIHtcclxuICAgIGZvbnQtc2l6ZTogMTRweDtcclxuICAgIHBhZGRpbmctdG9wOiAxMHB4O1xyXG59XHJcbi5tYXQtY2FyZCB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxNXB4O1xyXG59XHJcbi5jYXJkLXR4dCB7XHJcbiAgICBjb2xvcjogZ3JleTtcclxuICAgIGZvbnQtc2l6ZTogMTRweDtcclxufVxyXG4udGV4dC1hbGlnbi1yZ3Qge1xyXG4gICAgdGV4dC1hbGlnbjogcmlnaHQ7XHJcbn1cclxuLm1pbmktY2FyZCBpIHtcclxuICAgIGNvbG9yOiBkb2RnZXJibHVlO1xyXG4gICAgZm9udC1zaXplOiAzMHB4O1xyXG59XHJcbi5zaWRlTmF2LXR4dCB7XHJcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xyXG4gICAgZm9udC1zaXplOiAxNXB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcclxuICAgIGNvbG9yOiBncmV5O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG59XHJcbi5mdC1jbHIge1xyXG4gICAgZm9udC1zaXplOiAxNHB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IDUwMCAhaW1wb3J0YW50O1xyXG4gICAgY29sb3I6ICMyMzJmM2U7XHJcbn1cclxuLm1hdC1saXN0LWJhc2Uge1xyXG4gICAgcGFkZGluZy10b3A6IDBweCAhaW1wb3J0YW50O1xyXG59XHJcbnRhYmxlIHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG59XHJcbi5hY3RpdmUge1xyXG4gICAgYmFja2dyb3VuZDogI0ZGQzEwNztcclxufVxyXG4uZXhhbXBsZS1maWxsLXJlbWFpbmluZy1zcGFjZSB7XHJcbiAgICAvKiBUaGlzIGZpbGxzIHRoZSByZW1haW5pbmcgc3BhY2UsIGJ5IHVzaW5nIGZsZXhib3guIFxyXG4gICAgIEV2ZXJ5IHRvb2xiYXIgcm93IHVzZXMgYSBmbGV4Ym94IHJvdyBsYXlvdXQuICovXHJcbiAgICBmbGV4OiAxIDEgYXV0bztcclxufVxyXG4ubWF0LXRvb2xiYXItcm93LCAubWF0LXRvb2xiYXItc2luZ2xlLXJvdyB7XHJcbiAgICBoZWlnaHQ6IDU2cHg7XHJcbn1cclxuLm1hdC10b29sYmFyLm1hdC1wcmltYXJ5IHtcclxuICAgIGJhY2tncm91bmQ6ICMyMzJmM2UgIWltcG9ydGFudDtcclxuICAgIGNvbG9yOiAjZmZmO1xyXG59XHJcbi50b29sYmFyLWZ1bGxzY3JlZW4ge1xyXG4gICAgZGlzcGxheTogbm9uZTtcclxufVxyXG4udG9vbGJhci1maWxsZXIge1xyXG4gICAgZmxleDogMSAxIGF1dG9cclxufVxyXG4uZGFzaC1sYWJlbCB7XHJcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xyXG4gICAgZm9udC1zaXplOiAxN3B4O1xyXG4gICAgbGV0dGVyLXNwYWNpbmc6IDAuMDNjbTtcclxuICAgIHBhZGRpbmctbGVmdDogMTdweDtcclxufSJdfQ== */"
+module.exports = ".example-fill-remaining-space {\r\n    /* This fills the remaining space, by using flexbox. \r\n     Every toolbar row uses a flexbox row layout. */\r\n    -webkit-box-flex: 1;\r\n            flex: 1 1 auto;\r\n}\r\n.example-container {\r\n    height: calc(100vh - 64px);\r\n}\r\n.main-height {\r\n    height: calc(100vh - 57px);\r\n}\r\n.Sidenav {\r\n    border-right: 1px solid #dedede;\r\n    padding: 10px;\r\n}\r\n.Maincontent {\r\n    background: #efefef;\r\n    /*padding: 10px 15px;*/\r\n    overflow: auto;\r\n}\r\n.acc {\r\n    font-size: 14px;\r\n    padding-top: 10px;\r\n}\r\n.mat-card {\r\n    margin-bottom: 15px;\r\n}\r\n.card-txt {\r\n    color: grey;\r\n    font-size: 14px;\r\n}\r\n.text-align-rgt {\r\n    text-align: right;\r\n}\r\n.mini-card i {\r\n    color: dodgerblue;\r\n    font-size: 30px;\r\n}\r\n.sideNav-txt {\r\n    text-transform: uppercase;\r\n    font-size: 15px;\r\n    font-weight: 600;\r\n    color: grey;\r\n    cursor: pointer;\r\n    text-decoration: none;\r\n}\r\n.ft-clr {\r\n    font-size: 14px;\r\n    font-weight: 500 !important;\r\n    color: #232f3e;\r\n}\r\n.mat-list-base {\r\n    padding-top: 0px !important;\r\n}\r\ntable {\r\n    width: 100%;\r\n}\r\n.active {\r\n    background: #FFC107;\r\n}\r\n.example-fill-remaining-space {\r\n    /* This fills the remaining space, by using flexbox. \r\n     Every toolbar row uses a flexbox row layout. */\r\n    -webkit-box-flex: 1;\r\n            flex: 1 1 auto;\r\n}\r\n.mat-toolbar-row, .mat-toolbar-single-row {\r\n    height: 56px;\r\n}\r\n.mat-toolbar.mat-primary {\r\n    background: #232f3e !important;\r\n    color: #fff;\r\n}\r\n.toolbar-fullscreen {\r\n    display: none;\r\n}\r\n.toolbar-filler {\r\n    -webkit-box-flex: 1;\r\n            flex: 1 1 auto\r\n}\r\n.dash-label {\r\n    text-transform: uppercase;\r\n    font-size: 17px;\r\n    letter-spacing: 0.03cm;\r\n    padding-left: 17px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSTttREFDK0M7SUFDL0MsbUJBQWM7WUFBZCxjQUFjO0FBQ2xCO0FBQ0E7SUFDSSwwQkFBMEI7QUFDOUI7QUFDQTtJQUNJLDBCQUEwQjtBQUM5QjtBQUNBO0lBQ0ksK0JBQStCO0lBQy9CLGFBQWE7QUFDakI7QUFDQTtJQUNJLG1CQUFtQjtJQUNuQixzQkFBc0I7SUFDdEIsY0FBYztBQUNsQjtBQUNBO0lBQ0ksZUFBZTtJQUNmLGlCQUFpQjtBQUNyQjtBQUNBO0lBQ0ksbUJBQW1CO0FBQ3ZCO0FBQ0E7SUFDSSxXQUFXO0lBQ1gsZUFBZTtBQUNuQjtBQUNBO0lBQ0ksaUJBQWlCO0FBQ3JCO0FBQ0E7SUFDSSxpQkFBaUI7SUFDakIsZUFBZTtBQUNuQjtBQUNBO0lBQ0kseUJBQXlCO0lBQ3pCLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsV0FBVztJQUNYLGVBQWU7SUFDZixxQkFBcUI7QUFDekI7QUFDQTtJQUNJLGVBQWU7SUFDZiwyQkFBMkI7SUFDM0IsY0FBYztBQUNsQjtBQUNBO0lBQ0ksMkJBQTJCO0FBQy9CO0FBQ0E7SUFDSSxXQUFXO0FBQ2Y7QUFDQTtJQUNJLG1CQUFtQjtBQUN2QjtBQUNBO0lBQ0k7bURBQytDO0lBQy9DLG1CQUFjO1lBQWQsY0FBYztBQUNsQjtBQUNBO0lBQ0ksWUFBWTtBQUNoQjtBQUNBO0lBQ0ksOEJBQThCO0lBQzlCLFdBQVc7QUFDZjtBQUNBO0lBQ0ksYUFBYTtBQUNqQjtBQUNBO0lBQ0ksbUJBQWE7WUFBYjtBQUNKO0FBQ0E7SUFDSSx5QkFBeUI7SUFDekIsZUFBZTtJQUNmLHNCQUFzQjtJQUN0QixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5leGFtcGxlLWZpbGwtcmVtYWluaW5nLXNwYWNlIHtcclxuICAgIC8qIFRoaXMgZmlsbHMgdGhlIHJlbWFpbmluZyBzcGFjZSwgYnkgdXNpbmcgZmxleGJveC4gXHJcbiAgICAgRXZlcnkgdG9vbGJhciByb3cgdXNlcyBhIGZsZXhib3ggcm93IGxheW91dC4gKi9cclxuICAgIGZsZXg6IDEgMSBhdXRvO1xyXG59XHJcbi5leGFtcGxlLWNvbnRhaW5lciB7XHJcbiAgICBoZWlnaHQ6IGNhbGMoMTAwdmggLSA2NHB4KTtcclxufVxyXG4ubWFpbi1oZWlnaHQge1xyXG4gICAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gNTdweCk7XHJcbn1cclxuLlNpZGVuYXYge1xyXG4gICAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2RlZGVkZTtcclxuICAgIHBhZGRpbmc6IDEwcHg7XHJcbn1cclxuLk1haW5jb250ZW50IHtcclxuICAgIGJhY2tncm91bmQ6ICNlZmVmZWY7XHJcbiAgICAvKnBhZGRpbmc6IDEwcHggMTVweDsqL1xyXG4gICAgb3ZlcmZsb3c6IGF1dG87XHJcbn1cclxuLmFjYyB7XHJcbiAgICBmb250LXNpemU6IDE0cHg7XHJcbiAgICBwYWRkaW5nLXRvcDogMTBweDtcclxufVxyXG4ubWF0LWNhcmQge1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMTVweDtcclxufVxyXG4uY2FyZC10eHQge1xyXG4gICAgY29sb3I6IGdyZXk7XHJcbiAgICBmb250LXNpemU6IDE0cHg7XHJcbn1cclxuLnRleHQtYWxpZ24tcmd0IHtcclxuICAgIHRleHQtYWxpZ246IHJpZ2h0O1xyXG59XHJcbi5taW5pLWNhcmQgaSB7XHJcbiAgICBjb2xvcjogZG9kZ2VyYmx1ZTtcclxuICAgIGZvbnQtc2l6ZTogMzBweDtcclxufVxyXG4uc2lkZU5hdi10eHQge1xyXG4gICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcclxuICAgIGZvbnQtc2l6ZTogMTVweDtcclxuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XHJcbiAgICBjb2xvcjogZ3JleTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxufVxyXG4uZnQtY2xyIHtcclxuICAgIGZvbnQtc2l6ZTogMTRweDtcclxuICAgIGZvbnQtd2VpZ2h0OiA1MDAgIWltcG9ydGFudDtcclxuICAgIGNvbG9yOiAjMjMyZjNlO1xyXG59XHJcbi5tYXQtbGlzdC1iYXNlIHtcclxuICAgIHBhZGRpbmctdG9wOiAwcHggIWltcG9ydGFudDtcclxufVxyXG50YWJsZSB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxufVxyXG4uYWN0aXZlIHtcclxuICAgIGJhY2tncm91bmQ6ICNGRkMxMDc7XHJcbn1cclxuLmV4YW1wbGUtZmlsbC1yZW1haW5pbmctc3BhY2Uge1xyXG4gICAgLyogVGhpcyBmaWxscyB0aGUgcmVtYWluaW5nIHNwYWNlLCBieSB1c2luZyBmbGV4Ym94LiBcclxuICAgICBFdmVyeSB0b29sYmFyIHJvdyB1c2VzIGEgZmxleGJveCByb3cgbGF5b3V0LiAqL1xyXG4gICAgZmxleDogMSAxIGF1dG87XHJcbn1cclxuLm1hdC10b29sYmFyLXJvdywgLm1hdC10b29sYmFyLXNpbmdsZS1yb3cge1xyXG4gICAgaGVpZ2h0OiA1NnB4O1xyXG59XHJcbi5tYXQtdG9vbGJhci5tYXQtcHJpbWFyeSB7XHJcbiAgICBiYWNrZ3JvdW5kOiAjMjMyZjNlICFpbXBvcnRhbnQ7XHJcbiAgICBjb2xvcjogI2ZmZjtcclxufVxyXG4udG9vbGJhci1mdWxsc2NyZWVuIHtcclxuICAgIGRpc3BsYXk6IG5vbmU7XHJcbn1cclxuLnRvb2xiYXItZmlsbGVyIHtcclxuICAgIGZsZXg6IDEgMSBhdXRvXHJcbn1cclxuLmRhc2gtbGFiZWwge1xyXG4gICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcclxuICAgIGZvbnQtc2l6ZTogMTdweDtcclxuICAgIGxldHRlci1zcGFjaW5nOiAwLjAzY207XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDE3cHg7XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -506,6 +512,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
 /* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/esm5/form-field.es5.js");
 /* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/esm5/select.es5.js");
+/* harmony import */ var ng2_search_filter__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ng2-search-filter */ "./node_modules/ng2-search-filter/ng2-search-filter.es5.js");
+
 
 
 
@@ -608,6 +616,7 @@ var AppModule = /** @class */ (function () {
                 _angular_material_dialog__WEBPACK_IMPORTED_MODULE_41__["MatDialogModule"],
                 _angular_material_form_field__WEBPACK_IMPORTED_MODULE_42__["MatFormFieldModule"],
                 _angular_material_select__WEBPACK_IMPORTED_MODULE_43__["MatSelectModule"],
+                ng2_search_filter__WEBPACK_IMPORTED_MODULE_44__["Ng2SearchPipeModule"],
                 _asymmetrik_ngx_leaflet__WEBPACK_IMPORTED_MODULE_38__["LeafletModule"].forRoot(),
                 _angular_router__WEBPACK_IMPORTED_MODULE_19__["RouterModule"].forRoot(routes),
                 ag_grid_angular__WEBPACK_IMPORTED_MODULE_24__["AgGridModule"].withComponents([]),
@@ -636,7 +645,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjaGFydC9jaGFydC5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0L2NoYXJ0LmNvbXBvbmVudC5jc3MifQ== */"
 
 /***/ }),
 
@@ -680,7 +689,7 @@ var ChartComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".Maincontent {\r\n  background: #efefef;\r\n  padding: 10px 15px;\r\n  overflow: auto;\r\n}\r\n\r\n.acc {\r\n  font-size: 14px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.mat-card {\r\n  margin-bottom: 15px;\r\n}\r\n\r\n.card-txt {\r\n  color: grey;\r\n  font-size: 14px;\r\n}\r\n\r\n.text-align-rgt {\r\n  text-align: right;\r\n}\r\n\r\n.mini-card i{\r\n    color: #232f3e;\r\n    font-size: 30px;\r\n}\r\n\r\ntable {\r\n  width: 100%;\r\n}\r\n\r\n.card-val{\r\n  font-size: 18px;\r\n    font-weight: 600;\r\n    color: #232f3e;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRhc2hib2FyZC9kYXNoYm9hcmQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1CQUFtQjtFQUNuQixrQkFBa0I7RUFDbEIsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGVBQWU7RUFDZixpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsZUFBZTtBQUNqQjs7QUFFQTtFQUNFLGlCQUFpQjtBQUNuQjs7QUFFQTtJQUNJLGNBQWM7SUFDZCxlQUFlO0FBQ25COztBQUNBO0VBQ0UsV0FBVztBQUNiOztBQUNBO0VBQ0UsZUFBZTtJQUNiLGdCQUFnQjtJQUNoQixjQUFjO0FBQ2xCIiwiZmlsZSI6ImRhc2hib2FyZC9kYXNoYm9hcmQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5NYWluY29udGVudCB7XHJcbiAgYmFja2dyb3VuZDogI2VmZWZlZjtcclxuICBwYWRkaW5nOiAxMHB4IDE1cHg7XHJcbiAgb3ZlcmZsb3c6IGF1dG87XHJcbn1cclxuXHJcbi5hY2Mge1xyXG4gIGZvbnQtc2l6ZTogMTRweDtcclxuICBwYWRkaW5nLXRvcDogMTBweDtcclxufVxyXG5cclxuLm1hdC1jYXJkIHtcclxuICBtYXJnaW4tYm90dG9tOiAxNXB4O1xyXG59XHJcblxyXG4uY2FyZC10eHQge1xyXG4gIGNvbG9yOiBncmV5O1xyXG4gIGZvbnQtc2l6ZTogMTRweDtcclxufVxyXG5cclxuLnRleHQtYWxpZ24tcmd0IHtcclxuICB0ZXh0LWFsaWduOiByaWdodDtcclxufVxyXG5cclxuLm1pbmktY2FyZCBpe1xyXG4gICAgY29sb3I6ICMyMzJmM2U7XHJcbiAgICBmb250LXNpemU6IDMwcHg7XHJcbn1cclxudGFibGUge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcbi5jYXJkLXZhbHtcclxuICBmb250LXNpemU6IDE4cHg7XHJcbiAgICBmb250LXdlaWdodDogNjAwO1xyXG4gICAgY29sb3I6ICMyMzJmM2U7XHJcbn1cclxuIl19 */"
+module.exports = ".Maincontent {\r\n  background: #efefef;\r\n  padding: 10px 15px;\r\n  overflow: auto;\r\n}\r\n\r\n.acc {\r\n  font-size: 14px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.mat-card {\r\n  margin-bottom: 15px;\r\n}\r\n\r\n.card-txt {\r\n  color: grey;\r\n  font-size: 14px;\r\n}\r\n\r\n.text-align-rgt {\r\n  text-align: right;\r\n}\r\n\r\n.mini-card i{\r\n    color: #232f3e;\r\n    font-size: 30px;\r\n}\r\n\r\ntable {\r\n  width: 100%;\r\n}\r\n\r\n.card-val{\r\n  font-size: 18px;\r\n    font-weight: 600;\r\n    color: #232f3e;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsbUJBQW1CO0VBQ25CLGtCQUFrQjtFQUNsQixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsaUJBQWlCO0FBQ25COztBQUVBO0lBQ0ksY0FBYztJQUNkLGVBQWU7QUFDbkI7O0FBQ0E7RUFDRSxXQUFXO0FBQ2I7O0FBQ0E7RUFDRSxlQUFlO0lBQ2IsZ0JBQWdCO0lBQ2hCLGNBQWM7QUFDbEIiLCJmaWxlIjoic3JjL2FwcC9kYXNoYm9hcmQvZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuTWFpbmNvbnRlbnQge1xyXG4gIGJhY2tncm91bmQ6ICNlZmVmZWY7XHJcbiAgcGFkZGluZzogMTBweCAxNXB4O1xyXG4gIG92ZXJmbG93OiBhdXRvO1xyXG59XHJcblxyXG4uYWNjIHtcclxuICBmb250LXNpemU6IDE0cHg7XHJcbiAgcGFkZGluZy10b3A6IDEwcHg7XHJcbn1cclxuXHJcbi5tYXQtY2FyZCB7XHJcbiAgbWFyZ2luLWJvdHRvbTogMTVweDtcclxufVxyXG5cclxuLmNhcmQtdHh0IHtcclxuICBjb2xvcjogZ3JleTtcclxuICBmb250LXNpemU6IDE0cHg7XHJcbn1cclxuXHJcbi50ZXh0LWFsaWduLXJndCB7XHJcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XHJcbn1cclxuXHJcbi5taW5pLWNhcmQgaXtcclxuICAgIGNvbG9yOiAjMjMyZjNlO1xyXG4gICAgZm9udC1zaXplOiAzMHB4O1xyXG59XHJcbnRhYmxlIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG4uY2FyZC12YWx7XHJcbiAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcclxuICAgIGNvbG9yOiAjMjMyZjNlO1xyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -799,7 +808,7 @@ var GlobalService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".example-fill-remaining-space {\r\n  /* This fills the remaining space, by using flexbox. \r\n     Every toolbar row uses a flexbox row layout. */\r\n  -webkit-box-flex: 1;\r\n          flex: 1 1 auto;\r\n}\r\n\r\n.mat-toolbar-row, .mat-toolbar-single-row {\r\n    height: 56px;\r\n}\r\n\r\n.mat-toolbar.mat-primary {\r\n    background: #232f3e !important;\r\n    color: #fff;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhlYWRlci9oZWFkZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO21EQUNpRDtFQUNqRCxtQkFBYztVQUFkLGNBQWM7QUFDaEI7O0FBRUE7SUFDSSxZQUFZO0FBQ2hCOztBQUNBO0lBQ0ksOEJBQThCO0lBQzlCLFdBQVc7QUFDZiIsImZpbGUiOiJoZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhhbXBsZS1maWxsLXJlbWFpbmluZy1zcGFjZSB7XHJcbiAgLyogVGhpcyBmaWxscyB0aGUgcmVtYWluaW5nIHNwYWNlLCBieSB1c2luZyBmbGV4Ym94LiBcclxuICAgICBFdmVyeSB0b29sYmFyIHJvdyB1c2VzIGEgZmxleGJveCByb3cgbGF5b3V0LiAqL1xyXG4gIGZsZXg6IDEgMSBhdXRvO1xyXG59XHJcblxyXG4ubWF0LXRvb2xiYXItcm93LCAubWF0LXRvb2xiYXItc2luZ2xlLXJvdyB7XHJcbiAgICBoZWlnaHQ6IDU2cHg7XHJcbn1cclxuLm1hdC10b29sYmFyLm1hdC1wcmltYXJ5IHtcclxuICAgIGJhY2tncm91bmQ6ICMyMzJmM2UgIWltcG9ydGFudDtcclxuICAgIGNvbG9yOiAjZmZmO1xyXG59Il19 */"
+module.exports = ".example-fill-remaining-space {\r\n  /* This fills the remaining space, by using flexbox. \r\n     Every toolbar row uses a flexbox row layout. */\r\n  -webkit-box-flex: 1;\r\n          flex: 1 1 auto;\r\n}\r\n\r\n.mat-toolbar-row, .mat-toolbar-single-row {\r\n    height: 56px;\r\n}\r\n\r\n.mat-toolbar.mat-primary {\r\n    background: #232f3e !important;\r\n    color: #fff;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7bURBQ2lEO0VBQ2pELG1CQUFjO1VBQWQsY0FBYztBQUNoQjs7QUFFQTtJQUNJLFlBQVk7QUFDaEI7O0FBQ0E7SUFDSSw4QkFBOEI7SUFDOUIsV0FBVztBQUNmIiwiZmlsZSI6InNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmV4YW1wbGUtZmlsbC1yZW1haW5pbmctc3BhY2Uge1xyXG4gIC8qIFRoaXMgZmlsbHMgdGhlIHJlbWFpbmluZyBzcGFjZSwgYnkgdXNpbmcgZmxleGJveC4gXHJcbiAgICAgRXZlcnkgdG9vbGJhciByb3cgdXNlcyBhIGZsZXhib3ggcm93IGxheW91dC4gKi9cclxuICBmbGV4OiAxIDEgYXV0bztcclxufVxyXG5cclxuLm1hdC10b29sYmFyLXJvdywgLm1hdC10b29sYmFyLXNpbmdsZS1yb3cge1xyXG4gICAgaGVpZ2h0OiA1NnB4O1xyXG59XHJcbi5tYXQtdG9vbGJhci5tYXQtcHJpbWFyeSB7XHJcbiAgICBiYWNrZ3JvdW5kOiAjMjMyZjNlICFpbXBvcnRhbnQ7XHJcbiAgICBjb2xvcjogI2ZmZjtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -843,7 +852,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJoZWxwL2hlbHAuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2hlbHAvaGVscC5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -887,7 +896,7 @@ var HelpComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJoaWdoY2hhcnQvaGlnaGNoYXJ0LmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2hpZ2hjaGFydC9oaWdoY2hhcnQuY29tcG9uZW50LmNzcyJ9 */"
 
 /***/ }),
 
@@ -931,7 +940,7 @@ var HighchartComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "table {\r\n  width: 100%;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haWwvbWFpbC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVztBQUNiIiwiZmlsZSI6Im1haWwvbWFpbC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsidGFibGUge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcbiJdfQ== */"
+module.exports = "table {\r\n  width: 100%;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbC9tYWlsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxXQUFXO0FBQ2IiLCJmaWxlIjoic3JjL2FwcC9tYWlsL21haWwuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbInRhYmxlIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -959,7 +968,7 @@ var MailComponent = /** @class */ (function () {
         this.db = db;
         this.globalService = globalService;
         this.basePath = '/details';
-        this.displayedColumns = ['name', 'email', 'msg'];
+        this.displayedColumns = ['name', 'email', 'msg', 'date', 'time'];
         db.list(this.basePath).valueChanges()
             .subscribe(function (courses) {
             _this.courses = courses;
@@ -1469,7 +1478,7 @@ var MapService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "agm-map {\r\n  height: 100%;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1hcC9tYXAuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVk7QUFDZCIsImZpbGUiOiJtYXAvbWFwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJhZ20tbWFwIHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuIl19 */"
+module.exports = "agm-map {\r\n  height: 100%;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFwL21hcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBWTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvbWFwL21hcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYWdtLW1hcCB7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -1579,7 +1588,7 @@ var MapComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwYWdlLW5vdC1mb3VuZC9wYWdlLW5vdC1mb3VuZC5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2Utbm90LWZvdW5kL3BhZ2Utbm90LWZvdW5kLmNvbXBvbmVudC5jc3MifQ== */"
 
 /***/ }),
 
@@ -1623,7 +1632,7 @@ var PageNotFoundComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".mat-dialog-title {\r\n    text-align: center;\r\n    text-transform: uppercase;\r\n    font-size: 18px;\r\n    color: grey;\r\n}\r\n.name {\r\n    font-size: 15px;\r\n    font-weight: 500;\r\n    /*letter-spacing: 0.5px;*/\r\n    color: #000000;\r\n    text-transform: uppercase;\r\n}\r\n.yellow{\r\n\tbackground-color: #FF8F00;\r\n\tcolor: #ffffff !important;\r\n}\r\n.lime{\r\n\tbackground-color: #9E9D24;\r\n\tcolor: #ffffff !important;\r\n\r\n}\r\n.blue{\r\n\tbackground-color: #1565C0;\r\n\tcolor: #ffffff !important;\r\n\r\n}\r\n.grey{\r\n\tbackground-color: #424242;\r\n\tcolor: #ffffff !important;\r\n\t\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhc3N3b3JkbWd0L3Bhc3N3b3JkbWd0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxrQkFBa0I7SUFDbEIseUJBQXlCO0lBQ3pCLGVBQWU7SUFDZixXQUFXO0FBQ2Y7QUFDQTtJQUNJLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIseUJBQXlCO0lBQ3pCLGNBQWM7SUFDZCx5QkFBeUI7QUFDN0I7QUFFQTtDQUNDLHlCQUF5QjtDQUN6Qix5QkFBeUI7QUFDMUI7QUFFQTtDQUNDLHlCQUF5QjtDQUN6Qix5QkFBeUI7O0FBRTFCO0FBQ0E7Q0FDQyx5QkFBeUI7Q0FDekIseUJBQXlCOztBQUUxQjtBQUNBO0NBQ0MseUJBQXlCO0NBQ3pCLHlCQUF5Qjs7QUFFMUIiLCJmaWxlIjoicGFzc3dvcmRtZ3QvcGFzc3dvcmRtZ3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYXQtZGlhbG9nLXRpdGxlIHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcbiAgICBmb250LXNpemU6IDE4cHg7XHJcbiAgICBjb2xvcjogZ3JleTtcclxufVxyXG4ubmFtZSB7XHJcbiAgICBmb250LXNpemU6IDE1cHg7XHJcbiAgICBmb250LXdlaWdodDogNTAwO1xyXG4gICAgLypsZXR0ZXItc3BhY2luZzogMC41cHg7Ki9cclxuICAgIGNvbG9yOiAjMDAwMDAwO1xyXG4gICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcclxufVxyXG5cclxuLnllbGxvd3tcclxuXHRiYWNrZ3JvdW5kLWNvbG9yOiAjRkY4RjAwO1xyXG5cdGNvbG9yOiAjZmZmZmZmICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi5saW1le1xyXG5cdGJhY2tncm91bmQtY29sb3I6ICM5RTlEMjQ7XHJcblx0Y29sb3I6ICNmZmZmZmYgIWltcG9ydGFudDtcclxuXHJcbn1cclxuLmJsdWV7XHJcblx0YmFja2dyb3VuZC1jb2xvcjogIzE1NjVDMDtcclxuXHRjb2xvcjogI2ZmZmZmZiAhaW1wb3J0YW50O1xyXG5cclxufVxyXG4uZ3JleXtcclxuXHRiYWNrZ3JvdW5kLWNvbG9yOiAjNDI0MjQyO1xyXG5cdGNvbG9yOiAjZmZmZmZmICFpbXBvcnRhbnQ7XHJcblx0XHJcbn0iXX0= */"
+module.exports = ".mat-dialog-title {\r\n    text-align: center;\r\n    text-transform: uppercase;\r\n    font-size: 18px;\r\n    color: grey;\r\n}\r\n.name {\r\n    font-size: 15px;\r\n    font-weight: 500;\r\n    /*letter-spacing: 0.5px;*/\r\n    color: #000000;\r\n    text-transform: uppercase;\r\n}\r\n.yellow{\r\n\tbackground-color: #FF8F00;\r\n\tcolor: #ffffff !important;\r\n}\r\n.lime{\r\n\tbackground-color: #9E9D24;\r\n\tcolor: #ffffff !important;\r\n\r\n}\r\n.blue{\r\n\tbackground-color: #1565C0;\r\n\tcolor: #ffffff !important;\r\n\r\n}\r\n.grey{\r\n\tbackground-color: #424242;\r\n\tcolor: #ffffff !important;\r\n\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFzc3dvcmRtZ3QvcGFzc3dvcmRtZ3QuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtJQUNsQix5QkFBeUI7SUFDekIsZUFBZTtJQUNmLFdBQVc7QUFDZjtBQUNBO0lBQ0ksZUFBZTtJQUNmLGdCQUFnQjtJQUNoQix5QkFBeUI7SUFDekIsY0FBYztJQUNkLHlCQUF5QjtBQUM3QjtBQUVBO0NBQ0MseUJBQXlCO0NBQ3pCLHlCQUF5QjtBQUMxQjtBQUVBO0NBQ0MseUJBQXlCO0NBQ3pCLHlCQUF5Qjs7QUFFMUI7QUFDQTtDQUNDLHlCQUF5QjtDQUN6Qix5QkFBeUI7O0FBRTFCO0FBQ0E7Q0FDQyx5QkFBeUI7Q0FDekIseUJBQXlCOztBQUUxQiIsImZpbGUiOiJzcmMvYXBwL3Bhc3N3b3JkbWd0L3Bhc3N3b3JkbWd0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LWRpYWxvZy10aXRsZSB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xyXG4gICAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgY29sb3I6IGdyZXk7XHJcbn1cclxuLm5hbWUge1xyXG4gICAgZm9udC1zaXplOiAxNXB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IDUwMDtcclxuICAgIC8qbGV0dGVyLXNwYWNpbmc6IDAuNXB4OyovXHJcbiAgICBjb2xvcjogIzAwMDAwMDtcclxuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcbn1cclxuXHJcbi55ZWxsb3d7XHJcblx0YmFja2dyb3VuZC1jb2xvcjogI0ZGOEYwMDtcclxuXHRjb2xvcjogI2ZmZmZmZiAhaW1wb3J0YW50O1xyXG59XHJcblxyXG4ubGltZXtcclxuXHRiYWNrZ3JvdW5kLWNvbG9yOiAjOUU5RDI0O1xyXG5cdGNvbG9yOiAjZmZmZmZmICFpbXBvcnRhbnQ7XHJcblxyXG59XHJcbi5ibHVle1xyXG5cdGJhY2tncm91bmQtY29sb3I6ICMxNTY1QzA7XHJcblx0Y29sb3I6ICNmZmZmZmYgIWltcG9ydGFudDtcclxuXHJcbn1cclxuLmdyZXl7XHJcblx0YmFja2dyb3VuZC1jb2xvcjogIzQyNDI0MjtcclxuXHRjb2xvcjogI2ZmZmZmZiAhaW1wb3J0YW50O1xyXG5cclxufSJdfQ== */"
 
 /***/ }),
 
@@ -1657,11 +1666,6 @@ var PasswordmgtComponent = /** @class */ (function () {
         this.db = db;
         this.array = [];
         this.passPath = '/password';
-        this.foods = [
-            { value: 'steak-0', viewValue: 'Steak' },
-            { value: 'pizza-1', viewValue: 'Pizza' },
-            { value: 'tacos-2', viewValue: 'Tacos' }
-        ];
         db.list(this.passPath).valueChanges()
             .subscribe(function (password) {
             _this.passData = password;

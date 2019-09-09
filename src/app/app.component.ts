@@ -19,6 +19,10 @@ export class AppComponent {
             icon: 'map'
         },
         {
+           name: 'admin',
+            icon: 'person'
+        },
+        {
             name: 'activity',
             icon: 'local_activity'
         },

@@ -49,7 +49,6 @@ constructor(private db: AngularFireDatabase, private globalService: GlobalServic
       date: date,
       time: time
     };
-    debugger;
     this.globalService.addFunction(dataObj);
   }
 

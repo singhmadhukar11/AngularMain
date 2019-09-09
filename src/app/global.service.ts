@@ -5,7 +5,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 })
 export class GlobalService {
 constructor(private db: AngularFireDatabase) { }
-private basePath = '/details';
+public basePath = '/details';
 private passPath = '/password';
 dataApi = "https://jsonplaceholder.typicode.com/todos";
 
@@ -17,7 +17,6 @@ dataApi = "https://jsonplaceholder.typicode.com/todos";
 
 passwordFunction(data) {
   const obj = this.db.database.ref(this.passPath);
-  debugger;
   obj.push(data);
   console.log('Success');
   }

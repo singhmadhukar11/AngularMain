@@ -11,10 +11,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
   styleUrls: ['./mail.component.css']
 })
 export class MailComponent implements OnInit {
-private basePath = '/details';
 courses: Observable < any > | any;
  constructor(private db: AngularFireDatabase, private globalService: GlobalService) {
-    db.list(this.basePath).valueChanges()
+    db.list(globalService.basePath).valueChanges()
         .subscribe(courses => {
             this.courses = courses;
         })
