@@ -50,6 +50,10 @@ export class AppComponent {
         {
             name: 'signout',
             icon: 'exit_to_app'
+        },
+        {
+           name: 'login',
+            icon: 'person'
         }
     ];
 

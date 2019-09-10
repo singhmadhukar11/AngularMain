@@ -45,19 +45,17 @@ import {MatSelectModule} from '@angular/material/select';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
-const routes: Routes = [
-{ path: 'login', component: LoginComponent },
-{ path: 'dashboard', component: DashboardComponent },
-{ path: 'activity',  component: ActivityComponent },
-{ path: 'list',  component: MailComponent },
-{ path: 'chart',  component: ChartComponent },
-{ path: 'help',  component: HelpComponent },
-{ path: 'map', component: MapComponent },
-{ path: 'passwordmgt', component: PasswordmgtComponent },
-{ path: 'admin', component: AdminComponent },
-{ path: '', component: LoginComponent },
-{ path: '**', component: PageNotFoundComponent },
-];
+// const routes: Routes = [
+// { path: 'dashboard', component: DashboardComponent },
+// { path: 'activity',  component: ActivityComponent },
+// { path: 'list',  component: MailComponent },
+// { path: 'chart',  component: ChartComponent },
+// { path: 'help',  component: HelpComponent },
+// { path: 'map', component: MapComponent },
+// { path: 'passwordmgt', component: PasswordmgtComponent },
+// { path: '', component: MapComponent },
+// { path: '**', component: PageNotFoundComponent },
+// ];
 @NgModule({
   declarations: [
     AppComponent,
@@ -104,9 +102,9 @@ const routes: Routes = [
     MatSelectModule,
     Ng2SearchPipeModule,
     LeafletModule.forRoot(),
-    RouterModule.forRoot(
-      routes,
-    ),
+    // RouterModule.forRoot(
+    //   routes,
+    // ),
     AgGridModule.withComponents([]),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCsfAKMcwNFRB3o4uGi6Z5BD9-1kw6yy34'
