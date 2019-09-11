@@ -45,6 +45,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
+import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
 // const routes: Routes = [
 // { path: 'dashboard', component: DashboardComponent },
 // { path: 'activity',  component: ActivityComponent },
@@ -101,6 +102,10 @@ import { LoginComponent } from './login/login.component';
     MatFormFieldModule,
     MatSelectModule,
     Ng2SearchPipeModule,
+     NgxMapboxGLModule.withConfig({
+    accessToken: 'pk.eyJ1IjoibWFkaHVrYXJzaW5naCIsImEiOiJjazBkdG14NHYwYXcwM2RzZDZ5dTdzemRrIn0.Jl3tWFvdm7cRSaKjHDLhAg',
+      geocoderAccessToken: 'TOKEN' // Optionnal, specify if different from the map access token, can also be set per mgl-geocoder (accessToken input of mgl-geocoder)
+    }),
     LeafletModule.forRoot(),
     // RouterModule.forRoot(
     //   routes,
