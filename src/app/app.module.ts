@@ -46,6 +46,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
+import { D3Component } from './d3/d3.component';
+import { AngularD3TreeLibModule } from 'angular-d3-tree';
 // const routes: Routes = [
 // { path: 'dashboard', component: DashboardComponent },
 // { path: 'activity',  component: ActivityComponent },
@@ -73,7 +75,8 @@ import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
     PasswordmgtComponent,
     DialogOverviewExampleDialog,
     AdminComponent,
-    LoginComponent
+    LoginComponent,
+    D3Component
   ],
   entryComponents: [PasswordmgtComponent, DialogOverviewExampleDialog],
   imports: [
@@ -102,6 +105,7 @@ import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
     MatFormFieldModule,
     MatSelectModule,
     Ng2SearchPipeModule,
+    AngularD3TreeLibModule,
      NgxMapboxGLModule.withConfig({
     accessToken: 'pk.eyJ1IjoibWFkaHVrYXJzaW5naCIsImEiOiJjazBkdG14NHYwYXcwM2RzZDZ5dTdzemRrIn0.Jl3tWFvdm7cRSaKjHDLhAg',
       geocoderAccessToken: 'TOKEN' // Optionnal, specify if different from the map access token, can also be set per mgl-geocoder (accessToken input of mgl-geocoder)

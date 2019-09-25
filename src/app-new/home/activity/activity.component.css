@@ -1,0 +1,10 @@
+.full-width {
+    width: 100%;
+}
+.information {
+    font-size: 17px;
+    padding-left: 45px;
+    font-weight: 600;
+    color: #25282bbd;
+    text-transform: uppercase;
+}

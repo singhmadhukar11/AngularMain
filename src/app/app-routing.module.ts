@@ -12,6 +12,7 @@ import { ActivityComponent } from './activity/activity.component';
 import { HighchartComponent } from './highchart/highchart.component';
 import { PasswordmgtComponent, DialogOverviewExampleDialog } from './passwordmgt/passwordmgt.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { D3Component } from './d3/d3.component';
 const routes: Routes = [
 { path: 'login', component: LoginComponent },
 { path: 'dashboard', component: DashboardComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
 { path: 'map', component: MapComponent },
 { path: 'passwordmgt', component: PasswordmgtComponent },
 { path: 'admin', component: AdminComponent },
+{ path: 'd3', component: D3Component },
 { path: '', component: MapComponent },
 { path: '**', component: PageNotFoundComponent },
 ];

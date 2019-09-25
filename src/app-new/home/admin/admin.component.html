@@ -1,0 +1,13 @@
+<!-- <mat-nav-list *ngFor="let link of courses">
+ <button mat-icon-button (click)="deleteTodo(link)">
+  <p mat-list-item> {{ link.name }} <mat-icon matListIcon>folder</mat-icon></p>
+  </button>
+</mat-nav-list>
+
+ -->
+
+ <ul>
+            <li *ngFor="let book of books | async">
+                <pre>{{ book | json }}</pre>
+            </li>
+        </ul>

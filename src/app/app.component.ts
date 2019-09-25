@@ -48,8 +48,8 @@ export class AppComponent {
             icon: 'help'
         },
         {
-            name: 'signout',
-            icon: 'exit_to_app'
+            name: 'd3',
+            icon: 'bubble_chart'
         },
         {
            name: 'login',

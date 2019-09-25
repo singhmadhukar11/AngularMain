@@ -15,7 +15,7 @@ dataApi = "https://jsonplaceholder.typicode.com/todos";
   console.log('Success');
   }
 
-passwordFunction(data) {
+  passwordFunction(data) {
   const obj = this.db.database.ref(this.passPath);
   obj.push(data);
   console.log('Success');
