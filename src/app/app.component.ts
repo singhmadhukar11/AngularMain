@@ -54,6 +54,10 @@ export class AppComponent {
         {
            name: 'login',
             icon: 'person'
+        },
+         {
+           name: 'Signup',
+            icon: 'person'
         }
     ];
 

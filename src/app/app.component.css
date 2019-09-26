@@ -82,3 +82,21 @@ table {
     letter-spacing: 0.03cm;
     padding-left: 17px;
 }
+.mat-icon-button {
+    width: 75px !important;
+    height: 75px !important;
+    border-radius: 0px;
+}
+.app-menu .mat-icon{
+  font-size: 30px !important
+}
+.mat-menu-content:not(:empty) {
+    /* padding-top: 31px; */
+    /* padding-bottom: 22px; */
+    padding: 10px 18px 10px 0px !important;
+}
+
+.app-menu{
+    width: 235px !important;
+        padding: 5px;
+}

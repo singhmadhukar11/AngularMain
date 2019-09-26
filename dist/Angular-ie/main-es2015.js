@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n\t<mat-card>\r\n    <span class=\"information\">Information</span>\r\n\t<div fxLayout=\"row\" fxLayoutAlign=\"space-around center\">\r\n\t<mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Name\" value=\"{{name}}\" [(ngModel)]=\"name\">\r\n  \t</mat-form-field>\r\n\t<mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Email Address\" value=\"{{email}}\" [(ngModel)]=\"email\" [disabled]=\"!name\">\r\n  \t</mat-form-field>\r\n\t<mat-form-field fxFlex=\"25\">\r\n    <input matInput #phone placeholder=\"Contact No\" type=\"tel\" value=\"{{ctn}}\" [(ngModel)]=\"ctn\" maxlength=\"10\" [disabled]=\"!email\">\r\n    <mat-hint align=\"end\">{{phone.value.length}} / 10</mat-hint>\r\n  \t</mat-form-field>\r\n\t</div>\r\n  <div fxLayout=\"row\" fxLayoutAlign=\"space-around center\">\r\n  <mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Address\" value=\"{{address}}\" [(ngModel)]=\"address\" [disabled]=\"!ctn\">\r\n    </mat-form-field>\r\n  <mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Latitude\" value=\"{{lat}}\" [(ngModel)]=\"lat\">\r\n    </mat-form-field>\r\n  <mat-form-field fxFlex=\"25\">\r\n    <input matInput placeholder=\"Logitude\"  value=\"{{long}}\" [(ngModel)]=\"long\">\r\n    </mat-form-field>\r\n  </div>\r\n\r\n\t<div  fxLayout=\"row\" fxLayoutAlign=\"space-around center\" >\r\n\t<mat-form-field style=\"width: 92%\">\r\n    <input matInput placeholder=\"Message\" value=\"{{msg}}\" [(ngModel)]=\"msg\" maxlength=\"100\" #message [disabled]=\"!address\">\r\n    <mat-hint align=\"end\">{{message.value.length}} / 100</mat-hint>\r\n  \t</mat-form-field>\r\n\t</div>\r\n\t<div fxLayout=\"row\" fxLayoutAlign=\"end center\" style=\"margin-right: 4%;\">\r\n\t<button mat-raised-button color=\"primary\" (click)=\"submitFunction(name,email,ctn,msg,address,lat,long,date,time);resetForm()\" [disabled]=\"!address || !msg\" routerLink=\"/list\">Submit</button>\r\n\t</div>\r\n\t</mat-card>\r\n</div>\r\n<!-- mat-card>\r\n\t<div *ngFor=\"let hero of courses\">\r\n      {{ hero.name}} || {{ hero.email}} || {{ hero.msg}} || {{hero.ctn}}\r\n    </div>\r\n</mat-card> -->\r\n<!-- <mat-card>\r\n<table>\r\n  <tr>\r\n    <th mat-sort-header=\"name\"  style=\"text-align: left;\">Name</th>\r\n    <th mat-sort-header=\"calories\"  style=\"text-align: left;\">Email</th>\r\n    <th mat-sort-header=\"fat\"  style=\"text-align: left;\">Message</th>\r\n    <th mat-sort-header=\"carbs\"  style=\"text-align: left;\">Contact No</th>\r\n    <th mat-sort-header=\"calories\"  style=\"text-align: left;\">Address</th>\r\n    <th mat-sort-header=\"fat\"  style=\"text-align: left;\">Latitude</th>\r\n    <th mat-sort-header=\"carbs\"  style=\"text-align: left;\">Longitude</th>\r\n  </tr>\r\n\r\n  <tr *ngFor=\"let hero of courses\" (click)=\"delete(name)\">\r\n    <td>{{ hero.name}}</td>\r\n    <td>{{ hero.email}}</td>\r\n    <td>{{ hero.msg}}</td>\r\n    <td>{{hero.ctn}}</td>\r\n    <td>{{ hero.address}}</td>\r\n    <td>{{ hero.lat}}</td>\r\n    <td>{{hero.long}}</td>\r\n  </tr>\r\n</table>\r\n</mat-card> -->"
+module.exports = "<div>\n\t<mat-card>\n    <span class=\"information\">Information</span>\n\t<div fxLayout=\"row\" fxLayoutAlign=\"space-around center\">\n\t<mat-form-field fxFlex=\"25\">\n    <input matInput placeholder=\"Name\" value=\"{{name}}\" [(ngModel)]=\"name\">\n  \t</mat-form-field>\n\t<mat-form-field fxFlex=\"25\">\n    <input matInput placeholder=\"Email Address\" value=\"{{email}}\" [(ngModel)]=\"email\" [disabled]=\"!name\">\n  \t</mat-form-field>\n\t<mat-form-field fxFlex=\"25\">\n    <input matInput #phone placeholder=\"Contact No\" type=\"tel\" value=\"{{ctn}}\" [(ngModel)]=\"ctn\" maxlength=\"10\" [disabled]=\"!email\">\n    <mat-hint align=\"end\">{{phone.value.length}} / 10</mat-hint>\n  \t</mat-form-field>\n\t</div>\n  <div fxLayout=\"row\" fxLayoutAlign=\"space-around center\">\n  <mat-form-field fxFlex=\"25\">\n    <input matInput placeholder=\"Address\" value=\"{{address}}\" [(ngModel)]=\"address\" [disabled]=\"!ctn\">\n    </mat-form-field>\n  <mat-form-field fxFlex=\"25\">\n    <input matInput placeholder=\"Latitude\" value=\"{{lat}}\" [(ngModel)]=\"lat\">\n    </mat-form-field>\n  <mat-form-field fxFlex=\"25\">\n    <input matInput placeholder=\"Logitude\"  value=\"{{long}}\" [(ngModel)]=\"long\">\n    </mat-form-field>\n  </div>\n\n\t<div  fxLayout=\"row\" fxLayoutAlign=\"space-around center\" >\n\t<mat-form-field style=\"width: 92%\">\n    <input matInput placeholder=\"Message\" value=\"{{msg}}\" [(ngModel)]=\"msg\" maxlength=\"100\" #message [disabled]=\"!address\">\n    <mat-hint align=\"end\">{{message.value.length}} / 100</mat-hint>\n  \t</mat-form-field>\n\t</div>\n\t<div fxLayout=\"row\" fxLayoutAlign=\"end center\" style=\"margin-right: 4%;\">\n\t<button mat-raised-button color=\"primary\" (click)=\"submitFunction(name,email,ctn,msg,address,lat,long,date,time);resetForm()\" [disabled]=\"!address || !msg\" routerLink=\"/list\">Submit</button>\n\t</div>\n\t</mat-card>\n</div>\n<!-- mat-card>\n\t<div *ngFor=\"let hero of courses\">\n      {{ hero.name}} || {{ hero.email}} || {{ hero.msg}} || {{hero.ctn}}\n    </div>\n</mat-card> -->\n<!-- <mat-card>\n<table>\n  <tr>\n    <th mat-sort-header=\"name\"  style=\"text-align: left;\">Name</th>\n    <th mat-sort-header=\"calories\"  style=\"text-align: left;\">Email</th>\n    <th mat-sort-header=\"fat\"  style=\"text-align: left;\">Message</th>\n    <th mat-sort-header=\"carbs\"  style=\"text-align: left;\">Contact No</th>\n    <th mat-sort-header=\"calories\"  style=\"text-align: left;\">Address</th>\n    <th mat-sort-header=\"fat\"  style=\"text-align: left;\">Latitude</th>\n    <th mat-sort-header=\"carbs\"  style=\"text-align: left;\">Longitude</th>\n  </tr>\n\n  <tr *ngFor=\"let hero of courses\" (click)=\"delete(name)\">\n    <td>{{ hero.name}}</td>\n    <td>{{ hero.email}}</td>\n    <td>{{ hero.msg}}</td>\n    <td>{{hero.ctn}}</td>\n    <td>{{ hero.address}}</td>\n    <td>{{ hero.lat}}</td>\n    <td>{{hero.long}}</td>\n  </tr>\n</table>\n</mat-card> -->"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<div>\r\n\t<mat-card>\r\n    <span class=\"information\">Infor
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <mat-nav-list *ngFor=\"let link of courses\">\r\n <button mat-icon-button (click)=\"deleteTodo(link)\">\r\n  <p mat-list-item> {{ link.name }} <mat-icon matListIcon>folder</mat-icon></p>\r\n  </button>\r\n</mat-nav-list>\r\n\r\n -->\r\n\r\n <ul>\r\n            <li *ngFor=\"let book of books | async\">\r\n                <pre>{{ book | json }}</pre>\r\n            </li>\r\n        </ul>"
+module.exports = "<!-- <mat-nav-list *ngFor=\"let link of courses\">\n <button mat-icon-button (click)=\"deleteTodo(link)\">\n  <p mat-list-item> {{ link.name }} <mat-icon matListIcon>folder</mat-icon></p>\n  </button>\n</mat-nav-list>\n\n -->\n\n <ul>\n            <li *ngFor=\"let book of books | async\">\n                <pre>{{ book | json }}</pre>\n            </li>\n        </ul>"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<!-- <mat-nav-list *ngFor=\"let link of courses\">\r\n <button
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ag-grid-angular \r\n    style=\"width: 100%; height: 375px;\" \r\n    class=\"ag-theme-balham\"\r\n    [rowData]=\"rowData | async\"\r\n    [columnDefs]=\"columnDefs\"\r\n    >\r\n</ag-grid-angular>"
+module.exports = "<ag-grid-angular \n    style=\"width: 100%; height: 375px;\" \n    class=\"ag-theme-balham\"\n    [rowData]=\"rowData | async\"\n    [columnDefs]=\"columnDefs\"\n    >\n</ag-grid-angular>"
 
 /***/ }),
 
@@ -63,7 +63,7 @@ module.exports = "<ag-grid-angular \r\n    style=\"width: 100%; height: 375px;\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n <mat-toolbar color=\"primary\">\r\n    <span class=\"dash-label\">{{label}}</span>\r\n    <!-- This fills the remaining space of the current row -->\r\n    <span class=\"example-fill-remaining-space\"></span>\r\n      <span>User</span>\r\n      <i class=\"material-icons\">\r\n      perm_identity\r\n    </i>\r\n  </mat-toolbar>\r\n\r\n  <div fxLayout=\"row\" class=\"main-height\">\r\n    <div fxFlex=\"15\" class=\"Sidenav\" style=\"padding: 0;\">\r\n      <!-- <div routerLink=\"/dashboard\" routerLinkActive=\"active\">Dashboard</div>\r\n      <div routerLink=\"/activity\" routerLinkActive=\"active\">Activity</div> -->\r\n      <mat-list>\r\n        <div *ngFor=\"let menu of sideNavmenus;let i = index\" (click)=\"selectItem(i,menu)\" class=\"sideNav-txt\">\r\n        <mat-list-item routerLink=\"/{{menu.name}}\" [ngClass]=\"{'active': selectedIdx == i}\">\r\n           <button mat-icon-button matTooltip=\"{{menu.icon}}\" matTooltipPosition=\"right\">\r\n          <mat-icon mat-list-icon style=\"color: #232f3e;\">{{menu.icon}}</mat-icon>\r\n            </button>\r\n          <h4 mat-line><span class=\"ft-clr\">{{menu.name}}</span></h4>\r\n        </mat-list-item>\r\n      </div>\r\n      </mat-list>\r\n    </div>\r\n     <div fxFlex=\"85\" class=\"Maincontent\" [ngStyle]=\"{'padding':selectedIdx === 0 ? '0px' : '15px' }\">\r\n<router-outlet></router-outlet>\r\n</div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div>\n <mat-toolbar color=\"primary\">\n    <span class=\"dash-label\">{{label}}</span>\n    <!-- This fills the remaining space of the current row -->\n    <span class=\"example-fill-remaining-space\"></span>\n      <span>User</span>\n      <i class=\"material-icons\">\n      perm_identity\n    </i>\n  </mat-toolbar>\n\n  <div fxLayout=\"row\" class=\"main-height\">\n    <div fxFlex=\"15\" class=\"Sidenav\" style=\"padding: 0;\">\n      <!-- <div routerLink=\"/dashboard\" routerLinkActive=\"active\">Dashboard</div>\n      <div routerLink=\"/activity\" routerLinkActive=\"active\">Activity</div> -->\n      <mat-list>\n        <div *ngFor=\"let menu of sideNavmenus;let i = index\" (click)=\"selectItem(i,menu)\" class=\"sideNav-txt\">\n        <mat-list-item routerLink=\"/{{menu.name}}\" [ngClass]=\"{'active': selectedIdx == i}\">\n           <button mat-icon-button matTooltip=\"{{menu.icon}}\" matTooltipPosition=\"right\">\n          <mat-icon mat-list-icon style=\"color: #232f3e;\">{{menu.icon}}</mat-icon>\n            </button>\n          <h4 mat-line><span class=\"ft-clr\">{{menu.name}}</span></h4>\n        </mat-list-item>\n      </div>\n      </mat-list>\n    </div>\n     <div fxFlex=\"85\" class=\"Maincontent\" [ngStyle]=\"{'padding':selectedIdx === 0 ? '0px' : '15px' }\">\n<router-outlet></router-outlet>\n</div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -74,7 +74,18 @@ module.exports = "<div>\r\n <mat-toolbar color=\"primary\">\r\n    <span class=\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<label class=\"image-upload-container btn btn-bwm\">\r\n  <span>Select Image</span>\r\n  <input #imageInput\r\n         type=\"file\"\r\n         accept=\"image/*\"\r\n         (change)=\"processFile(imageInput)\">\r\n</label>"
+module.exports = "<label class=\"image-upload-container btn btn-bwm\">\n  <span>Select Image</span>\n  <input #imageInput\n         type=\"file\"\n         accept=\"image/*\"\n         (change)=\"processFile(imageInput)\">\n</label>"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/d3/d3.component.html":
+/*!****************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/d3/d3.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h4>d3 works!</h4>\r\n<!-- <p></p> -->\r\n<s2w-angular-d3-tree-lib\r\n  [(treeData)]=\"data\"\r\n  (onNodeChanged)=\"nodeUpdated($event)\"\r\n  (onNodeSelected)=\"nodeSelected($event)\"></s2w-angular-d3-tree-lib>"
 
 /***/ }),
 
@@ -85,7 +96,7 @@ module.exports = "<label class=\"image-upload-container btn btn-bwm\">\r\n  <spa
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "      <mat-card class=\"margin-bottom-15\">\r\n        <div fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n          <div>\r\n            <div><b>{{greet}}</b>, Z-Team</div>\r\n            <div class=\"acc\">Account Type: <b>Personal</b></div>\r\n          </div>\r\n          <div>\r\n            <div>Time: <b>{{date | date:'hh:mm a':'+0530'}}</b></div>\r\n            <div class=\"acc\">Date: <b>{{date | date:'dd-MM-yyyy'}}</b></div>\r\n          </div>\r\n        </div>\r\n      </mat-card>\r\n      <div fxLayout=\"row\" fxLayoutAlign=\"space-between center\" class=\"mini-card\">\r\n        <mat-card fxFlex=\"20\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n          <div><i class=\"material-icons\">person</i></div>\r\n          <div class=\"card-txt\">\r\n            <div class=\"text-align-rgt card-val\">{{courses.length}}</div>\r\n            <div>Total User</div>\r\n          </div>\r\n        </mat-card>\r\n        <mat-card fxFlex=\"20\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n          <div><i class=\"material-icons\">shopping_cart</i></div>\r\n          <div class=\"card-txt\">\r\n            <div class=\"text-align-rgt card-val\">${{courses.length * 57}}</div>\r\n            <div>Today's sale</div>\r\n          </div>\r\n        </mat-card>\r\n        <mat-card fxFlex=\"20\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n          <div><i class=\"material-icons\">visibility</i></div>\r\n          <div class=\"card-txt\">\r\n            <div class=\"text-align-rgt card-val\">{{courses.length * 5}}</div>\r\n            <div>Total Visits</div>\r\n          </div>\r\n        </mat-card>\r\n        <mat-card fxFlex=\"20\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n          <div><i class=\"material-icons\">touch_app</i></div>\r\n          <div class=\"card-txt\">\r\n            <div class=\"text-align-rgt card-val\">{{courses.length * 2}}</div>\r\n            <div>Online Orders</div>\r\n          </div>\r\n        </mat-card>\r\n      </div>\r\n      <div>\r\n        <table mat-table [dataSource]=\"courses\" class=\"mat-elevation-z8\">\r\n  <!-- Position Column -->\r\n  <ng-container matColumnDef=\"name\">\r\n    <th mat-header-cell *matHeaderCellDef> Name. </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n  </ng-container>\r\n\r\n  <!-- Name Column -->\r\n  <ng-container matColumnDef=\"address\">\r\n    <th mat-header-cell *matHeaderCellDef> Address </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.address}} </td>\r\n  </ng-container>\r\n\r\n  <!-- Weight Column -->\r\n  <ng-container matColumnDef=\"email\">\r\n    <th mat-header-cell *matHeaderCellDef> Email </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.email}} </td>\r\n  </ng-container>\r\n\r\n  <!-- Symbol Column -->\r\n  <ng-container matColumnDef=\"ctn\">\r\n    <th mat-header-cell *matHeaderCellDef> Contact No </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.ctn}} </td>\r\n  </ng-container>\r\n\r\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n</table>\r\n      </div>"
+module.exports = "      <mat-card class=\"margin-bottom-15\">\n        <div fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n          <div>\n            <div><b>{{greet}}</b>, Z-Team</div>\n            <div class=\"acc\">Account Type: <b>Personal</b></div>\n          </div>\n          <div>\n            <div>Time: <b>{{date | date:'hh:mm a':'+0530'}}</b></div>\n            <div class=\"acc\">Date: <b>{{date | date:'dd-MM-yyyy'}}</b></div>\n          </div>\n        </div>\n      </mat-card>\n      <div fxLayout=\"row\" fxLayoutAlign=\"space-between center\" class=\"mini-card\">\n        <mat-card fxFlex=\"20\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n          <div><i class=\"material-icons\">person</i></div>\n          <div class=\"card-txt\">\n            <div class=\"text-align-rgt card-val\">{{courses.length}}</div>\n            <div>Total User</div>\n          </div>\n        </mat-card>\n        <mat-card fxFlex=\"20\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n          <div><i class=\"material-icons\">shopping_cart</i></div>\n          <div class=\"card-txt\">\n            <div class=\"text-align-rgt card-val\">${{courses.length * 57}}</div>\n            <div>Today's sale</div>\n          </div>\n        </mat-card>\n        <mat-card fxFlex=\"20\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n          <div><i class=\"material-icons\">visibility</i></div>\n          <div class=\"card-txt\">\n            <div class=\"text-align-rgt card-val\">{{courses.length * 5}}</div>\n            <div>Total Visits</div>\n          </div>\n        </mat-card>\n        <mat-card fxFlex=\"20\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n          <div><i class=\"material-icons\">touch_app</i></div>\n          <div class=\"card-txt\">\n            <div class=\"text-align-rgt card-val\">{{courses.length * 2}}</div>\n            <div>Online Orders</div>\n          </div>\n        </mat-card>\n      </div>\n      <div>\n        <table mat-table [dataSource]=\"courses\" class=\"mat-elevation-z8\">\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef> Name. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"address\">\n    <th mat-header-cell *matHeaderCellDef> Address </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.address}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"email\">\n    <th mat-header-cell *matHeaderCellDef> Email </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.email}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"ctn\">\n    <th mat-header-cell *matHeaderCellDef> Contact No </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.ctn}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n      </div>"
 
 /***/ }),
 
@@ -96,7 +107,7 @@ module.exports = "      <mat-card class=\"margin-bottom-15\">\r\n        <div fx
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar color=\"primary\">\r\n    <span>Dashboard</span>\r\n    <!-- This fills the remaining space of the current row -->\r\n    <span class=\"example-fill-remaining-space\"></span>\r\n      <span>User</span>\r\n      <i class=\"material-icons\">\r\n      perm_identity\r\n    </i>\r\n  </mat-toolbar>\r\n"
+module.exports = "<mat-toolbar color=\"primary\">\n    <span>Dashboard</span>\n    <!-- This fills the remaining space of the current row -->\n    <span class=\"example-fill-remaining-space\"></span>\n      <span>User</span>\n      <i class=\"material-icons\">\n      perm_identity\n    </i>\n  </mat-toolbar>\n"
 
 /***/ }),
 
@@ -107,7 +118,7 @@ module.exports = "<mat-toolbar color=\"primary\">\r\n    <span>Dashboard</span>\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>help works!</p>\r\n"
+module.exports = "<p>help works!</p>\n"
 
 /***/ }),
 
@@ -129,7 +140,7 @@ module.exports = "<div>Highchart Works</div>"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>login works!</p>\r\n"
+module.exports = "<p>login works!</p>\n"
 
 /***/ }),
 
@@ -140,7 +151,7 @@ module.exports = "<p>login works!</p>\r\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <div style=\"float: right;\"> \r\n    <button mat-icon-button matTooltip=\"Add\" matTooltipPosition=\"right\" routerLink=\"/activity\">\r\n          <mat-icon mat-list-icon style=\"color: #232f3e;\">library_add</mat-icon>\r\n    </button>\r\n  </div>\r\n<table mat-table [dataSource]=\"courses\" class=\"mat-elevation-z8\">\r\n  <ng-container matColumnDef=\"name\">\r\n    <th mat-header-cell *matHeaderCellDef><mat-checkbox color=\"primary\">Name</mat-checkbox>  </th>\r\n    <td mat-cell *matCellDef=\"let element\"> <mat-checkbox color=\"primary\">{{element.name}}</mat-checkbox> </td>\r\n  </ng-container>\r\n  <ng-container matColumnDef=\"email\">\r\n    <th mat-header-cell *matHeaderCellDef> Email </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.email}} </td>\r\n  </ng-container>\r\n  <ng-container matColumnDef=\"msg\">\r\n    <th mat-header-cell *matHeaderCellDef> Message </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.msg}} </td>\r\n  </ng-container>\r\n   <ng-container matColumnDef=\"date\">\r\n    <th mat-header-cell *matHeaderCellDef> Date </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.date}} </td>\r\n  </ng-container>\r\n  <ng-container matColumnDef=\"time\">\r\n    <th mat-header-cell *matHeaderCellDef> Time </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.time}} </td>\r\n  </ng-container>\r\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n</table>\r\n</div>"
+module.exports = "<div>\n  <div style=\"float: right;\"> \n    <button mat-icon-button matTooltip=\"Add\" matTooltipPosition=\"right\" routerLink=\"/activity\">\n          <mat-icon mat-list-icon style=\"color: #232f3e;\">library_add</mat-icon>\n    </button>\n  </div>\n<table mat-table [dataSource]=\"courses\" class=\"mat-elevation-z8\">\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef><mat-checkbox color=\"primary\">Name</mat-checkbox>  </th>\n    <td mat-cell *matCellDef=\"let element\"> <mat-checkbox color=\"primary\">{{element.name}}</mat-checkbox> </td>\n  </ng-container>\n  <ng-container matColumnDef=\"email\">\n    <th mat-header-cell *matHeaderCellDef> Email </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.email}} </td>\n  </ng-container>\n  <ng-container matColumnDef=\"msg\">\n    <th mat-header-cell *matHeaderCellDef> Message </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.msg}} </td>\n  </ng-container>\n   <ng-container matColumnDef=\"date\">\n    <th mat-header-cell *matHeaderCellDef> Date </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.date}} </td>\n  </ng-container>\n  <ng-container matColumnDef=\"time\">\n    <th mat-header-cell *matHeaderCellDef> Time </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.time}} </td>\n  </ng-container>\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n</div>"
 
 /***/ }),
 
@@ -151,7 +162,7 @@ module.exports = "<div>\r\n  <div style=\"float: right;\"> \r\n    <button mat-i
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<agm-map \r\n  [latitude]=\"lat\"\r\n  [longitude]=\"lng\"\r\n  [zoom]=\"zoom\"\r\n  [disableDefaultUI]=\"false\"\r\n  [zoomControl]=\"true\"\r\n  [styles]=\"mapStyle\"\r\n  (mapClick)=\"mapClicked($event)\">\r\n <agm-marker-cluster imagePath=\"https://raw.githubusercontent.com/googlemaps/v3-utility-library/master/markerclustererplus/images/m\"> \r\n  <agm-marker \r\n      *ngFor=\"let m of courses\"\r\n      [latitude]=\"m.lat\"\r\n      [longitude]=\"m.long\"\r\n      [label]=\"m.label\"\r\n      [iconUrl]=\"'../assets/pin.png'\"\r\n      >\r\n      <!-- (mouseOver)=\"onMouseOver(infoWindow,$event)\" -->\r\n    <agm-info-window #infoWindow>\r\n      <strong>{{m.name}}</strong>\r\n    </agm-info-window>\r\n  </agm-marker>\r\n  </agm-marker-cluster>\r\n  </agm-map>\r\n\r\n  "
+module.exports = "<agm-map \n  [latitude]=\"lat\"\n  [longitude]=\"lng\"\n  [zoom]=\"zoom\"\n  [disableDefaultUI]=\"false\"\n  [zoomControl]=\"true\"\n  [styles]=\"mapStyle\"\n  (mapClick)=\"mapClicked($event)\">\n <agm-marker-cluster imagePath=\"https://raw.githubusercontent.com/googlemaps/v3-utility-library/master/markerclustererplus/images/m\"> \n  <agm-marker \n      *ngFor=\"let m of courses\"\n      [latitude]=\"m.lat\"\n      [longitude]=\"m.long\"\n      [label]=\"m.label\"\n      [iconUrl]=\"'../assets/pin.png'\"\n      >\n      <!-- (mouseOver)=\"onMouseOver(infoWindow,$event)\" -->\n    <agm-info-window #infoWindow>\n      <strong>{{m.name}}</strong>\n    </agm-info-window>\n  </agm-marker>\n  </agm-marker-cluster>\n  </agm-map>\n\n  "
 
 /***/ }),
 
@@ -162,7 +173,7 @@ module.exports = "<agm-map \r\n  [latitude]=\"lat\"\r\n  [longitude]=\"lng\"\r\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>page-not-found!</p>\r\n"
+module.exports = "<p>page-not-found!</p>\n"
 
 /***/ }),
 
@@ -173,7 +184,7 @@ module.exports = "<p>page-not-found!</p>\r\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<style>\r\n\t.mat-form-field {\r\n    display: inline-block;\r\n    position: relative;\r\n    text-align: left;\r\n    width: 100%;\r\n}\r\n</style>\r\n<h1 mat-dialog-title >Details</h1>\r\n<div mat-dialog-content>\r\n<mat-form-field style=\"width: 100%;\">\r\n  <mat-label>Select Type</mat-label>\r\n  <mat-select [(value)]=\"data.type\">\r\n    <mat-option value=\"cardetail\">Card Details</mat-option>\r\n    <mat-option value=\"social\">Social Media</mat-option>\r\n    <mat-option value=\"bank\">Bank Account</mat-option>\r\n    <mat-option value=\"personal\">Personal</mat-option>\r\n  </mat-select>\r\n</mat-form-field>\r\n  <mat-form-field>\r\n    <input matInput placeholder=\"Name\" [(ngModel)]=\"data.name\" [disabled]=\"!data.type == cardetail ? true : null\">\r\n  </mat-form-field>\r\n     <mat-form-field>\r\n    <input matInput placeholder=\"Username\" [(ngModel)]=\"data.username\">\r\n  </mat-form-field>\r\n   <mat-form-field>\r\n    <input matInput placeholder=\"Password\" [(ngModel)]=\"data.password\">\r\n  </mat-form-field>\r\n  <mat-form-field>\r\n    <input matInput placeholder=\"Comments\" [(ngModel)]=\"data.comments\">\r\n  </mat-form-field>\r\n</div>\r\n<div mat-dialog-actions align=\"end\">\r\n  <button mat-button (click)=\"onNoClick()\">Cancel</button>\r\n  <button mat-button color=\"primary\"  [mat-dialog-close]=\"data\" cdkFocusInitial>Submit</button>\r\n</div>"
+module.exports = "<style>\n\t.mat-form-field {\n    display: inline-block;\n    position: relative;\n    text-align: left;\n    width: 100%;\n}\n</style>\n<h1 mat-dialog-title >Details</h1>\n<div mat-dialog-content>\n<mat-form-field style=\"width: 100%;\">\n  <mat-label>Select Type</mat-label>\n  <mat-select [(value)]=\"data.type\">\n    <mat-option value=\"cardetail\">Card Details</mat-option>\n    <mat-option value=\"social\">Social Media</mat-option>\n    <mat-option value=\"bank\">Bank Account</mat-option>\n    <mat-option value=\"personal\">Personal</mat-option>\n  </mat-select>\n</mat-form-field>\n  <mat-form-field>\n    <input matInput placeholder=\"Name\" [(ngModel)]=\"data.name\" [disabled]=\"!data.type == cardetail ? true : null\">\n  </mat-form-field>\n     <mat-form-field>\n    <input matInput placeholder=\"Username\" [(ngModel)]=\"data.username\">\n  </mat-form-field>\n   <mat-form-field>\n    <input matInput placeholder=\"Password\" [(ngModel)]=\"data.password\">\n  </mat-form-field>\n  <mat-form-field>\n    <input matInput placeholder=\"Comments\" [(ngModel)]=\"data.comments\">\n  </mat-form-field>\n</div>\n<div mat-dialog-actions align=\"end\">\n  <button mat-button (click)=\"onNoClick()\">Cancel</button>\n  <button mat-button color=\"primary\"  [mat-dialog-close]=\"data\" cdkFocusInitial>Submit</button>\n</div>"
 
 /***/ }),
 
@@ -184,7 +195,7 @@ module.exports = "<style>\r\n\t.mat-form-field {\r\n    display: inline-block;\r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n<div>\r\n   <button mat-raised-button color=\"primary\" (click)=\"openDialog()\">Add Password</button>\r\n<mat-form-field class=\"example-full-width\" style=\"left: 5px;top: 5px;\">\r\n<input matInput class=\"form-control\" type=\"text\" name=\"search\" [(ngModel)]=\"searchText\" autocomplete=\"off\" placeholder=\"Search Details\">\r\n     </mat-form-field>\r\n</div>\r\n<div fxLayout=\"row wrap\" fxLayoutGap=\"20px\">\r\n\t<div *ngFor=\"let t of passData | filter:searchText\" fxFlex=\"30\">\r\n\t<mat-card style=\"margin-top: 20px;font-size: 15px;color: grey;\" [ngClass]=\"{'yellow': t.type == 'social','lime': t.type == 'personal','blue': t.type == 'cardetail','grey': t.type == 'bank'}\">\r\n\t\t<span class=\"name\">{{t.name}}</span>\r\n\t\t<div><span>Username</span> : <span>{{t.username}}</span></div>\r\n\t\t<div><span>Password</span> : <span>{{t.password}}</span></div>\r\n\t\t<div><span>Comments</span> : <span>{{t.comments}}</span></div>\r\n\t</mat-card>\r\n\t</div>\r\n</div> \r\n</div>"
+module.exports = "<div>\n<div>\n   <button mat-raised-button color=\"primary\" (click)=\"openDialog()\">Add Password</button>\n<mat-form-field class=\"example-full-width\" style=\"left: 5px;top: 5px;\">\n<input matInput class=\"form-control\" type=\"text\" name=\"search\" [(ngModel)]=\"searchText\" autocomplete=\"off\" placeholder=\"Search Details\">\n     </mat-form-field>\n</div>\n<div fxLayout=\"row wrap\" fxLayoutGap=\"20px\">\n\t<div *ngFor=\"let t of passData | filter:searchText\" fxFlex=\"30\">\n\t<mat-card style=\"margin-top: 20px;font-size: 15px;color: grey;\" [ngClass]=\"{'yellow': t.type == 'social','lime': t.type == 'personal','blue': t.type == 'cardetail','grey': t.type == 'bank'}\">\n\t\t<span class=\"name\">{{t.name}}</span>\n\t\t<div><span>Username</span> : <span>{{t.username}}</span></div>\n\t\t<div><span>Password</span> : <span>{{t.password}}</span></div>\n\t\t<div><span>Comments</span> : <span>{{t.comments}}</span></div>\n\t</mat-card>\n\t</div>\n</div> \n</div>"
 
 /***/ }),
 
@@ -195,7 +206,7 @@ module.exports = "<div>\r\n<div>\r\n   <button mat-raised-button color=\"primary
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".full-width {\r\n    width: 100%;\r\n}\r\n.information {\r\n    font-size: 17px;\r\n    padding-left: 45px;\r\n    font-weight: 600;\r\n    color: #25282bbd;\r\n    text-transform: uppercase;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWN0aXZpdHkvYWN0aXZpdHkuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFdBQVc7QUFDZjtBQUNBO0lBQ0ksZUFBZTtJQUNmLGtCQUFrQjtJQUNsQixnQkFBZ0I7SUFDaEIsZ0JBQWdCO0lBQ2hCLHlCQUF5QjtBQUM3QiIsImZpbGUiOiJzcmMvYXBwL2FjdGl2aXR5L2FjdGl2aXR5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZnVsbC13aWR0aCB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxufVxyXG4uaW5mb3JtYXRpb24ge1xyXG4gICAgZm9udC1zaXplOiAxN3B4O1xyXG4gICAgcGFkZGluZy1sZWZ0OiA0NXB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcclxuICAgIGNvbG9yOiAjMjUyODJiYmQ7XHJcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xyXG59Il19 */"
+module.exports = ".full-width {\n    width: 100%;\n}\n.information {\n    font-size: 17px;\n    padding-left: 45px;\n    font-weight: 600;\n    color: #25282bbd;\n    text-transform: uppercase;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWN0aXZpdHkvYWN0aXZpdHkuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFdBQVc7QUFDZjtBQUNBO0lBQ0ksZUFBZTtJQUNmLGtCQUFrQjtJQUNsQixnQkFBZ0I7SUFDaEIsZ0JBQWdCO0lBQ2hCLHlCQUF5QjtBQUM3QiIsImZpbGUiOiJzcmMvYXBwL2FjdGl2aXR5L2FjdGl2aXR5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZnVsbC13aWR0aCB7XG4gICAgd2lkdGg6IDEwMCU7XG59XG4uaW5mb3JtYXRpb24ge1xuICAgIGZvbnQtc2l6ZTogMTdweDtcbiAgICBwYWRkaW5nLWxlZnQ6IDQ1cHg7XG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICBjb2xvcjogIzI1MjgyYmJkO1xuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59Il19 */"
 
 /***/ }),
 
@@ -414,6 +425,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _activity_activity_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./activity/activity.component */ "./src/app/activity/activity.component.ts");
 /* harmony import */ var _passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./passwordmgt/passwordmgt.component */ "./src/app/passwordmgt/passwordmgt.component.ts");
 /* harmony import */ var _page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./page-not-found/page-not-found.component */ "./src/app/page-not-found/page-not-found.component.ts");
+/* harmony import */ var _d3_d3_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./d3/d3.component */ "./src/app/d3/d3.component.ts");
+
 
 
 
@@ -437,6 +450,7 @@ const routes = [
     { path: 'map', component: _map_map_component__WEBPACK_IMPORTED_MODULE_5__["MapComponent"] },
     { path: 'passwordmgt', component: _passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_11__["PasswordmgtComponent"] },
     { path: 'admin', component: _admin_admin_component__WEBPACK_IMPORTED_MODULE_3__["AdminComponent"] },
+    { path: 'd3', component: _d3_d3_component__WEBPACK_IMPORTED_MODULE_13__["D3Component"] },
     { path: '', component: _map_map_component__WEBPACK_IMPORTED_MODULE_5__["MapComponent"] },
     { path: '**', component: _page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_12__["PageNotFoundComponent"] },
 ];
@@ -460,7 +474,7 @@ AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".example-fill-remaining-space {\r\n    /* This fills the remaining space, by using flexbox. \r\n     Every toolbar row uses a flexbox row layout. */\r\n    -webkit-box-flex: 1;\r\n            flex: 1 1 auto;\r\n}\r\n.example-container {\r\n    height: calc(100vh - 64px);\r\n}\r\n.main-height {\r\n    height: calc(100vh - 57px);\r\n}\r\n.Sidenav {\r\n    border-right: 1px solid #dedede;\r\n    padding: 10px;\r\n}\r\n.Maincontent {\r\n    background: #efefef;\r\n    /*padding: 10px 15px;*/\r\n    overflow: auto;\r\n}\r\n.acc {\r\n    font-size: 14px;\r\n    padding-top: 10px;\r\n}\r\n.mat-card {\r\n    margin-bottom: 15px;\r\n}\r\n.card-txt {\r\n    color: grey;\r\n    font-size: 14px;\r\n}\r\n.text-align-rgt {\r\n    text-align: right;\r\n}\r\n.mini-card i {\r\n    color: dodgerblue;\r\n    font-size: 30px;\r\n}\r\n.sideNav-txt {\r\n    text-transform: uppercase;\r\n    font-size: 15px;\r\n    font-weight: 600;\r\n    color: grey;\r\n    cursor: pointer;\r\n    text-decoration: none;\r\n}\r\n.ft-clr {\r\n    font-size: 14px;\r\n    font-weight: 500 !important;\r\n    color: #232f3e;\r\n}\r\n.mat-list-base {\r\n    padding-top: 0px !important;\r\n}\r\ntable {\r\n    width: 100%;\r\n}\r\n.active {\r\n    background: #FFC107;\r\n}\r\n.example-fill-remaining-space {\r\n    /* This fills the remaining space, by using flexbox. \r\n     Every toolbar row uses a flexbox row layout. */\r\n    -webkit-box-flex: 1;\r\n            flex: 1 1 auto;\r\n}\r\n.mat-toolbar-row, .mat-toolbar-single-row {\r\n    height: 56px;\r\n}\r\n.mat-toolbar.mat-primary {\r\n    background: #232f3e !important;\r\n    color: #fff;\r\n}\r\n.toolbar-fullscreen {\r\n    display: none;\r\n}\r\n.toolbar-filler {\r\n    -webkit-box-flex: 1;\r\n            flex: 1 1 auto\r\n}\r\n.dash-label {\r\n    text-transform: uppercase;\r\n    font-size: 17px;\r\n    letter-spacing: 0.03cm;\r\n    padding-left: 17px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSTttREFDK0M7SUFDL0MsbUJBQWM7WUFBZCxjQUFjO0FBQ2xCO0FBQ0E7SUFDSSwwQkFBMEI7QUFDOUI7QUFDQTtJQUNJLDBCQUEwQjtBQUM5QjtBQUNBO0lBQ0ksK0JBQStCO0lBQy9CLGFBQWE7QUFDakI7QUFDQTtJQUNJLG1CQUFtQjtJQUNuQixzQkFBc0I7SUFDdEIsY0FBYztBQUNsQjtBQUNBO0lBQ0ksZUFBZTtJQUNmLGlCQUFpQjtBQUNyQjtBQUNBO0lBQ0ksbUJBQW1CO0FBQ3ZCO0FBQ0E7SUFDSSxXQUFXO0lBQ1gsZUFBZTtBQUNuQjtBQUNBO0lBQ0ksaUJBQWlCO0FBQ3JCO0FBQ0E7SUFDSSxpQkFBaUI7SUFDakIsZUFBZTtBQUNuQjtBQUNBO0lBQ0kseUJBQXlCO0lBQ3pCLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsV0FBVztJQUNYLGVBQWU7SUFDZixxQkFBcUI7QUFDekI7QUFDQTtJQUNJLGVBQWU7SUFDZiwyQkFBMkI7SUFDM0IsY0FBYztBQUNsQjtBQUNBO0lBQ0ksMkJBQTJCO0FBQy9CO0FBQ0E7SUFDSSxXQUFXO0FBQ2Y7QUFDQTtJQUNJLG1CQUFtQjtBQUN2QjtBQUNBO0lBQ0k7bURBQytDO0lBQy9DLG1CQUFjO1lBQWQsY0FBYztBQUNsQjtBQUNBO0lBQ0ksWUFBWTtBQUNoQjtBQUNBO0lBQ0ksOEJBQThCO0lBQzlCLFdBQVc7QUFDZjtBQUNBO0lBQ0ksYUFBYTtBQUNqQjtBQUNBO0lBQ0ksbUJBQWE7WUFBYjtBQUNKO0FBQ0E7SUFDSSx5QkFBeUI7SUFDekIsZUFBZTtJQUNmLHNCQUFzQjtJQUN0QixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5leGFtcGxlLWZpbGwtcmVtYWluaW5nLXNwYWNlIHtcclxuICAgIC8qIFRoaXMgZmlsbHMgdGhlIHJlbWFpbmluZyBzcGFjZSwgYnkgdXNpbmcgZmxleGJveC4gXHJcbiAgICAgRXZlcnkgdG9vbGJhciByb3cgdXNlcyBhIGZsZXhib3ggcm93IGxheW91dC4gKi9cclxuICAgIGZsZXg6IDEgMSBhdXRvO1xyXG59XHJcbi5leGFtcGxlLWNvbnRhaW5lciB7XHJcbiAgICBoZWlnaHQ6IGNhbGMoMTAwdmggLSA2NHB4KTtcclxufVxyXG4ubWFpbi1oZWlnaHQge1xyXG4gICAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gNTdweCk7XHJcbn1cclxuLlNpZGVuYXYge1xyXG4gICAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2RlZGVkZTtcclxuICAgIHBhZGRpbmc6IDEwcHg7XHJcbn1cclxuLk1haW5jb250ZW50IHtcclxuICAgIGJhY2tncm91bmQ6ICNlZmVmZWY7XHJcbiAgICAvKnBhZGRpbmc6IDEwcHggMTVweDsqL1xyXG4gICAgb3ZlcmZsb3c6IGF1dG87XHJcbn1cclxuLmFjYyB7XHJcbiAgICBmb250LXNpemU6IDE0cHg7XHJcbiAgICBwYWRkaW5nLXRvcDogMTBweDtcclxufVxyXG4ubWF0LWNhcmQge1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMTVweDtcclxufVxyXG4uY2FyZC10eHQge1xyXG4gICAgY29sb3I6IGdyZXk7XHJcbiAgICBmb250LXNpemU6IDE0cHg7XHJcbn1cclxuLnRleHQtYWxpZ24tcmd0IHtcclxuICAgIHRleHQtYWxpZ246IHJpZ2h0O1xyXG59XHJcbi5taW5pLWNhcmQgaSB7XHJcbiAgICBjb2xvcjogZG9kZ2VyYmx1ZTtcclxuICAgIGZvbnQtc2l6ZTogMzBweDtcclxufVxyXG4uc2lkZU5hdi10eHQge1xyXG4gICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcclxuICAgIGZvbnQtc2l6ZTogMTVweDtcclxuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XHJcbiAgICBjb2xvcjogZ3JleTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxufVxyXG4uZnQtY2xyIHtcclxuICAgIGZvbnQtc2l6ZTogMTRweDtcclxuICAgIGZvbnQtd2VpZ2h0OiA1MDAgIWltcG9ydGFudDtcclxuICAgIGNvbG9yOiAjMjMyZjNlO1xyXG59XHJcbi5tYXQtbGlzdC1iYXNlIHtcclxuICAgIHBhZGRpbmctdG9wOiAwcHggIWltcG9ydGFudDtcclxufVxyXG50YWJsZSB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxufVxyXG4uYWN0aXZlIHtcclxuICAgIGJhY2tncm91bmQ6ICNGRkMxMDc7XHJcbn1cclxuLmV4YW1wbGUtZmlsbC1yZW1haW5pbmctc3BhY2Uge1xyXG4gICAgLyogVGhpcyBmaWxscyB0aGUgcmVtYWluaW5nIHNwYWNlLCBieSB1c2luZyBmbGV4Ym94LiBcclxuICAgICBFdmVyeSB0b29sYmFyIHJvdyB1c2VzIGEgZmxleGJveCByb3cgbGF5b3V0LiAqL1xyXG4gICAgZmxleDogMSAxIGF1dG87XHJcbn1cclxuLm1hdC10b29sYmFyLXJvdywgLm1hdC10b29sYmFyLXNpbmdsZS1yb3cge1xyXG4gICAgaGVpZ2h0OiA1NnB4O1xyXG59XHJcbi5tYXQtdG9vbGJhci5tYXQtcHJpbWFyeSB7XHJcbiAgICBiYWNrZ3JvdW5kOiAjMjMyZjNlICFpbXBvcnRhbnQ7XHJcbiAgICBjb2xvcjogI2ZmZjtcclxufVxyXG4udG9vbGJhci1mdWxsc2NyZWVuIHtcclxuICAgIGRpc3BsYXk6IG5vbmU7XHJcbn1cclxuLnRvb2xiYXItZmlsbGVyIHtcclxuICAgIGZsZXg6IDEgMSBhdXRvXHJcbn1cclxuLmRhc2gtbGFiZWwge1xyXG4gICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcclxuICAgIGZvbnQtc2l6ZTogMTdweDtcclxuICAgIGxldHRlci1zcGFjaW5nOiAwLjAzY207XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDE3cHg7XHJcbn0iXX0= */"
+module.exports = ".example-fill-remaining-space {\n    /* This fills the remaining space, by using flexbox. \n     Every toolbar row uses a flexbox row layout. */\n    -webkit-box-flex: 1;\n            flex: 1 1 auto;\n}\n.example-container {\n    height: calc(100vh - 64px);\n}\n.main-height {\n    height: calc(100vh - 57px);\n}\n.Sidenav {\n    border-right: 1px solid #dedede;\n    padding: 10px;\n}\n.Maincontent {\n    background: #efefef;\n    /*padding: 10px 15px;*/\n    overflow: auto;\n}\n.acc {\n    font-size: 14px;\n    padding-top: 10px;\n}\n.mat-card {\n    margin-bottom: 15px;\n}\n.card-txt {\n    color: grey;\n    font-size: 14px;\n}\n.text-align-rgt {\n    text-align: right;\n}\n.mini-card i {\n    color: dodgerblue;\n    font-size: 30px;\n}\n.sideNav-txt {\n    text-transform: uppercase;\n    font-size: 15px;\n    font-weight: 600;\n    color: grey;\n    cursor: pointer;\n    text-decoration: none;\n}\n.ft-clr {\n    font-size: 14px;\n    font-weight: 500 !important;\n    color: #232f3e;\n}\n.mat-list-base {\n    padding-top: 0px !important;\n}\ntable {\n    width: 100%;\n}\n.active {\n    background: #FFC107;\n}\n.example-fill-remaining-space {\n    /* This fills the remaining space, by using flexbox. \n     Every toolbar row uses a flexbox row layout. */\n    -webkit-box-flex: 1;\n            flex: 1 1 auto;\n}\n.mat-toolbar-row, .mat-toolbar-single-row {\n    height: 56px;\n}\n.mat-toolbar.mat-primary {\n    background: #232f3e !important;\n    color: #fff;\n}\n.toolbar-fullscreen {\n    display: none;\n}\n.toolbar-filler {\n    -webkit-box-flex: 1;\n            flex: 1 1 auto\n}\n.dash-label {\n    text-transform: uppercase;\n    font-size: 17px;\n    letter-spacing: 0.03cm;\n    padding-left: 17px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSTttREFDK0M7SUFDL0MsbUJBQWM7WUFBZCxjQUFjO0FBQ2xCO0FBQ0E7SUFDSSwwQkFBMEI7QUFDOUI7QUFDQTtJQUNJLDBCQUEwQjtBQUM5QjtBQUNBO0lBQ0ksK0JBQStCO0lBQy9CLGFBQWE7QUFDakI7QUFDQTtJQUNJLG1CQUFtQjtJQUNuQixzQkFBc0I7SUFDdEIsY0FBYztBQUNsQjtBQUNBO0lBQ0ksZUFBZTtJQUNmLGlCQUFpQjtBQUNyQjtBQUNBO0lBQ0ksbUJBQW1CO0FBQ3ZCO0FBQ0E7SUFDSSxXQUFXO0lBQ1gsZUFBZTtBQUNuQjtBQUNBO0lBQ0ksaUJBQWlCO0FBQ3JCO0FBQ0E7SUFDSSxpQkFBaUI7SUFDakIsZUFBZTtBQUNuQjtBQUNBO0lBQ0kseUJBQXlCO0lBQ3pCLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsV0FBVztJQUNYLGVBQWU7SUFDZixxQkFBcUI7QUFDekI7QUFDQTtJQUNJLGVBQWU7SUFDZiwyQkFBMkI7SUFDM0IsY0FBYztBQUNsQjtBQUNBO0lBQ0ksMkJBQTJCO0FBQy9CO0FBQ0E7SUFDSSxXQUFXO0FBQ2Y7QUFDQTtJQUNJLG1CQUFtQjtBQUN2QjtBQUNBO0lBQ0k7bURBQytDO0lBQy9DLG1CQUFjO1lBQWQsY0FBYztBQUNsQjtBQUNBO0lBQ0ksWUFBWTtBQUNoQjtBQUNBO0lBQ0ksOEJBQThCO0lBQzlCLFdBQVc7QUFDZjtBQUNBO0lBQ0ksYUFBYTtBQUNqQjtBQUNBO0lBQ0ksbUJBQWE7WUFBYjtBQUNKO0FBQ0E7SUFDSSx5QkFBeUI7SUFDekIsZUFBZTtJQUNmLHNCQUFzQjtJQUN0QixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5leGFtcGxlLWZpbGwtcmVtYWluaW5nLXNwYWNlIHtcbiAgICAvKiBUaGlzIGZpbGxzIHRoZSByZW1haW5pbmcgc3BhY2UsIGJ5IHVzaW5nIGZsZXhib3guIFxuICAgICBFdmVyeSB0b29sYmFyIHJvdyB1c2VzIGEgZmxleGJveCByb3cgbGF5b3V0LiAqL1xuICAgIGZsZXg6IDEgMSBhdXRvO1xufVxuLmV4YW1wbGUtY29udGFpbmVyIHtcbiAgICBoZWlnaHQ6IGNhbGMoMTAwdmggLSA2NHB4KTtcbn1cbi5tYWluLWhlaWdodCB7XG4gICAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gNTdweCk7XG59XG4uU2lkZW5hdiB7XG4gICAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2RlZGVkZTtcbiAgICBwYWRkaW5nOiAxMHB4O1xufVxuLk1haW5jb250ZW50IHtcbiAgICBiYWNrZ3JvdW5kOiAjZWZlZmVmO1xuICAgIC8qcGFkZGluZzogMTBweCAxNXB4OyovXG4gICAgb3ZlcmZsb3c6IGF1dG87XG59XG4uYWNjIHtcbiAgICBmb250LXNpemU6IDE0cHg7XG4gICAgcGFkZGluZy10b3A6IDEwcHg7XG59XG4ubWF0LWNhcmQge1xuICAgIG1hcmdpbi1ib3R0b206IDE1cHg7XG59XG4uY2FyZC10eHQge1xuICAgIGNvbG9yOiBncmV5O1xuICAgIGZvbnQtc2l6ZTogMTRweDtcbn1cbi50ZXh0LWFsaWduLXJndCB7XG4gICAgdGV4dC1hbGlnbjogcmlnaHQ7XG59XG4ubWluaS1jYXJkIGkge1xuICAgIGNvbG9yOiBkb2RnZXJibHVlO1xuICAgIGZvbnQtc2l6ZTogMzBweDtcbn1cbi5zaWRlTmF2LXR4dCB7XG4gICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbiAgICBmb250LXNpemU6IDE1cHg7XG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICBjb2xvcjogZ3JleTtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xufVxuLmZ0LWNsciB7XG4gICAgZm9udC1zaXplOiAxNHB4O1xuICAgIGZvbnQtd2VpZ2h0OiA1MDAgIWltcG9ydGFudDtcbiAgICBjb2xvcjogIzIzMmYzZTtcbn1cbi5tYXQtbGlzdC1iYXNlIHtcbiAgICBwYWRkaW5nLXRvcDogMHB4ICFpbXBvcnRhbnQ7XG59XG50YWJsZSB7XG4gICAgd2lkdGg6IDEwMCU7XG59XG4uYWN0aXZlIHtcbiAgICBiYWNrZ3JvdW5kOiAjRkZDMTA3O1xufVxuLmV4YW1wbGUtZmlsbC1yZW1haW5pbmctc3BhY2Uge1xuICAgIC8qIFRoaXMgZmlsbHMgdGhlIHJlbWFpbmluZyBzcGFjZSwgYnkgdXNpbmcgZmxleGJveC4gXG4gICAgIEV2ZXJ5IHRvb2xiYXIgcm93IHVzZXMgYSBmbGV4Ym94IHJvdyBsYXlvdXQuICovXG4gICAgZmxleDogMSAxIGF1dG87XG59XG4ubWF0LXRvb2xiYXItcm93LCAubWF0LXRvb2xiYXItc2luZ2xlLXJvdyB7XG4gICAgaGVpZ2h0OiA1NnB4O1xufVxuLm1hdC10b29sYmFyLm1hdC1wcmltYXJ5IHtcbiAgICBiYWNrZ3JvdW5kOiAjMjMyZjNlICFpbXBvcnRhbnQ7XG4gICAgY29sb3I6ICNmZmY7XG59XG4udG9vbGJhci1mdWxsc2NyZWVuIHtcbiAgICBkaXNwbGF5OiBub25lO1xufVxuLnRvb2xiYXItZmlsbGVyIHtcbiAgICBmbGV4OiAxIDEgYXV0b1xufVxuLmRhc2gtbGFiZWwge1xuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gICAgZm9udC1zaXplOiAxN3B4O1xuICAgIGxldHRlci1zcGFjaW5nOiAwLjAzY207XG4gICAgcGFkZGluZy1sZWZ0OiAxN3B4O1xufSJdfQ== */"
 
 /***/ }),
 
@@ -518,8 +532,8 @@ let AppComponent = class AppComponent {
                 icon: 'help'
             },
             {
-                name: 'signout',
-                icon: 'exit_to_app'
+                name: 'd3',
+                icon: 'bubble_chart'
             },
             {
                 name: 'login',
@@ -610,6 +624,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_admin_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./admin/admin.component */ "./src/app/admin/admin.component.ts");
 /* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
 /* harmony import */ var ngx_mapbox_gl__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ngx-mapbox-gl */ "./node_modules/ngx-mapbox-gl/fesm2015/ngx-mapbox-gl.js");
+/* harmony import */ var _d3_d3_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./d3/d3.component */ "./src/app/d3/d3.component.ts");
+/* harmony import */ var angular_d3_tree__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! angular-d3-tree */ "./node_modules/angular-d3-tree/fesm2015/angular-d3-tree.js");
+
+
 
 
 
@@ -688,7 +706,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_39__["PasswordmgtComponent"],
             _passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_39__["DialogOverviewExampleDialog"],
             _admin_admin_component__WEBPACK_IMPORTED_MODULE_44__["AdminComponent"],
-            _login_login_component__WEBPACK_IMPORTED_MODULE_45__["LoginComponent"]
+            _login_login_component__WEBPACK_IMPORTED_MODULE_45__["LoginComponent"],
+            _d3_d3_component__WEBPACK_IMPORTED_MODULE_47__["D3Component"]
         ],
         entryComponents: [_passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_39__["PasswordmgtComponent"], _passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_39__["DialogOverviewExampleDialog"]],
         imports: [
@@ -717,6 +736,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_material_form_field__WEBPACK_IMPORTED_MODULE_41__["MatFormFieldModule"],
             _angular_material_select__WEBPACK_IMPORTED_MODULE_42__["MatSelectModule"],
             ng2_search_filter__WEBPACK_IMPORTED_MODULE_43__["Ng2SearchPipeModule"],
+            angular_d3_tree__WEBPACK_IMPORTED_MODULE_48__["AngularD3TreeLibModule"],
             ngx_mapbox_gl__WEBPACK_IMPORTED_MODULE_46__["NgxMapboxGLModule"].withConfig({
                 accessToken: 'pk.eyJ1IjoibWFkaHVrYXJzaW5naCIsImEiOiJjazBkdG14NHYwYXcwM2RzZDZ5dTdzemRrIn0.Jl3tWFvdm7cRSaKjHDLhAg',
                 geocoderAccessToken: 'TOKEN' // Optionnal, specify if different from the map access token, can also be set per mgl-geocoder (accessToken input of mgl-geocoder)
@@ -784,6 +804,94 @@ ChartComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/d3/d3.component.css":
+/*!*************************************!*\
+  !*** ./src/app/d3/d3.component.css ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".link{\r\n\tfill: chocolate !important;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZDMvZDMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtDQUNDLDBCQUEwQjtBQUMzQiIsImZpbGUiOiJzcmMvYXBwL2QzL2QzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubGlua3tcclxuXHRmaWxsOiBjaG9jb2xhdGUgIWltcG9ydGFudDtcclxufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/d3/d3.component.ts":
+/*!************************************!*\
+  !*** ./src/app/d3/d3.component.ts ***!
+  \************************************/
+/*! exports provided: D3Component */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D3Component", function() { return D3Component; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
+/* harmony import */ var angular_d3_tree__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! angular-d3-tree */ "./node_modules/angular-d3-tree/fesm2015/angular-d3-tree.js");
+
+
+
+
+const dataTreeSimple = {
+    "result": [
+        { "id": "1", "description": "root" },
+        { "id": "2", "description": "2", "parent": "1" },
+        { "id": "3", "description": "3", "parent": "2" },
+        { "id": "4", "description": "4", "parent": "2" },
+        { "id": "5", "description": "5", "parent": "2" },
+        { "id": "6", "description": "6", "parent": "2" },
+        { "id": "7", "descripition": "7", "parent": "2" },
+        { "id": "8", "description": "8", "parent": "2" },
+        { "id": "9", "description": "9", "parent": "2" },
+        { "id": "10", "description": "10", "parent": "9" }
+    ]
+};
+let D3Component = class D3Component {
+    constructor(treeService) {
+        this.treeService = treeService;
+        this.data = dataTreeSimple.result;
+    }
+    nodeUpdated(node) {
+        console.info("app detected node change");
+    }
+    nodeSelected(node) {
+        console.info("app detected node selected", node);
+        this.selectedNode = node;
+    }
+    ngOnInit() {
+        d3__WEBPACK_IMPORTED_MODULE_2__["select"]("h4").style("color", "red");
+        const width = 500;
+        const height = 500;
+        //Create SVG element
+        const svg = d3__WEBPACK_IMPORTED_MODULE_2__["select"]("p")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+        //Create and append line
+        svg.append("line")
+            .attr("x1", 100)
+            .attr("x2", 500)
+            .attr("y1", 50)
+            .attr("y2", 250)
+            .attr("stroke", "black");
+    }
+};
+D3Component.ctorParameters = () => [
+    { type: angular_d3_tree__WEBPACK_IMPORTED_MODULE_3__["AngularD3TreeLibService"] }
+];
+D3Component = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-d3',
+        template: __webpack_require__(/*! raw-loader!./d3.component.html */ "./node_modules/raw-loader/index.js!./src/app/d3/d3.component.html"),
+        styles: [__webpack_require__(/*! ./d3.component.css */ "./src/app/d3/d3.component.css")]
+    })
+], D3Component);
+
+
+
+/***/ }),
+
 /***/ "./src/app/dashboard/dashboard.component.css":
 /*!***************************************************!*\
   !*** ./src/app/dashboard/dashboard.component.css ***!
@@ -791,7 +899,7 @@ ChartComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".Maincontent {\r\n  background: #efefef;\r\n  padding: 10px 15px;\r\n  overflow: auto;\r\n}\r\n\r\n.acc {\r\n  font-size: 14px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.mat-card {\r\n  margin-bottom: 15px;\r\n}\r\n\r\n.card-txt {\r\n  color: grey;\r\n  font-size: 14px;\r\n}\r\n\r\n.text-align-rgt {\r\n  text-align: right;\r\n}\r\n\r\n.mini-card i{\r\n    color: #232f3e;\r\n    font-size: 30px;\r\n}\r\n\r\ntable {\r\n  width: 100%;\r\n}\r\n\r\n.card-val{\r\n  font-size: 18px;\r\n    font-weight: 600;\r\n    color: #232f3e;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsbUJBQW1CO0VBQ25CLGtCQUFrQjtFQUNsQixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsaUJBQWlCO0FBQ25COztBQUVBO0lBQ0ksY0FBYztJQUNkLGVBQWU7QUFDbkI7O0FBQ0E7RUFDRSxXQUFXO0FBQ2I7O0FBQ0E7RUFDRSxlQUFlO0lBQ2IsZ0JBQWdCO0lBQ2hCLGNBQWM7QUFDbEIiLCJmaWxlIjoic3JjL2FwcC9kYXNoYm9hcmQvZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuTWFpbmNvbnRlbnQge1xyXG4gIGJhY2tncm91bmQ6ICNlZmVmZWY7XHJcbiAgcGFkZGluZzogMTBweCAxNXB4O1xyXG4gIG92ZXJmbG93OiBhdXRvO1xyXG59XHJcblxyXG4uYWNjIHtcclxuICBmb250LXNpemU6IDE0cHg7XHJcbiAgcGFkZGluZy10b3A6IDEwcHg7XHJcbn1cclxuXHJcbi5tYXQtY2FyZCB7XHJcbiAgbWFyZ2luLWJvdHRvbTogMTVweDtcclxufVxyXG5cclxuLmNhcmQtdHh0IHtcclxuICBjb2xvcjogZ3JleTtcclxuICBmb250LXNpemU6IDE0cHg7XHJcbn1cclxuXHJcbi50ZXh0LWFsaWduLXJndCB7XHJcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XHJcbn1cclxuXHJcbi5taW5pLWNhcmQgaXtcclxuICAgIGNvbG9yOiAjMjMyZjNlO1xyXG4gICAgZm9udC1zaXplOiAzMHB4O1xyXG59XHJcbnRhYmxlIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG4uY2FyZC12YWx7XHJcbiAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcclxuICAgIGNvbG9yOiAjMjMyZjNlO1xyXG59XHJcbiJdfQ== */"
+module.exports = ".Maincontent {\n  background: #efefef;\n  padding: 10px 15px;\n  overflow: auto;\n}\n\n.acc {\n  font-size: 14px;\n  padding-top: 10px;\n}\n\n.mat-card {\n  margin-bottom: 15px;\n}\n\n.card-txt {\n  color: grey;\n  font-size: 14px;\n}\n\n.text-align-rgt {\n  text-align: right;\n}\n\n.mini-card i{\n    color: #232f3e;\n    font-size: 30px;\n}\n\ntable {\n  width: 100%;\n}\n\n.card-val{\n  font-size: 18px;\n    font-weight: 600;\n    color: #232f3e;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsbUJBQW1CO0VBQ25CLGtCQUFrQjtFQUNsQixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsaUJBQWlCO0FBQ25COztBQUVBO0lBQ0ksY0FBYztJQUNkLGVBQWU7QUFDbkI7O0FBQ0E7RUFDRSxXQUFXO0FBQ2I7O0FBQ0E7RUFDRSxlQUFlO0lBQ2IsZ0JBQWdCO0lBQ2hCLGNBQWM7QUFDbEIiLCJmaWxlIjoic3JjL2FwcC9kYXNoYm9hcmQvZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuTWFpbmNvbnRlbnQge1xuICBiYWNrZ3JvdW5kOiAjZWZlZmVmO1xuICBwYWRkaW5nOiAxMHB4IDE1cHg7XG4gIG92ZXJmbG93OiBhdXRvO1xufVxuXG4uYWNjIHtcbiAgZm9udC1zaXplOiAxNHB4O1xuICBwYWRkaW5nLXRvcDogMTBweDtcbn1cblxuLm1hdC1jYXJkIHtcbiAgbWFyZ2luLWJvdHRvbTogMTVweDtcbn1cblxuLmNhcmQtdHh0IHtcbiAgY29sb3I6IGdyZXk7XG4gIGZvbnQtc2l6ZTogMTRweDtcbn1cblxuLnRleHQtYWxpZ24tcmd0IHtcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XG59XG5cbi5taW5pLWNhcmQgaXtcbiAgICBjb2xvcjogIzIzMmYzZTtcbiAgICBmb250LXNpemU6IDMwcHg7XG59XG50YWJsZSB7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmNhcmQtdmFse1xuICBmb250LXNpemU6IDE4cHg7XG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICBjb2xvcjogIzIzMmYzZTtcbn1cbiJdfQ== */"
 
 /***/ }),
 
@@ -906,7 +1014,7 @@ GlobalService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".example-fill-remaining-space {\r\n  /* This fills the remaining space, by using flexbox. \r\n     Every toolbar row uses a flexbox row layout. */\r\n  -webkit-box-flex: 1;\r\n          flex: 1 1 auto;\r\n}\r\n\r\n.mat-toolbar-row, .mat-toolbar-single-row {\r\n    height: 56px;\r\n}\r\n\r\n.mat-toolbar.mat-primary {\r\n    background: #232f3e !important;\r\n    color: #fff;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7bURBQ2lEO0VBQ2pELG1CQUFjO1VBQWQsY0FBYztBQUNoQjs7QUFFQTtJQUNJLFlBQVk7QUFDaEI7O0FBQ0E7SUFDSSw4QkFBOEI7SUFDOUIsV0FBVztBQUNmIiwiZmlsZSI6InNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmV4YW1wbGUtZmlsbC1yZW1haW5pbmctc3BhY2Uge1xyXG4gIC8qIFRoaXMgZmlsbHMgdGhlIHJlbWFpbmluZyBzcGFjZSwgYnkgdXNpbmcgZmxleGJveC4gXHJcbiAgICAgRXZlcnkgdG9vbGJhciByb3cgdXNlcyBhIGZsZXhib3ggcm93IGxheW91dC4gKi9cclxuICBmbGV4OiAxIDEgYXV0bztcclxufVxyXG5cclxuLm1hdC10b29sYmFyLXJvdywgLm1hdC10b29sYmFyLXNpbmdsZS1yb3cge1xyXG4gICAgaGVpZ2h0OiA1NnB4O1xyXG59XHJcbi5tYXQtdG9vbGJhci5tYXQtcHJpbWFyeSB7XHJcbiAgICBiYWNrZ3JvdW5kOiAjMjMyZjNlICFpbXBvcnRhbnQ7XHJcbiAgICBjb2xvcjogI2ZmZjtcclxufSJdfQ== */"
+module.exports = ".example-fill-remaining-space {\n  /* This fills the remaining space, by using flexbox. \n     Every toolbar row uses a flexbox row layout. */\n  -webkit-box-flex: 1;\n          flex: 1 1 auto;\n}\n\n.mat-toolbar-row, .mat-toolbar-single-row {\n    height: 56px;\n}\n\n.mat-toolbar.mat-primary {\n    background: #232f3e !important;\n    color: #fff;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7bURBQ2lEO0VBQ2pELG1CQUFjO1VBQWQsY0FBYztBQUNoQjs7QUFFQTtJQUNJLFlBQVk7QUFDaEI7O0FBQ0E7SUFDSSw4QkFBOEI7SUFDOUIsV0FBVztBQUNmIiwiZmlsZSI6InNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmV4YW1wbGUtZmlsbC1yZW1haW5pbmctc3BhY2Uge1xuICAvKiBUaGlzIGZpbGxzIHRoZSByZW1haW5pbmcgc3BhY2UsIGJ5IHVzaW5nIGZsZXhib3guIFxuICAgICBFdmVyeSB0b29sYmFyIHJvdyB1c2VzIGEgZmxleGJveCByb3cgbGF5b3V0LiAqL1xuICBmbGV4OiAxIDEgYXV0bztcbn1cblxuLm1hdC10b29sYmFyLXJvdywgLm1hdC10b29sYmFyLXNpbmdsZS1yb3cge1xuICAgIGhlaWdodDogNTZweDtcbn1cbi5tYXQtdG9vbGJhci5tYXQtcHJpbWFyeSB7XG4gICAgYmFja2dyb3VuZDogIzIzMmYzZSAhaW1wb3J0YW50O1xuICAgIGNvbG9yOiAjZmZmO1xufSJdfQ== */"
 
 /***/ }),
 
@@ -1074,7 +1182,7 @@ LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "table {\r\n  width: 100%;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbC9tYWlsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxXQUFXO0FBQ2IiLCJmaWxlIjoic3JjL2FwcC9tYWlsL21haWwuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbInRhYmxlIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG4iXX0= */"
+module.exports = "table {\n  width: 100%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbC9tYWlsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxXQUFXO0FBQ2IiLCJmaWxlIjoic3JjL2FwcC9tYWlsL21haWwuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbInRhYmxlIHtcbiAgd2lkdGg6IDEwMCU7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -1608,7 +1716,7 @@ MapService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "agm-map {\r\n  height: 100%;\r\n}\r\nmgl-map {\r\n      height: 100%;\r\n      width: 100%;\r\n    }\r\n\r\n   \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFwL21hcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBWTtBQUNkO0FBQ0E7TUFDTSxZQUFZO01BQ1osV0FBVztJQUNiIiwiZmlsZSI6InNyYy9hcHAvbWFwL21hcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYWdtLW1hcCB7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG59XHJcbm1nbC1tYXAge1xyXG4gICAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgfVxyXG5cclxuICAgIl19 */"
+module.exports = "agm-map {\n  height: 100%;\n}\nmgl-map {\n      height: 100%;\n      width: 100%;\n    }\n\n   \n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFwL21hcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBWTtBQUNkO0FBQ0E7TUFDTSxZQUFZO01BQ1osV0FBVztJQUNiIiwiZmlsZSI6InNyYy9hcHAvbWFwL21hcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYWdtLW1hcCB7XG4gIGhlaWdodDogMTAwJTtcbn1cbm1nbC1tYXAge1xuICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgd2lkdGg6IDEwMCU7XG4gICAgfVxuXG4gICAiXX0= */"
 
 /***/ }),
 
@@ -1732,7 +1840,7 @@ PageNotFoundComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".mat-dialog-title {\r\n    text-align: center;\r\n    text-transform: uppercase;\r\n    font-size: 18px;\r\n    color: grey;\r\n}\r\n.name {\r\n    font-size: 15px;\r\n    font-weight: 500;\r\n    /*letter-spacing: 0.5px;*/\r\n    color: #000000;\r\n    text-transform: uppercase;\r\n}\r\n.yellow{\r\n\tbackground-color: #FF8F00;\r\n\tcolor: #ffffff !important;\r\n}\r\n.lime{\r\n\tbackground-color: #9E9D24;\r\n\tcolor: #ffffff !important;\r\n\r\n}\r\n.blue{\r\n\tbackground-color: #1565C0;\r\n\tcolor: #ffffff !important;\r\n\r\n}\r\n.grey{\r\n\tbackground-color: #424242;\r\n\tcolor: #ffffff !important;\r\n\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFzc3dvcmRtZ3QvcGFzc3dvcmRtZ3QuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtJQUNsQix5QkFBeUI7SUFDekIsZUFBZTtJQUNmLFdBQVc7QUFDZjtBQUNBO0lBQ0ksZUFBZTtJQUNmLGdCQUFnQjtJQUNoQix5QkFBeUI7SUFDekIsY0FBYztJQUNkLHlCQUF5QjtBQUM3QjtBQUVBO0NBQ0MseUJBQXlCO0NBQ3pCLHlCQUF5QjtBQUMxQjtBQUVBO0NBQ0MseUJBQXlCO0NBQ3pCLHlCQUF5Qjs7QUFFMUI7QUFDQTtDQUNDLHlCQUF5QjtDQUN6Qix5QkFBeUI7O0FBRTFCO0FBQ0E7Q0FDQyx5QkFBeUI7Q0FDekIseUJBQXlCOztBQUUxQiIsImZpbGUiOiJzcmMvYXBwL3Bhc3N3b3JkbWd0L3Bhc3N3b3JkbWd0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LWRpYWxvZy10aXRsZSB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xyXG4gICAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgY29sb3I6IGdyZXk7XHJcbn1cclxuLm5hbWUge1xyXG4gICAgZm9udC1zaXplOiAxNXB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IDUwMDtcclxuICAgIC8qbGV0dGVyLXNwYWNpbmc6IDAuNXB4OyovXHJcbiAgICBjb2xvcjogIzAwMDAwMDtcclxuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcbn1cclxuXHJcbi55ZWxsb3d7XHJcblx0YmFja2dyb3VuZC1jb2xvcjogI0ZGOEYwMDtcclxuXHRjb2xvcjogI2ZmZmZmZiAhaW1wb3J0YW50O1xyXG59XHJcblxyXG4ubGltZXtcclxuXHRiYWNrZ3JvdW5kLWNvbG9yOiAjOUU5RDI0O1xyXG5cdGNvbG9yOiAjZmZmZmZmICFpbXBvcnRhbnQ7XHJcblxyXG59XHJcbi5ibHVle1xyXG5cdGJhY2tncm91bmQtY29sb3I6ICMxNTY1QzA7XHJcblx0Y29sb3I6ICNmZmZmZmYgIWltcG9ydGFudDtcclxuXHJcbn1cclxuLmdyZXl7XHJcblx0YmFja2dyb3VuZC1jb2xvcjogIzQyNDI0MjtcclxuXHRjb2xvcjogI2ZmZmZmZiAhaW1wb3J0YW50O1xyXG5cclxufSJdfQ== */"
+module.exports = ".mat-dialog-title {\n    text-align: center;\n    text-transform: uppercase;\n    font-size: 18px;\n    color: grey;\n}\n.name {\n    font-size: 15px;\n    font-weight: 500;\n    /*letter-spacing: 0.5px;*/\n    color: #000000;\n    text-transform: uppercase;\n}\n.yellow{\n\tbackground-color: #FF8F00;\n\tcolor: #ffffff !important;\n}\n.lime{\n\tbackground-color: #9E9D24;\n\tcolor: #ffffff !important;\n\n}\n.blue{\n\tbackground-color: #1565C0;\n\tcolor: #ffffff !important;\n\n}\n.grey{\n\tbackground-color: #424242;\n\tcolor: #ffffff !important;\n\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFzc3dvcmRtZ3QvcGFzc3dvcmRtZ3QuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtJQUNsQix5QkFBeUI7SUFDekIsZUFBZTtJQUNmLFdBQVc7QUFDZjtBQUNBO0lBQ0ksZUFBZTtJQUNmLGdCQUFnQjtJQUNoQix5QkFBeUI7SUFDekIsY0FBYztJQUNkLHlCQUF5QjtBQUM3QjtBQUVBO0NBQ0MseUJBQXlCO0NBQ3pCLHlCQUF5QjtBQUMxQjtBQUVBO0NBQ0MseUJBQXlCO0NBQ3pCLHlCQUF5Qjs7QUFFMUI7QUFDQTtDQUNDLHlCQUF5QjtDQUN6Qix5QkFBeUI7O0FBRTFCO0FBQ0E7Q0FDQyx5QkFBeUI7Q0FDekIseUJBQXlCOztBQUUxQiIsImZpbGUiOiJzcmMvYXBwL3Bhc3N3b3JkbWd0L3Bhc3N3b3JkbWd0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LWRpYWxvZy10aXRsZSB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gICAgZm9udC1zaXplOiAxOHB4O1xuICAgIGNvbG9yOiBncmV5O1xufVxuLm5hbWUge1xuICAgIGZvbnQtc2l6ZTogMTVweDtcbiAgICBmb250LXdlaWdodDogNTAwO1xuICAgIC8qbGV0dGVyLXNwYWNpbmc6IDAuNXB4OyovXG4gICAgY29sb3I6ICMwMDAwMDA7XG4gICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbn1cblxuLnllbGxvd3tcblx0YmFja2dyb3VuZC1jb2xvcjogI0ZGOEYwMDtcblx0Y29sb3I6ICNmZmZmZmYgIWltcG9ydGFudDtcbn1cblxuLmxpbWV7XG5cdGJhY2tncm91bmQtY29sb3I6ICM5RTlEMjQ7XG5cdGNvbG9yOiAjZmZmZmZmICFpbXBvcnRhbnQ7XG5cbn1cbi5ibHVle1xuXHRiYWNrZ3JvdW5kLWNvbG9yOiAjMTU2NUMwO1xuXHRjb2xvcjogI2ZmZmZmZiAhaW1wb3J0YW50O1xuXG59XG4uZ3JleXtcblx0YmFja2dyb3VuZC1jb2xvcjogIzQyNDI0Mjtcblx0Y29sb3I6ICNmZmZmZmYgIWltcG9ydGFudDtcblxufSJdfQ== */"
 
 /***/ }),
 

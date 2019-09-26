@@ -1,0 +1,36 @@
+<style>
+	.mat-form-field {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+</style>
+<h1 mat-dialog-title >Details</h1>
+<div mat-dialog-content>
+<mat-form-field style="width: 100%;">
+  <mat-label>Select Type</mat-label>
+  <mat-select [(value)]="data.type">
+    <mat-option value="cardetail">Card Details</mat-option>
+    <mat-option value="social">Social Media</mat-option>
+    <mat-option value="bank">Bank Account</mat-option>
+    <mat-option value="personal">Personal</mat-option>
+  </mat-select>
+</mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Name" [(ngModel)]="data.name" [disabled]="!data.type == cardetail ? true : null">
+  </mat-form-field>
+     <mat-form-field>
+    <input matInput placeholder="Username" [(ngModel)]="data.username">
+  </mat-form-field>
+   <mat-form-field>
+    <input matInput placeholder="Password" [(ngModel)]="data.password">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Comments" [(ngModel)]="data.comments">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button color="primary"  [mat-dialog-close]="data" cdkFocusInitial>Submit</button>
+</div>

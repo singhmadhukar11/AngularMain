@@ -3,16 +3,22 @@
     <span class="dash-label">{{label}}</span>
     <!-- This fills the remaining space of the current row -->
     <span class="example-fill-remaining-space"></span>
-      <span>User</span>
-      <i class="material-icons">
-      perm_identity
-    </i>
+      <!-- <button mat-button [matMenuTriggerFor]="belowMenu">Below</button> -->
+       <button mat-icon-button [matMenuTriggerFor]="belowMenu">
+    <mat-icon>apps</mat-icon>
+  </button>
+
+<mat-menu #belowMenu="matMenu" yPosition="below" class="app-menu">
+  <div class="app-menu"  fxLayout="row wrap">
+    <button mat-icon-button *ngFor="let menu of sideNavmenus;let i = index" (click)="selectItem(i,menu)" routerLink="/{{menu.name}}" [ngClass]="{'active': selectedIdx == i}" matTooltip="{{menu.name}}">
+    <mat-icon>{{menu.icon}}</mat-icon>
+  </button>
+  </div>
+</mat-menu>
   </mat-toolbar>
 
   <div fxLayout="row" class="main-height">
-    <div fxFlex="15" class="Sidenav" style="padding: 0;">
-      <!-- <div routerLink="/dashboard" routerLinkActive="active">Dashboard</div>
-      <div routerLink="/activity" routerLinkActive="active">Activity</div> -->
+ <!--    <div fxFlex="15" class="Sidenav" style="padding: 0;">
       <mat-list>
         <div *ngFor="let menu of sideNavmenus;let i = index" (click)="selectItem(i,menu)" class="sideNav-txt">
         <mat-list-item routerLink="/{{menu.name}}" [ngClass]="{'active': selectedIdx == i}">
@@ -23,8 +29,8 @@
         </mat-list-item>
       </div>
       </mat-list>
-    </div>
-     <div fxFlex="85" class="Maincontent" [ngStyle]="{'padding':selectedIdx === 0 ? '0px' : '15px' }">
+    </div> -->
+     <div fxFlex="100" class="Maincontent" [ngStyle]="{'padding':selectedIdx === 0 ? '0px' : '15px' }">
 <router-outlet></router-outlet>
 </div>
   </div>

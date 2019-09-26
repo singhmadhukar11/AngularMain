@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AdminComponent } from './admin/admin.component';
-import { LoginComponent } from './login/login.component';
-import { MapComponent } from './map/map.component';
-import { AgGridComponent } from './ag-grid/ag-grid.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { MailComponent } from './mail/mail.component';
-import { ChartComponent } from './chart/chart.component';
-import { HelpComponent } from './help/help.component';
-import { ActivityComponent } from './activity/activity.component';
-import { HighchartComponent } from './highchart/highchart.component';
-import { PasswordmgtComponent, DialogOverviewExampleDialog } from './passwordmgt/passwordmgt.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { D3Component } from './d3/d3.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { LoginComponent } from './components/login/login.component';
+import { MapComponent } from './components/map/map.component';
+import { AgGridComponent } from './components/ag-grid/ag-grid.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { MailComponent } from './components/mail/mail.component';
+import { ChartComponent } from './components/chart/chart.component';
+import { HelpComponent } from './components/help/help.component';
+import { ActivityComponent } from './components/activity/activity.component';
+import { HighchartComponent } from './components/highchart/highchart.component';
+import { PasswordmgtComponent, DialogOverviewExampleDialog } from './components/passwordmgt/passwordmgt.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { D3Component } from './components/d3/d3.component';
 const routes: Routes = [
 { path: 'login', component: LoginComponent },
 { path: 'dashboard', component: DashboardComponent },
@@ -27,7 +27,6 @@ const routes: Routes = [
 { path: '', component: MapComponent },
 { path: '**', component: PageNotFoundComponent },
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

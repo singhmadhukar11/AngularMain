@@ -1,0 +1,66 @@
+<div>
+	<mat-card>
+    <span class="information">Information</span>
+	<div fxLayout="row" fxLayoutAlign="space-around center">
+	<mat-form-field fxFlex="25">
+    <input matInput placeholder="Name" value="{{name}}" [(ngModel)]="name">
+  	</mat-form-field>
+	<mat-form-field fxFlex="25">
+    <input matInput placeholder="Email Address" value="{{email}}" [(ngModel)]="email" [disabled]="!name">
+  	</mat-form-field>
+	<mat-form-field fxFlex="25">
+    <input matInput #phone placeholder="Contact No" type="tel" value="{{ctn}}" [(ngModel)]="ctn" maxlength="10" [disabled]="!email">
+    <mat-hint align="end">{{phone.value.length}} / 10</mat-hint>
+  	</mat-form-field>
+	</div>
+  <div fxLayout="row" fxLayoutAlign="space-around center">
+  <mat-form-field fxFlex="25">
+    <input matInput placeholder="Address" value="{{address}}" [(ngModel)]="address" [disabled]="!ctn">
+    </mat-form-field>
+  <mat-form-field fxFlex="25">
+    <input matInput placeholder="Latitude" value="{{lat}}" [(ngModel)]="lat">
+    </mat-form-field>
+  <mat-form-field fxFlex="25">
+    <input matInput placeholder="Logitude"  value="{{long}}" [(ngModel)]="long">
+    </mat-form-field>
+  </div>
+
+	<div  fxLayout="row" fxLayoutAlign="space-around center" >
+	<mat-form-field style="width: 92%">
+    <input matInput placeholder="Message" value="{{msg}}" [(ngModel)]="msg" maxlength="100" #message [disabled]="!address">
+    <mat-hint align="end">{{message.value.length}} / 100</mat-hint>
+  	</mat-form-field>
+	</div>
+	<div fxLayout="row" fxLayoutAlign="end center" style="margin-right: 4%;">
+	<button mat-raised-button color="primary" (click)="submitFunction(name,email,ctn,msg,address,lat,long,date,time);resetForm()" [disabled]="!address || !msg" routerLink="/list">Submit</button>
+	</div>
+	</mat-card>
+</div>
+<!-- mat-card>
+	<div *ngFor="let hero of courses">
+      {{ hero.name}} || {{ hero.email}} || {{ hero.msg}} || {{hero.ctn}}
+    </div>
+</mat-card> -->
+<!-- <mat-card>
+<table>
+  <tr>
+    <th mat-sort-header="name"  style="text-align: left;">Name</th>
+    <th mat-sort-header="calories"  style="text-align: left;">Email</th>
+    <th mat-sort-header="fat"  style="text-align: left;">Message</th>
+    <th mat-sort-header="carbs"  style="text-align: left;">Contact No</th>
+    <th mat-sort-header="calories"  style="text-align: left;">Address</th>
+    <th mat-sort-header="fat"  style="text-align: left;">Latitude</th>
+    <th mat-sort-header="carbs"  style="text-align: left;">Longitude</th>
+  </tr>
+
+  <tr *ngFor="let hero of courses" (click)="delete(name)">
+    <td>{{ hero.name}}</td>
+    <td>{{ hero.email}}</td>
+    <td>{{ hero.msg}}</td>
+    <td>{{hero.ctn}}</td>
+    <td>{{ hero.address}}</td>
+    <td>{{ hero.lat}}</td>
+    <td>{{hero.long}}</td>
+  </tr>
+</table>
+</mat-card> -->
