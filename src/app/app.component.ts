@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import { Routes, RouterModule, Router } from '@angular/router';
+import { ComponentsModule } from './components/components.module';
 export interface type{
     name:string;
     icon:string;
