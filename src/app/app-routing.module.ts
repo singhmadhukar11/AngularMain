@@ -33,7 +33,8 @@ const routes: Routes = [
 },
 { path: 'admin', component: AdminComponent },
 { path: 'd3', component: D3Component },
-{ path: '', component: MapComponent },
+{ path: 'aggrid', component: AgGridComponent },
+{ path: '', component: AgGridComponent },
 { path: '**', component: PageNotFoundComponent },
 ];
 @NgModule({

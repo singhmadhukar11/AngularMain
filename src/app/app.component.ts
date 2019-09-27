@@ -53,7 +53,7 @@ export class AppComponent {
             icon: 'bubble_chart'
         },
         {
-           name: 'login',
+           name: 'aggrid',
             icon: 'person'
         }
     ];

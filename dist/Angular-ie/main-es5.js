@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n <mat-toolbar color=\"primary\">\n    <span class=\"dash-label\">{{label}}</span>\n    <!-- This fills the remaining space of the current row -->\n    <span class=\"example-fill-remaining-space\"></span>\n      <!-- <button mat-button [matMenuTriggerFor]=\"belowMenu\">Below</button> -->\n       <button mat-icon-button [matMenuTriggerFor]=\"belowMenu\">\n    <mat-icon>apps</mat-icon>\n  </button>\n\n<mat-menu #belowMenu=\"matMenu\" yPosition=\"below\" class=\"app-menu\">\n  <div class=\"app-menu\"  fxLayout=\"row wrap\">\n    <button mat-icon-button *ngFor=\"let menu of sideNavmenus;let i = index\" (click)=\"selectItem(i,menu)\" routerLink=\"/{{menu.name}}\" [ngClass]=\"{'active': selectedIdx == i}\" matTooltip=\"{{menu.name}}\">\n    <mat-icon>{{menu.icon}}</mat-icon>\n  </button>\n  </div>\n</mat-menu>\n  </mat-toolbar>\n\n  <div fxLayout=\"row\" class=\"main-height\">\n <!--    <div fxFlex=\"15\" class=\"Sidenav\" style=\"padding: 0;\">\n      <mat-list>\n        <div *ngFor=\"let menu of sideNavmenus;let i = index\" (click)=\"selectItem(i,menu)\" class=\"sideNav-txt\">\n        <mat-list-item routerLink=\"/{{menu.name}}\" [ngClass]=\"{'active': selectedIdx == i}\">\n           <button mat-icon-button matTooltip=\"{{menu.icon}}\" matTooltipPosition=\"right\">\n          <mat-icon mat-list-icon style=\"color: #232f3e;\">{{menu.icon}}</mat-icon>\n            </button>\n          <h4 mat-line><span class=\"ft-clr\">{{menu.name}}</span></h4>\n        </mat-list-item>\n      </div>\n      </mat-list>\n    </div> -->\n     <div fxFlex=\"100\" class=\"Maincontent\" [ngStyle]=\"{'padding':selectedIdx === 0 ? '0px' : '15px' }\">\n<router-outlet></router-outlet>\n</div>\n  </div>\n</div>\n"
+module.exports = "<div>\n <mat-toolbar color=\"primary\">\n    <span class=\"dash-label\">{{label}}</span>\n    <!-- This fills the remaining space of the current row -->\n    <span class=\"example-fill-remaining-space\"></span>\n      <!-- <button mat-button [matMenuTriggerFor]=\"belowMenu\">Below</button> -->\n       <button mat-icon-button [matMenuTriggerFor]=\"belowMenu\">\n    <mat-icon>apps</mat-icon>\n  </button>\n\n<mat-menu #belowMenu=\"matMenu\" yPosition=\"below\" class=\"app-menu\">\n  <div class=\"app-menu\"  fxLayout=\"row wrap\">\n    <button mat-icon-button *ngFor=\"let menu of sideNavmenus;let i = index\" (click)=\"selectItem(i,menu)\" routerLink=\"/{{menu.name}}\" [ngClass]=\"{'active': selectedIdx == i}\" matTooltip=\"{{menu.name}}\">\n    <mat-icon>{{menu.icon}}</mat-icon>\n  </button>\n  </div>\n</mat-menu>\n</mat-toolbar>\n\n  <div fxLayout=\"row\" class=\"main-height\">\n <!--    <div fxFlex=\"15\" class=\"Sidenav\" style=\"padding: 0;\">\n      <mat-list>\n        <div *ngFor=\"let menu of sideNavmenus;let i = index\" (click)=\"selectItem(i,menu)\" class=\"sideNav-txt\">\n        <mat-list-item routerLink=\"/{{menu.name}}\" [ngClass]=\"{'active': selectedIdx == i}\">\n           <button mat-icon-button matTooltip=\"{{menu.icon}}\" matTooltipPosition=\"right\">\n          <mat-icon mat-list-icon style=\"color: #232f3e;\">{{menu.icon}}</mat-icon>\n            </button>\n          <h4 mat-line><span class=\"ft-clr\">{{menu.name}}</span></h4>\n        </mat-list-item>\n      </div>\n      </mat-list>\n    </div> -->\n     <div fxFlex=\"100\" class=\"Maincontent\" [ngStyle]=\"{'padding':selectedIdx === 0 ? '0px' : '15px' }\">\n<router-outlet></router-outlet>\n</div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -107,7 +107,7 @@ module.exports = "      <mat-card class=\"margin-bottom-15\">\n        <div fxLa
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar color=\"primary\">\n    <span>Dashboard</span>\n    <!-- This fills the remaining space of the current row -->\n    <span class=\"example-fill-remaining-space\"></span>\n      <span>User</span>\n      <i class=\"material-icons\">\n      perm_identity\n    </i>\n  </mat-toolbar>\n"
+module.exports = "<mat-toolbar color=\"primary\">\n    <span>Dashboard</span>\n    <span class=\"example-fill-remaining-space\"></span>\n      <span>User</span>\n      <i class=\"material-icons\">\n      perm_identity\n    </i>\n  </mat-toolbar>\n"
 
 /***/ }),
 
@@ -162,7 +162,7 @@ module.exports = "<div>\n  <div style=\"float: right;\"> \n    <button mat-icon-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<agm-map \n  [latitude]=\"lat\"\n  [longitude]=\"lng\"\n  [zoom]=\"zoom\"\n  [disableDefaultUI]=\"false\"\n  [zoomControl]=\"true\"\n  [styles]=\"mapStyle\"\n  (mapClick)=\"mapClicked($event)\">\n <agm-marker-cluster imagePath=\"https://raw.githubusercontent.com/googlemaps/v3-utility-library/master/markerclustererplus/images/m\"> \n  <agm-marker \n      *ngFor=\"let m of courses\"\n      [latitude]=\"m.lat\"\n      [longitude]=\"m.long\"\n      [label]=\"m.label\"\n      [iconUrl]=\"'../assets/pin.png'\"\n      >\n      <!-- (mouseOver)=\"onMouseOver(infoWindow,$event)\" -->\n    <agm-info-window #infoWindow>\n      <strong>{{m.name}}</strong>\n    </agm-info-window>\n  </agm-marker>\n  </agm-marker-cluster>\n  </agm-map>\n\n  "
+module.exports = "<div leaflet [leafletOptions]=\"options\" (leafletMapReady)=\"onMapReady($event)\" style=\"height: 577px;\"> </div>\n\n\n<!-- <agm-map \n  [latitude]=\"lat\"\n  [longitude]=\"lng\"\n  [zoom]=\"zoom\"\n  [disableDefaultUI]=\"false\"\n  [zoomControl]=\"true\"\n  [styles]=\"mapStyle\"\n  (mapClick)=\"mapClicked($event)\">\n <agm-marker-cluster imagePath=\"https://raw.githubusercontent.com/googlemaps/v3-utility-library/master/markerclustererplus/images/m\"> \n  <agm-marker \n      *ngFor=\"let m of courses\"\n      [latitude]=\"m.lat\"\n      [longitude]=\"m.long\"\n      [label]=\"m.label\"\n      [iconUrl]=\"'../assets/pin.png'\"\n      >\n    <agm-info-window #infoWindow>\n      <strong>{{m.name}}</strong>\n    </agm-info-window>\n  </agm-marker>\n  </agm-marker-cluster>\n  </agm-map>\n -->\n  "
 
 /***/ }),
 
@@ -185,6 +185,17 @@ module.exports = "<p>page-not-found!</p>\n"
 /***/ (function(module, exports) {
 
 module.exports = "<style>\n\t.mat-form-field {\n    display: inline-block;\n    position: relative;\n    text-align: left;\n    width: 100%;\n}\n</style>\n<h1 mat-dialog-title >Details</h1>\n<div mat-dialog-content>\n<mat-form-field style=\"width: 100%;\">\n  <mat-label>Select Type</mat-label>\n  <mat-select [(value)]=\"data.type\">\n    <mat-option value=\"cardetail\">Card Details</mat-option>\n    <mat-option value=\"social\">Social Media</mat-option>\n    <mat-option value=\"bank\">Bank Account</mat-option>\n    <mat-option value=\"personal\">Personal</mat-option>\n  </mat-select>\n</mat-form-field>\n  <mat-form-field>\n    <input matInput placeholder=\"Name\" [(ngModel)]=\"data.name\" [disabled]=\"!data.type == cardetail ? true : null\">\n  </mat-form-field>\n     <mat-form-field>\n    <input matInput placeholder=\"Username\" [(ngModel)]=\"data.username\">\n  </mat-form-field>\n   <mat-form-field>\n    <input matInput placeholder=\"Password\" [(ngModel)]=\"data.password\">\n  </mat-form-field>\n  <mat-form-field>\n    <input matInput placeholder=\"Comments\" [(ngModel)]=\"data.comments\">\n  </mat-form-field>\n</div>\n<div mat-dialog-actions align=\"end\">\n  <button mat-button (click)=\"onNoClick()\">Cancel</button>\n  <button mat-button color=\"primary\"  [mat-dialog-close]=\"data\" cdkFocusInitial>Submit</button>\n</div>"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/components/passwordmgt/passdetails/passdetails.component.html":
+/*!*********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/components/passwordmgt/passdetails/passdetails.component.html ***!
+  \*********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>passdetails works!</p>\r\n"
 
 /***/ }),
 
@@ -223,6 +234,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/passwordmgt/passwordmgt.component */ "./src/app/components/passwordmgt/passwordmgt.component.ts");
 /* harmony import */ var _components_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/page-not-found/page-not-found.component */ "./src/app/components/page-not-found/page-not-found.component.ts");
 /* harmony import */ var _components_d3_d3_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/d3/d3.component */ "./src/app/components/d3/d3.component.ts");
+/* harmony import */ var _components_passwordmgt_passdetails_passdetails_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/passwordmgt/passdetails/passdetails.component */ "./src/app/components/passwordmgt/passdetails/passdetails.component.ts");
+
 
 
 
@@ -245,7 +258,14 @@ var routes = [
     { path: 'chart', component: _components_chart_chart_component__WEBPACK_IMPORTED_MODULE_8__["ChartComponent"] },
     { path: 'help', component: _components_help_help_component__WEBPACK_IMPORTED_MODULE_9__["HelpComponent"] },
     { path: 'map', component: _components_map_map_component__WEBPACK_IMPORTED_MODULE_5__["MapComponent"] },
-    { path: 'passwordmgt', component: _components_passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_11__["PasswordmgtComponent"] },
+    { path: 'passwordmgt', component: _components_passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_11__["PasswordmgtComponent"],
+        children: [
+            {
+                path: 'users',
+                component: _components_passwordmgt_passdetails_passdetails_component__WEBPACK_IMPORTED_MODULE_14__["PassdetailsComponent"]
+            }
+        ]
+    },
     { path: 'admin', component: _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_3__["AdminComponent"] },
     { path: 'd3', component: _components_d3_d3_component__WEBPACK_IMPORTED_MODULE_13__["D3Component"] },
     { path: '', component: _components_map_map_component__WEBPACK_IMPORTED_MODULE_5__["MapComponent"] },
@@ -382,42 +402,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _library_material_material_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./library/material/material.module */ "./src/app/library/material/material.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _library_library_library_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./library/library/library.module */ "./src/app/library/library/library.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
 /* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/header/header.component */ "./src/app/components/header/header.component.ts");
 /* harmony import */ var _components_highchart_highchart_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/highchart/highchart.component */ "./src/app/components/highchart/highchart.component.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var angular_highcharts__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! angular-highcharts */ "./node_modules/angular-highcharts/fesm5/angular-highcharts.js");
-/* harmony import */ var _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/activity/activity.component */ "./src/app/components/activity/activity.component.ts");
-/* harmony import */ var _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/dashboard/dashboard.component */ "./src/app/components/dashboard/dashboard.component.ts");
-/* harmony import */ var _components_mail_mail_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/mail/mail.component */ "./src/app/components/mail/mail.component.ts");
-/* harmony import */ var _components_chart_chart_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/chart/chart.component */ "./src/app/components/chart/chart.component.ts");
-/* harmony import */ var _components_help_help_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/help/help.component */ "./src/app/components/help/help.component.ts");
-/* harmony import */ var ag_grid_angular__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ag-grid-angular */ "./node_modules/ag-grid-angular/main.js");
-/* harmony import */ var ag_grid_angular__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(ag_grid_angular__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _components_ag_grid_ag_grid_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/ag-grid/ag-grid.component */ "./src/app/components/ag-grid/ag-grid.component.ts");
-/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/index.js");
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _components_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/page-not-found/page-not-found.component */ "./src/app/components/page-not-found/page-not-found.component.ts");
-/* harmony import */ var _components_map_map_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/map/map.component */ "./src/app/components/map/map.component.ts");
-/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
-/* harmony import */ var _agm_js_marker_clusterer__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @agm/js-marker-clusterer */ "./node_modules/@agm/js-marker-clusterer/index.js");
-/* harmony import */ var _asymmetrik_ngx_leaflet__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @asymmetrik/ngx-leaflet */ "./node_modules/@asymmetrik/ngx-leaflet/dist/index.js");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
-/* harmony import */ var _components_passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/passwordmgt/passwordmgt.component */ "./src/app/components/passwordmgt/passwordmgt.component.ts");
-/* harmony import */ var ng2_search_filter__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ng2-search-filter */ "./node_modules/ng2-search-filter/ng2-search-filter.es5.js");
-/* harmony import */ var _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./components/admin/admin.component */ "./src/app/components/admin/admin.component.ts");
-/* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
-/* harmony import */ var ngx_mapbox_gl__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ngx-mapbox-gl */ "./node_modules/ngx-mapbox-gl/fesm5/ngx-mapbox-gl.js");
-/* harmony import */ var _components_d3_d3_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./components/d3/d3.component */ "./src/app/components/d3/d3.component.ts");
-/* harmony import */ var angular_d3_tree__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! angular-d3-tree */ "./node_modules/angular-d3-tree/fesm5/angular-d3-tree.js");
-
-
-
-
+/* harmony import */ var _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/activity/activity.component */ "./src/app/components/activity/activity.component.ts");
+/* harmony import */ var _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/dashboard/dashboard.component */ "./src/app/components/dashboard/dashboard.component.ts");
+/* harmony import */ var _components_mail_mail_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/mail/mail.component */ "./src/app/components/mail/mail.component.ts");
+/* harmony import */ var _components_chart_chart_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/chart/chart.component */ "./src/app/components/chart/chart.component.ts");
+/* harmony import */ var _components_help_help_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/help/help.component */ "./src/app/components/help/help.component.ts");
+/* harmony import */ var ag_grid_angular__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ag-grid-angular */ "./node_modules/ag-grid-angular/main.js");
+/* harmony import */ var ag_grid_angular__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(ag_grid_angular__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _components_ag_grid_ag_grid_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/ag-grid/ag-grid.component */ "./src/app/components/ag-grid/ag-grid.component.ts");
+/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/index.js");
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _components_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/page-not-found/page-not-found.component */ "./src/app/components/page-not-found/page-not-found.component.ts");
+/* harmony import */ var _components_map_map_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/map/map.component */ "./src/app/components/map/map.component.ts");
+/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
+/* harmony import */ var _agm_js_marker_clusterer__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @agm/js-marker-clusterer */ "./node_modules/@agm/js-marker-clusterer/index.js");
+/* harmony import */ var _asymmetrik_ngx_leaflet__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @asymmetrik/ngx-leaflet */ "./node_modules/@asymmetrik/ngx-leaflet/dist/index.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _components_passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/passwordmgt/passwordmgt.component */ "./src/app/components/passwordmgt/passwordmgt.component.ts");
+/* harmony import */ var _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/admin/admin.component */ "./src/app/components/admin/admin.component.ts");
+/* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
+/* harmony import */ var _components_d3_d3_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/d3/d3.component */ "./src/app/components/d3/d3.component.ts");
+/* harmony import */ var _components_components_module__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./components/components.module */ "./src/app/components/components.module.ts");
 
 
 
@@ -457,56 +469,45 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
                 _components_header_header_component__WEBPACK_IMPORTED_MODULE_8__["HeaderComponent"],
                 _components_highchart_highchart_component__WEBPACK_IMPORTED_MODULE_9__["HighchartComponent"],
-                _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_12__["ActivityComponent"],
-                _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_13__["DashboardComponent"],
-                _components_mail_mail_component__WEBPACK_IMPORTED_MODULE_14__["MailComponent"],
-                _components_chart_chart_component__WEBPACK_IMPORTED_MODULE_15__["ChartComponent"],
-                _components_help_help_component__WEBPACK_IMPORTED_MODULE_16__["HelpComponent"],
-                _components_ag_grid_ag_grid_component__WEBPACK_IMPORTED_MODULE_18__["AgGridComponent"],
-                _components_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_23__["PageNotFoundComponent"],
-                _components_map_map_component__WEBPACK_IMPORTED_MODULE_24__["MapComponent"],
-                _components_passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_29__["PasswordmgtComponent"],
-                _components_passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_29__["DialogOverviewExampleDialog"],
-                _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_31__["AdminComponent"],
-                _components_login_login_component__WEBPACK_IMPORTED_MODULE_32__["LoginComponent"],
-                _components_d3_d3_component__WEBPACK_IMPORTED_MODULE_34__["D3Component"]
+                _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_10__["ActivityComponent"],
+                _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["DashboardComponent"],
+                _components_mail_mail_component__WEBPACK_IMPORTED_MODULE_12__["MailComponent"],
+                _components_chart_chart_component__WEBPACK_IMPORTED_MODULE_13__["ChartComponent"],
+                _components_help_help_component__WEBPACK_IMPORTED_MODULE_14__["HelpComponent"],
+                _components_ag_grid_ag_grid_component__WEBPACK_IMPORTED_MODULE_16__["AgGridComponent"],
+                _components_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_21__["PageNotFoundComponent"],
+                _components_map_map_component__WEBPACK_IMPORTED_MODULE_22__["MapComponent"],
+                _components_passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_27__["PasswordmgtComponent"],
+                _components_passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_27__["DialogOverviewExampleDialog"],
+                _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_28__["AdminComponent"],
+                _components_login_login_component__WEBPACK_IMPORTED_MODULE_29__["LoginComponent"],
+                _components_d3_d3_component__WEBPACK_IMPORTED_MODULE_30__["D3Component"]
             ],
-            entryComponents: [_components_passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_29__["PasswordmgtComponent"], _components_passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_29__["DialogOverviewExampleDialog"]],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
                 _library_material_material_module__WEBPACK_IMPORTED_MODULE_4__["MaterialModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"],
-                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_7__["FlexLayoutModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"],
-                angular_highcharts__WEBPACK_IMPORTED_MODULE_11__["ChartModule"],
-                _angular_fire__WEBPACK_IMPORTED_MODULE_19__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_21__["environment"].firebaseConfig),
-                _angular_fire_database__WEBPACK_IMPORTED_MODULE_20__["AngularFireDatabaseModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_22__["FormsModule"],
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_28__["NgbModule"],
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_28__["NgbPaginationModule"],
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_28__["NgbAlertModule"],
-                ng2_search_filter__WEBPACK_IMPORTED_MODULE_30__["Ng2SearchPipeModule"],
-                angular_d3_tree__WEBPACK_IMPORTED_MODULE_35__["AngularD3TreeLibModule"],
-                ngx_mapbox_gl__WEBPACK_IMPORTED_MODULE_33__["NgxMapboxGLModule"].withConfig({
-                    accessToken: 'pk.eyJ1IjoibWFkaHVrYXJzaW5naCIsImEiOiJjazBkdG14NHYwYXcwM2RzZDZ5dTdzemRrIn0.Jl3tWFvdm7cRSaKjHDLhAg',
-                    geocoderAccessToken: 'TOKEN' // Optionnal, specify if different from the map access token, can also be set per mgl-geocoder (accessToken input of mgl-geocoder)
-                }),
-                _asymmetrik_ngx_leaflet__WEBPACK_IMPORTED_MODULE_27__["LeafletModule"].forRoot(),
-                // RouterModule.forRoot(
-                //   routes,
-                // ),
-                ag_grid_angular__WEBPACK_IMPORTED_MODULE_17__["AgGridModule"].withComponents([]),
-                _agm_core__WEBPACK_IMPORTED_MODULE_25__["AgmCoreModule"].forRoot({
+                _library_library_library_module__WEBPACK_IMPORTED_MODULE_5__["LibraryModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"],
+                _angular_fire__WEBPACK_IMPORTED_MODULE_17__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_19__["environment"].firebaseConfig),
+                _angular_fire_database__WEBPACK_IMPORTED_MODULE_18__["AngularFireDatabaseModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_20__["FormsModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_26__["NgbModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_26__["NgbPaginationModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_26__["NgbAlertModule"],
+                _components_components_module__WEBPACK_IMPORTED_MODULE_31__["ComponentsModule"],
+                _asymmetrik_ngx_leaflet__WEBPACK_IMPORTED_MODULE_25__["LeafletModule"].forRoot(),
+                ag_grid_angular__WEBPACK_IMPORTED_MODULE_15__["AgGridModule"].withComponents([]),
+                _agm_core__WEBPACK_IMPORTED_MODULE_23__["AgmCoreModule"].forRoot({
                     apiKey: 'AIzaSyCsfAKMcwNFRB3o4uGi6Z5BD9-1kw6yy34'
                 }),
-                _agm_js_marker_clusterer__WEBPACK_IMPORTED_MODULE_26__["AgmJsMarkerClustererModule"]
+                _agm_js_marker_clusterer__WEBPACK_IMPORTED_MODULE_24__["AgmJsMarkerClustererModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -763,6 +764,73 @@ var ChartComponent = /** @class */ (function () {
         })
     ], ChartComponent);
     return ChartComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/components.module.ts":
+/*!*************************************************!*\
+  !*** ./src/app/components/components.module.ts ***!
+  \*************************************************/
+/*! exports provided: ComponentsModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComponentsModule", function() { return ComponentsModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _passwordmgt_passdetails_passdetails_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./passwordmgt/passdetails/passdetails.component */ "./src/app/components/passwordmgt/passdetails/passdetails.component.ts");
+
+
+
+
+// import { HeaderComponent } from './header/header.component';
+// import { DashboardComponent } from './dashboard/dashboard.component';
+// import { MailComponent } from './mail/mail.component';
+// import { ChartComponent } from './chart/chart.component';
+// import { HelpComponent } from './help/help.component';
+// import { HighchartComponent } from './highchart/highchart.component';
+// import { ActivityComponent } from './activity/activity.component';
+// import { AdminComponent } from './admin/admin.component';
+// import { LoginComponent } from './login/login.component';
+// import { D3Component } from './d3/d3.component';
+// import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+// import { MapComponent } from './map/map.component';
+// import { AgGridComponent } from './ag-grid/ag-grid.component';
+var ComponentsModule = /** @class */ (function () {
+    function ComponentsModule() {
+    }
+    ComponentsModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: [
+                // HeaderComponent,
+                //    HighchartComponent,
+                //    ActivityComponent,
+                //    DashboardComponent,
+                //    MailComponent,
+                //    ChartComponent,
+                //    HelpComponent,
+                //    AgGridComponent,
+                //    PageNotFoundComponent,
+                //    MapComponent,
+                //    AdminComponent,
+                //    LoginComponent,
+                //    D3Component
+                _passwordmgt_passdetails_passdetails_component__WEBPACK_IMPORTED_MODULE_3__["PassdetailsComponent"]
+            ],
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            ],
+            exports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            ]
+        })
+    ], ComponentsModule);
+    return ComponentsModule;
 }());
 
 
@@ -1196,53 +1264,65 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapComponent", function() { return MapComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
-/* harmony import */ var _services_map_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/map.service */ "./src/app/services/map.service.ts");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
-
+// import { MouseEvent } from '@agm/core';
 var MapComponent = /** @class */ (function () {
-    function MapComponent(db, mapService) {
-        var _this = this;
-        this.db = db;
-        this.mapService = mapService;
-        // google maps zoom level
-        this.zoom = 2;
-        this.basePath = '/details';
-        this.today = new Date();
-        this.hours = this.today.getHours();
-        if (navigator) {
-            navigator.geolocation.getCurrentPosition(function (pos) {
-                _this.lng = +pos.coords.longitude;
-                _this.lat = +pos.coords.latitude;
-            });
-            db.list(this.basePath).valueChanges()
-                .subscribe(function (data) {
-                _this.courses = data;
-            });
-            if (this.hours < 18) {
-                this.mapStyle = this.mapService.dayStyles;
-            }
-            else {
-                this.mapStyle = this.mapService.nightStyles;
-            }
-        }
+    function MapComponent() {
+        this.options = {
+            layers: [
+                Object(leaflet__WEBPACK_IMPORTED_MODULE_2__["tileLayer"])('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
+            ],
+            zoom: 4,
+            center: Object(leaflet__WEBPACK_IMPORTED_MODULE_2__["latLng"])(20.5937, 78.9629)
+        };
     }
-    MapComponent.prototype.getData = function () {
-        return this.courses;
+    MapComponent.prototype.onMapReady = function (map) {
+        // get a local reference to the map as we need it later
+        this.map = map;
     };
-    MapComponent.prototype.clickedMarker = function (label, index) {
-        console.log("clicked the marker: " + (label || index));
+    // google maps zoom level
+    // zoom: number = 2;
+    // initial center position for the map
+    //   lat: any;
+    //   lng: any;
+    //   locations:any;
+    //   private basePath = '/details';
+    //   mapStyle;
+    //   today = new Date()
+    //   hours = this.today.getHours();
+    // courses: Observable < any > | any;
+    //   constructor(private db: AngularFireDatabase,private mapService: MapService){
+    //     if (navigator)
+    //     {
+    //     navigator.geolocation.getCurrentPosition( pos => {
+    //         this.lng = +pos.coords.longitude;
+    //         this.lat = +pos.coords.latitude;
+    //       });
+    //      db.list(this.basePath).valueChanges()
+    //         .subscribe(data => {
+    //             this.courses = data;
+    //         });
+    //   if(this.hours < 18){
+    //     this.mapStyle = this.mapService.dayStyles;
+    //   }else{
+    //     this.mapStyle = this.mapService.nightStyles;
+    //   }
+    //  }}
+    //    getData() {
+    //       return this.courses;
+    //   }
+    //   clickedMarker(label: string, index: number) {
+    //     console.log(`clicked the marker: ${label || index}`)
+    //   }
+    //   onMouseOver(infoWindow) {
+    //         infoWindow.open();
+    //     }
+    MapComponent.prototype.ngOnInit = function () {
     };
-    MapComponent.prototype.onMouseOver = function (infoWindow) {
-        infoWindow.open();
-    };
-    MapComponent.prototype.ngOnInit = function () { };
-    MapComponent.ctorParameters = function () { return [
-        { type: _angular_fire_database__WEBPACK_IMPORTED_MODULE_2__["AngularFireDatabase"] },
-        { type: _services_map_service__WEBPACK_IMPORTED_MODULE_3__["MapService"] }
-    ]; };
     MapComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-map',
@@ -1295,6 +1375,50 @@ var PageNotFoundComponent = /** @class */ (function () {
         })
     ], PageNotFoundComponent);
     return PageNotFoundComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/passwordmgt/passdetails/passdetails.component.css":
+/*!******************************************************************************!*\
+  !*** ./src/app/components/passwordmgt/passdetails/passdetails.component.css ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvcGFzc3dvcmRtZ3QvcGFzc2RldGFpbHMvcGFzc2RldGFpbHMuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/components/passwordmgt/passdetails/passdetails.component.ts":
+/*!*****************************************************************************!*\
+  !*** ./src/app/components/passwordmgt/passdetails/passdetails.component.ts ***!
+  \*****************************************************************************/
+/*! exports provided: PassdetailsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PassdetailsComponent", function() { return PassdetailsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var PassdetailsComponent = /** @class */ (function () {
+    function PassdetailsComponent() {
+    }
+    PassdetailsComponent.prototype.ngOnInit = function () {
+    };
+    PassdetailsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-passdetails',
+            template: __webpack_require__(/*! raw-loader!./passdetails.component.html */ "./node_modules/raw-loader/index.js!./src/app/components/passwordmgt/passdetails/passdetails.component.html"),
+            styles: [__webpack_require__(/*! ./passdetails.component.css */ "./src/app/components/passwordmgt/passdetails/passdetails.component.css")]
+        })
+    ], PassdetailsComponent);
+    return PassdetailsComponent;
 }());
 
 
@@ -1397,6 +1521,62 @@ var DialogOverviewExampleDialog = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]))
     ], DialogOverviewExampleDialog);
     return DialogOverviewExampleDialog;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/library/library/library.module.ts":
+/*!***************************************************!*\
+  !*** ./src/app/library/library/library.module.ts ***!
+  \***************************************************/
+/*! exports provided: LibraryModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LibraryModule", function() { return LibraryModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var ng2_search_filter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ng2-search-filter */ "./node_modules/ng2-search-filter/ng2-search-filter.es5.js");
+/* harmony import */ var angular_highcharts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! angular-highcharts */ "./node_modules/angular-highcharts/fesm5/angular-highcharts.js");
+/* harmony import */ var angular_d3_tree__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! angular-d3-tree */ "./node_modules/angular-d3-tree/fesm5/angular-d3-tree.js");
+
+
+
+
+
+
+
+
+var LibraryModule = /** @class */ (function () {
+    function LibraryModule() {
+    }
+    LibraryModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: [],
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+                angular_highcharts__WEBPACK_IMPORTED_MODULE_6__["ChartModule"],
+                ng2_search_filter__WEBPACK_IMPORTED_MODULE_5__["Ng2SearchPipeModule"],
+                angular_d3_tree__WEBPACK_IMPORTED_MODULE_7__["AngularD3TreeLibModule"]
+            ],
+            exports: [
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+                angular_highcharts__WEBPACK_IMPORTED_MODULE_6__["ChartModule"],
+                ng2_search_filter__WEBPACK_IMPORTED_MODULE_5__["Ng2SearchPipeModule"],
+                angular_d3_tree__WEBPACK_IMPORTED_MODULE_7__["AngularD3TreeLibModule"]
+            ]
+        })
+    ], LibraryModule);
+    return LibraryModule;
 }());
 
 
@@ -1541,483 +1721,6 @@ var GlobalService = /** @class */ (function () {
         })
     ], GlobalService);
     return GlobalService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/services/map.service.ts":
-/*!*****************************************!*\
-  !*** ./src/app/services/map.service.ts ***!
-  \*****************************************/
-/*! exports provided: MapService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapService", function() { return MapService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-
-
-var MapService = /** @class */ (function () {
-    function MapService() {
-        this.dayStyles = [
-            {
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#ebe3cd"
-                    }
-                ]
-            },
-            {
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#523735"
-                    }
-                ]
-            },
-            {
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                    {
-                        "color": "#f5f1e6"
-                    }
-                ]
-            },
-            {
-                "featureType": "administrative",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                    {
-                        "color": "#c9b2a6"
-                    }
-                ]
-            },
-            {
-                "featureType": "administrative.land_parcel",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                    {
-                        "color": "#dcd2be"
-                    }
-                ]
-            },
-            {
-                "featureType": "administrative.land_parcel",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#ae9e90"
-                    }
-                ]
-            },
-            {
-                "featureType": "landscape.natural",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#dfd2ae"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#dfd2ae"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#93817c"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.park",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "color": "#a5b076"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.park",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#447530"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#f5f1e6"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.arterial",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#fdfcf8"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.highway",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#f8c967"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.highway",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                    {
-                        "color": "#e9bc62"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.highway.controlled_access",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#e98d58"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.highway.controlled_access",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                    {
-                        "color": "#db8555"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.local",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#806b63"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit.line",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#dfd2ae"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit.line",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#8f7d77"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit.line",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                    {
-                        "color": "#ebe3cd"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit.station",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#dfd2ae"
-                    }
-                ]
-            },
-            {
-                "featureType": "water",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "color": "#b9d3c2"
-                    }
-                ]
-            },
-            {
-                "featureType": "water",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#92998d"
-                    }
-                ]
-            }
-        ];
-        this.nightStyles = [
-            {
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#1d2c4d"
-                    }
-                ]
-            },
-            {
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#8ec3b9"
-                    }
-                ]
-            },
-            {
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                    {
-                        "color": "#1a3646"
-                    }
-                ]
-            },
-            {
-                "featureType": "administrative.country",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                    {
-                        "color": "#4b6878"
-                    }
-                ]
-            },
-            {
-                "featureType": "administrative.land_parcel",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#64779e"
-                    }
-                ]
-            },
-            {
-                "featureType": "administrative.province",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                    {
-                        "color": "#4b6878"
-                    }
-                ]
-            },
-            {
-                "featureType": "landscape.man_made",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                    {
-                        "color": "#334e87"
-                    }
-                ]
-            },
-            {
-                "featureType": "landscape.natural",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#023e58"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#283d6a"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#6f9ba5"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                    {
-                        "color": "#1d2c4d"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.park",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "color": "#023e58"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.park",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#3C7680"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#304a7d"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#98a5be"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                    {
-                        "color": "#1d2c4d"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.highway",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#2c6675"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.highway",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                    {
-                        "color": "#255763"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.highway",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#b0d5ce"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.highway",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                    {
-                        "color": "#023e58"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#98a5be"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                    {
-                        "color": "#1d2c4d"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit.line",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "color": "#283d6a"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit.station",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#3a4762"
-                    }
-                ]
-            },
-            {
-                "featureType": "water",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#0e1626"
-                    }
-                ]
-            },
-            {
-                "featureType": "water",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#4e6d70"
-                    }
-                ]
-            }
-        ];
-    }
-    MapService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-            providedIn: 'root'
-        })
-    ], MapService);
-    return MapService;
 }());
 
 

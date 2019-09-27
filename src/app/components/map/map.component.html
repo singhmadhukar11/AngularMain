@@ -1,4 +1,7 @@
-<agm-map 
+<div leaflet [leafletOptions]="options" (leafletMapReady)="onMapReady($event)" style="height: 577px;"> </div>
+
+
+<!-- <agm-map 
   [latitude]="lat"
   [longitude]="lng"
   [zoom]="zoom"
@@ -14,12 +17,11 @@
       [label]="m.label"
       [iconUrl]="'../assets/pin.png'"
       >
-      <!-- (mouseOver)="onMouseOver(infoWindow,$event)" -->
     <agm-info-window #infoWindow>
       <strong>{{m.name}}</strong>
     </agm-info-window>
   </agm-marker>
   </agm-marker-cluster>
   </agm-map>
-
+ -->
   

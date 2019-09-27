@@ -32,7 +32,6 @@ import { AdminComponent } from './components/admin/admin.component';
 import { LoginComponent } from './components/login/login.component';
 import { D3Component } from './components/d3/d3.component';
 import { ComponentsModule } from './components/components.module';
-
 @NgModule({
   declarations: [
     AppComponent,
