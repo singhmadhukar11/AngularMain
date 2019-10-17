@@ -51,6 +51,7 @@ import { ComponentsModule } from './components/components.module';
     LoginComponent,
     D3Component
   ],
+  entryComponents: [DialogOverviewExampleDialog],
   imports: [
     BrowserModule,
     AppRoutingModule,

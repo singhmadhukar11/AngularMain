@@ -14,8 +14,8 @@ export class MapComponent implements OnInit {
     layers: [
       tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
     ],
-    zoom: 4,
-    center: latLng(20.5937, 78.9629)
+    zoom: 8,
+    center: latLng(22.7196, 75.8577)
   };
 
    onMapReady(map) {

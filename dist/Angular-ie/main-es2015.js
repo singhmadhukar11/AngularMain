@@ -63,7 +63,7 @@ module.exports = "<!-- <mat-nav-list *ngFor=\"let link of courses\">\n <button m
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ag-grid-angular \n    style=\"width: 100%; height: 375px;\" \n    class=\"ag-theme-balham\"\n    [rowData]=\"rowData | async\"\n    [columnDefs]=\"columnDefs\"\n    >\n</ag-grid-angular>"
+module.exports = "<ag-grid-angular \n    style=\"width: 100%; height: calc(100vh - 57px);\" \n    class=\"ag-theme-material\"\n    [rowData]=\"rowData | async\"\n    [columnDefs]=\"columnDefs\"\n    (gridReady)=\"onGridReady($event)\"\n    >\n</ag-grid-angular>"
 
 /***/ }),
 
@@ -206,7 +206,7 @@ module.exports = "<p>passdetails works!</p>\r\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n<div>\n   <button mat-raised-button color=\"primary\" (click)=\"openDialog()\">Add Password</button>\n<mat-form-field class=\"example-full-width\" style=\"left: 5px;top: 5px;\">\n<input matInput class=\"form-control\" type=\"text\" name=\"search\" [(ngModel)]=\"searchText\" autocomplete=\"off\" placeholder=\"Search Details\">\n     </mat-form-field>\n</div>\n<div fxLayout=\"row wrap\" fxLayoutGap=\"20px\">\n\t<div *ngFor=\"let t of passData | filter:searchText\" fxFlex=\"30\">\n\t<mat-card style=\"margin-top: 20px;font-size: 15px;color: grey;\" [ngClass]=\"{'yellow': t.type == 'social','lime': t.type == 'personal','blue': t.type == 'cardetail','grey': t.type == 'bank'}\">\n\t\t<span class=\"name\">{{t.name}}</span>\n\t\t<div><span>Username</span> : <span>{{t.username}}</span></div>\n\t\t<div><span>Password</span> : <span>{{t.password}}</span></div>\n\t\t<div><span>Comments</span> : <span>{{t.comments}}</span></div>\n\t</mat-card>\n\t</div>\n</div> \n</div>"
+module.exports = "<div>\n<div>\n   <button mat-raised-button color=\"primary\" (click)=\"openDialog()\">Add Password</button>\n<mat-form-field class=\"example-full-width\" style=\"left: 5px;top: 5px;\">\n<input matInput class=\"form-control\" type=\"text\" name=\"search\" [(ngModel)]=\"searchText\" autocomplete=\"off\" placeholder=\"Search Details\">\n     </mat-form-field>\n</div>\n<div fxLayout=\"row wrap\" fxLayoutGap=\"40px\">\n\t<div *ngFor=\"let t of passData | filter:searchText\" fxFlex=\"30\">\n\t<mat-card style=\"margin-top: 20px;font-size: 15px;color: grey;\" [ngClass]=\"{'yellow': t.type == 'social','lime': t.type == 'personal','blue': t.type == 'cardetail','grey': t.type == 'bank'}\">\n\t\t<span class=\"name\">{{t.name}}</span>\n\t\t<div><span>Username</span> : <span>{{t.username}}</span></div>\n\t\t<div><span>Password</span> : <span>{{t.password}}</span></div>\n\t\t<div><span>Comments</span> : <span>{{t.comments}}</span></div>\n\t</mat-card>\n\t</div>\n</div> \n</div>"
 
 /***/ }),
 
@@ -226,15 +226,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/admin/admin.component */ "./src/app/components/admin/admin.component.ts");
 /* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
 /* harmony import */ var _components_map_map_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/map/map.component */ "./src/app/components/map/map.component.ts");
-/* harmony import */ var _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/dashboard/dashboard.component */ "./src/app/components/dashboard/dashboard.component.ts");
-/* harmony import */ var _components_mail_mail_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/mail/mail.component */ "./src/app/components/mail/mail.component.ts");
-/* harmony import */ var _components_chart_chart_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/chart/chart.component */ "./src/app/components/chart/chart.component.ts");
-/* harmony import */ var _components_help_help_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/help/help.component */ "./src/app/components/help/help.component.ts");
-/* harmony import */ var _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/activity/activity.component */ "./src/app/components/activity/activity.component.ts");
-/* harmony import */ var _components_passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/passwordmgt/passwordmgt.component */ "./src/app/components/passwordmgt/passwordmgt.component.ts");
-/* harmony import */ var _components_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/page-not-found/page-not-found.component */ "./src/app/components/page-not-found/page-not-found.component.ts");
-/* harmony import */ var _components_d3_d3_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/d3/d3.component */ "./src/app/components/d3/d3.component.ts");
-/* harmony import */ var _components_passwordmgt_passdetails_passdetails_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/passwordmgt/passdetails/passdetails.component */ "./src/app/components/passwordmgt/passdetails/passdetails.component.ts");
+/* harmony import */ var _components_ag_grid_ag_grid_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/ag-grid/ag-grid.component */ "./src/app/components/ag-grid/ag-grid.component.ts");
+/* harmony import */ var _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/dashboard/dashboard.component */ "./src/app/components/dashboard/dashboard.component.ts");
+/* harmony import */ var _components_mail_mail_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/mail/mail.component */ "./src/app/components/mail/mail.component.ts");
+/* harmony import */ var _components_chart_chart_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/chart/chart.component */ "./src/app/components/chart/chart.component.ts");
+/* harmony import */ var _components_help_help_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/help/help.component */ "./src/app/components/help/help.component.ts");
+/* harmony import */ var _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/activity/activity.component */ "./src/app/components/activity/activity.component.ts");
+/* harmony import */ var _components_passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/passwordmgt/passwordmgt.component */ "./src/app/components/passwordmgt/passwordmgt.component.ts");
+/* harmony import */ var _components_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/page-not-found/page-not-found.component */ "./src/app/components/page-not-found/page-not-found.component.ts");
+/* harmony import */ var _components_d3_d3_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/d3/d3.component */ "./src/app/components/d3/d3.component.ts");
+/* harmony import */ var _components_passwordmgt_passdetails_passdetails_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/passwordmgt/passdetails/passdetails.component */ "./src/app/components/passwordmgt/passdetails/passdetails.component.ts");
+
 
 
 
@@ -252,24 +254,25 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     { path: 'login', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_4__["LoginComponent"] },
-    { path: 'dashboard', component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__["DashboardComponent"] },
-    { path: 'activity', component: _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_10__["ActivityComponent"] },
-    { path: 'list', component: _components_mail_mail_component__WEBPACK_IMPORTED_MODULE_7__["MailComponent"] },
-    { path: 'chart', component: _components_chart_chart_component__WEBPACK_IMPORTED_MODULE_8__["ChartComponent"] },
-    { path: 'help', component: _components_help_help_component__WEBPACK_IMPORTED_MODULE_9__["HelpComponent"] },
+    { path: 'dashboard', component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__["DashboardComponent"] },
+    { path: 'activity', component: _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_11__["ActivityComponent"] },
+    { path: 'list', component: _components_mail_mail_component__WEBPACK_IMPORTED_MODULE_8__["MailComponent"] },
+    { path: 'chart', component: _components_chart_chart_component__WEBPACK_IMPORTED_MODULE_9__["ChartComponent"] },
+    { path: 'help', component: _components_help_help_component__WEBPACK_IMPORTED_MODULE_10__["HelpComponent"] },
     { path: 'map', component: _components_map_map_component__WEBPACK_IMPORTED_MODULE_5__["MapComponent"] },
-    { path: 'passwordmgt', component: _components_passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_11__["PasswordmgtComponent"],
+    { path: 'passwordmgt', component: _components_passwordmgt_passwordmgt_component__WEBPACK_IMPORTED_MODULE_12__["PasswordmgtComponent"],
         children: [
             {
                 path: 'users',
-                component: _components_passwordmgt_passdetails_passdetails_component__WEBPACK_IMPORTED_MODULE_14__["PassdetailsComponent"]
+                component: _components_passwordmgt_passdetails_passdetails_component__WEBPACK_IMPORTED_MODULE_15__["PassdetailsComponent"]
             }
         ]
     },
     { path: 'admin', component: _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_3__["AdminComponent"] },
-    { path: 'd3', component: _components_d3_d3_component__WEBPACK_IMPORTED_MODULE_13__["D3Component"] },
-    { path: '', component: _components_map_map_component__WEBPACK_IMPORTED_MODULE_5__["MapComponent"] },
-    { path: '**', component: _components_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_12__["PageNotFoundComponent"] },
+    { path: 'd3', component: _components_d3_d3_component__WEBPACK_IMPORTED_MODULE_14__["D3Component"] },
+    { path: 'aggrid', component: _components_ag_grid_ag_grid_component__WEBPACK_IMPORTED_MODULE_6__["AgGridComponent"] },
+    { path: '', component: _components_ag_grid_ag_grid_component__WEBPACK_IMPORTED_MODULE_6__["AgGridComponent"] },
+    { path: '**', component: _components_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_13__["PageNotFoundComponent"] },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -353,7 +356,7 @@ let AppComponent = class AppComponent {
                 icon: 'bubble_chart'
             },
             {
-                name: 'login',
+                name: 'aggrid',
                 icon: 'person'
             }
         ];
@@ -687,14 +690,18 @@ let AgGridComponent = class AgGridComponent {
         this.http = http;
         this.globalService = globalService;
         this.columnDefs = [
-            { headerName: 'ID', field: 'id', width: 100, resizable: true },
-            { headerName: 'USER ID', field: 'userId', width: 100, resizable: true },
-            { headerName: 'TITLE', field: 'title', width: 560, resizable: true },
-            { headerName: 'COMPLETE', field: 'completed', width: 350, resizable: true }
+            { headerName: 'ID', field: 'id', width: 100 },
+            { headerName: 'USER ID', field: 'userId', width: 150 },
+            { headerName: 'TITLE', field: 'title', width: 150 },
+            { headerName: 'COMPLETE', field: 'completed', width: 150 }
         ];
     }
-    ngOnInit() {
+    onGridReady(params) {
+        params.api.sizeColumnsToFit();
         this.rowData = this.http.get(this.globalService.dataApi);
+    }
+    ngOnInit() {
+        console.log("Ag-Grid Started");
     }
 };
 AgGridComponent.ctorParameters = () => [
@@ -1238,20 +1245,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// import { MouseEvent } from '@agm/core';
 let MapComponent = class MapComponent {
-    // import { MouseEvent } from '@agm/core';
     constructor() {
         this.options = {
             layers: [
                 Object(leaflet__WEBPACK_IMPORTED_MODULE_2__["tileLayer"])('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
             ],
-            zoom: 4,
-            center: Object(leaflet__WEBPACK_IMPORTED_MODULE_2__["latLng"])(20.5937, 78.9629)
+            zoom: 8,
+            center: Object(leaflet__WEBPACK_IMPORTED_MODULE_2__["latLng"])(22.7196, 75.8577)
         };
     }
     onMapReady(map) {
-        // get a local reference to the map as we need it later
         this.map = map;
     }
     // google maps zoom level
